@@ -22,7 +22,7 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Test:** capture, Dex registration, category, height, weight, descriptions, number display, saved species, existing save, and national list after unlocking.
 
 ## Stage 8I: Species-specific party icons and followers
-**Status:** [Cloud compile](https://github.com/Lamictal/Eevee/actions/runs/42921554174) started; mGBA validation outstanding.
+**Status:** [Corrected Stage 8I build](https://github.com/Lamictal/Eevee/actions/runs/42922943309) **compiled successfully**; mGBA validation outstanding. The original compile attempt [failed](https://github.com/Lamictal/Eevee/actions/runs/42921554174) on missing custom overworld graphics declarations, corrected in commit `aa4cc99`.
 **Bug:** [Issue #2](https://github.com/Lamictal/Eevee/issues/2)
 
 - Replaces temporary Eevee party icons for Aerieon/Aerartheon with original-art-derived 32×64 species icons.
