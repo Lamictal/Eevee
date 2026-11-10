@@ -9,7 +9,7 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
 ## Stage 8J: Aerieon/Aerartheon Pokédex registration
-**Status:** [GitHub build](https://github.com/Lamictal/Eevee/actions/runs/42923026893) launched; compile and emulator checks pending.
+**Status:** [Corrected Stage 8J build](https://github.com/Lamictal/Eevee/actions/runs/42923311309) **compiled successfully**; emulator validation pending. The original build [failed on a duplicate source anchor](https://github.com/Lamictal/Eevee/actions/runs/42923026893), corrected in commit `cbf5e3c`.
 **Bug:** [Issue #1](https://github.com/Lamictal/Eevee/issues/1)
 
 - Adds Aerieon as National Dex **#1026** and Aerartheon as **#1027**, after all official Gen IX species. Existing official National numbers stay unchanged.
