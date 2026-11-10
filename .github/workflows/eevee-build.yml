@@ -1,0 +1,63 @@
+name: Test Eevee Stage 8E expansion
+
+on:
+  push:
+    branches:
+      - stage8e-cloud-prototype
+    paths:
+      - stage8d-kit.tar.xz.b64
+      - .github/workflows/eevee-build.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GBA build requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential binutils-arm-none-eabi gcc-arm-none-eabi \
+            libnewlib-arm-none-eabi git libpng-dev python3 unzip xz-utils
+          arm-none-eabi-gcc --version
+
+      - name: Unpack and validate prototype
+        run: |
+          test -s stage8d-kit.tar.xz.b64
+          mkdir -p kit
+          base64 -d stage8d-kit.tar.xz.b64 | tar -xJ -C kit
+          python3 kit/check_kit.py
+
+      - name: Attempt compile (NOT Evergreen)
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 kit/build_stage8d.py \
+            --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
+            --jobs 4 2>&1 | tee stage8d_attempt.log
+
+      - name: Upload prototype ROM if successful
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-Stage8E-UNTESTED-GBA
+          path: pokeemerald-expansion-stage8d/pokeemerald.gba
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload diagnostic logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-Stage8E-logs
+          path: |
+            stage8d_attempt.log
+            kit/stage8d_build.log
+          if-no-files-found: warn
+          retention-days: 14
