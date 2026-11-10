@@ -122,7 +122,7 @@ def install(root):
         defs+=(
             f'const u8 gMonIcon_{name}[] = INCGFX_U8("graphics/pokemon/{key}/icon.png", ".4bpp");\n'
             f'#if OW_POKEMON_OBJECT_EVENTS\n'
-            f'const u32 gObjectEventPic_{name}[] = INCGFX_COMP("graphics/pokemon/{key}/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");\n'
+            
             f'#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE\n'
             f'const u16 gOverworldPalette_{name}[] = INCGFX_U16("graphics/pokemon/{key}/overworld_normal.pal", ".gbapal");\n'
             f'const u16 gShinyOverworldPalette_{name}[] = INCGFX_U16("graphics/pokemon/{key}/overworld_shiny.pal", ".gbapal");\n'
@@ -132,9 +132,16 @@ def install(root):
     for name in CUSTOM:
         tables += f"static const struct SpriteFrameImage sPicTable_{name}[] = {{\n    overworld_ascending_frames(gObjectEventPic_{name}, 4, 4),\n}};\n"
     gfx = root/"src/data/graphics/pokemon.h"
+    owgfx = root/"src/data/object_events/object_event_graphics.h"
     tablefile=root/"src/data/object_events/object_event_pic_tables_followers.h"
+    owdefs = "\n// STAGE8I_GRAPHICS: bespoke follower overworld sprites\n"
+    for name in CUSTOM:
+        key=name.lower()
+        owdefs += f'const u32 gObjectEventPic_{name}[] = INCGFX_U32("graphics/pokemon/{key}/overworld.png", ".4bpp.smol", "-mwidth 4 -mheight 4");\n'
     if gfx.read_text(encoding="utf-8").count("const u32 gMonFrontPic_Egg[]") != 1:
         raise ValueError("Missing graphics insertion anchor")
+    if owgfx.read_text(encoding="utf-8").count("const u32 gObjectEventPic_RubySapphireBrendanNormal[]") != 1:
+        raise ValueError("Missing overworld graphics anchor")
     if tablefile.read_text(encoding="utf-8").count("static const struct SpriteFrameImage sPicTable_Substitute[]") != 1:
         raise ValueError("Missing follower insertion anchor")
     for name in CUSTOM:
@@ -144,6 +151,10 @@ def install(root):
     # Construct the modified species region before writing.
     new_region=region.replace("    // STAGE8C_CUSTOM_EEVEE_PROTO",
                               "    // STAGE8C_CUSTOM_EEVEE_PROTO\n    // STAGE8I_GRAPHICS: custom party icons and overworld followers",1)
+    new_region = ("    // STAGE8I_GRAPHICS: custom icon symbol declarations\n" +
+                  "    extern const u8 gMonIcon_Aerieon[];\n" +
+                  "    extern const u8 gMonIcon_Aerartheon[];\n" +
+                  new_region)
     for name in CUSTOM:
         pattern = re.compile(r"(\[SPECIES_"+name.upper()+r"\] = \{)(.*?)(?=\n    \},)",re.S)
         hits=list(pattern.finditer(new_region))
@@ -170,6 +181,7 @@ def install(root):
         new_region=new_region.replace(block,edited,1)
         print(f"{name}: dedicated 32x64 party icon (palette {best}), six 32x32 follower frames")
     replace_one(gfx,"const u32 gMonFrontPic_Egg[]",defs)
+    replace_one(owgfx,"const u32 gObjectEventPic_RubySapphireBrendanNormal[]",owdefs)
     replace_one(tablefile,"static const struct SpriteFrameImage sPicTable_Substitute[]",tables)
     species_file.write_text(source[:start]+new_region+source[end:],encoding="utf-8")
     print("Stage 8I graphics installed; no species IDs, dex numbers, or save fields changed.")
