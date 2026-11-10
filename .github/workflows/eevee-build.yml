@@ -1,4 +1,4 @@
-name: Build Eevee expansion with battle effectiveness UI
+name: Build Eevee expansion Stage 8G test
 
 on:
   push:
@@ -9,6 +9,8 @@ on:
       - stage8e_hotfix.py
       - stage8f_enable_battle_ui.py
       - stage8f_patch_builder.py
+      - stage8g_encounters_quickrun.py
+      - stage8g_patch_builder.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -43,6 +45,9 @@ jobs:
       - name: Enable Unbound-style type indicators in build
         run: python3 stage8f_patch_builder.py
 
+      - name: Enable Stage 8G increased test encounters and double-B escape
+        run: python3 stage8g_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -55,7 +60,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8F-Type-Effectiveness-UNTESTED-GBA
+          name: Eevee-Stage8G-Easy-Encounters-QuickRun-UNTESTED-GBA
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
           retention-days: 14
