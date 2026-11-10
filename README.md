@@ -2,7 +2,7 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8I**, cloud build running; last confirmed successful compile: Stage 8H. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8J**, compiled successfully. Emulator validation is pending; Stage 8I also compiled successfully. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
@@ -12,11 +12,17 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
 
+## Stage 8J Pokédex registration
+- **Aerieon #1026** and **Aerartheon #1027** are now registered as separate National Pokédex species, with descriptions and existing height/weight fields.
+- [Successful Stage 8J combined ROM](https://github.com/Lamictal/Eevee/actions/runs/42923311309), and [Stage 8I sprite-only ROM](https://github.com/Lamictal/Eevee/actions/runs/42922943309).
+- Two new Dex entries fit in the existing saved seen/caught bitset byte allocation; save compatibility **still requires mGBA testing**.
+- Catching a species again may be necessary to register one obtained in an older build with Dex number 000.
+
 ## Stage 8I sprite corrections
 - Replaces Eevee party-menu placeholder icons for both custom species with sprites derived from their battle artwork.
 - Replaces green Substitute follower with provisional six-frame species follower graphics.
-- [Stage 8I build](https://github.com/Lamictal/Eevee/actions/runs/42921554174) and [sprite bug issue #2](https://github.com/Lamictal/Eevee/issues/2).
-- Next: [Stage 8J save-aware Pokédex registration plan](STAGE8J_POKEDEX_PLAN.md) for issue #1.
+- [Stage 8I successful build](https://github.com/Lamictal/Eevee/actions/runs/42922943309) and [sprite bug issue #2](https://github.com/Lamictal/Eevee/issues/2).
+- Engineering notes: [Stage 8J Pokédex registration design](STAGE8J_POKEDEX_PLAN.md) for issue #1.
 
 ## Stage 8H test additions
 - Following lead party Pokémon, with a substitute overworld sprite where custom walking graphics are missing.
