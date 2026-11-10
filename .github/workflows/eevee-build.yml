@@ -1,4 +1,4 @@
-name: Build Eevee expansion Stage 8G test
+name: Build Eevee expansion Stage 8H followers and IV-EV
 
 on:
   push:
@@ -11,6 +11,8 @@ on:
       - stage8f_patch_builder.py
       - stage8g_encounters_quickrun.py
       - stage8g_patch_builder.py
+      - stage8h_followers_ivev.py
+      - stage8h_patch_builder.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -48,6 +50,9 @@ jobs:
       - name: Enable Stage 8G increased test encounters and double-B escape
         run: python3 stage8g_patch_builder.py
 
+      - name: Enable Stage 8H follower Pokemon and IV-EV summary
+        run: python3 stage8h_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -60,7 +65,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8G-Easy-Encounters-QuickRun-UNTESTED-GBA
+          name: Eevee-Stage8H-Followers-IV-EV-UNTESTED-GBA
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
           retention-days: 14
