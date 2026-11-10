@@ -2,7 +2,7 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8H**, cloud build running; last confirmed successful compile: Stage 8G. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8I**, cloud build running; last confirmed successful compile: Stage 8H. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
@@ -11,6 +11,12 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Stage 8F compiled ROM download](https://github.com/Lamictal/Eevee/actions/runs/42887055365): earlier effectiveness-indicator build.
 - [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
+
+## Stage 8I sprite corrections
+- Replaces Eevee party-menu placeholder icons for both custom species with sprites derived from their battle artwork.
+- Replaces green Substitute follower with provisional six-frame species follower graphics.
+- [Stage 8I build](https://github.com/Lamictal/Eevee/actions/runs/42921554174) and [sprite bug issue #2](https://github.com/Lamictal/Eevee/issues/2).
+- Next: [Stage 8J save-aware Pokédex registration plan](STAGE8J_POKEDEX_PLAN.md) for issue #1.
 
 ## Stage 8H test additions
 - Following lead party Pokémon, with a substitute overworld sprite where custom walking graphics are missing.
