@@ -8,6 +8,19 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8J: Aerieon/Aerartheon Pokédex registration
+**Status:** [GitHub build](https://github.com/Lamictal/Eevee/actions/runs/42923026893) launched; compile and emulator checks pending.
+**Bug:** [Issue #1](https://github.com/Lamictal/Eevee/issues/1)
+
+- Adds Aerieon as National Dex **#1026** and Aerartheon as **#1027**, after all official Gen IX species. Existing official National numbers stay unchanged.
+- Replaces `NATIONAL_DEX_NONE` species entries with proper national numbers, plus short custom Pokédex descriptions.
+- Uses their existing provisional category / sizes: Aerieon, Sky, 0.9 m / 25 kg; Aerartheon, Sky Bug, 1.0 m / 29 kg.
+- Corrects the registration display so custom species show a **four-digit National number** even before the National Pokédex is formally unlocked. The Hoenn regional list is unchanged for now.
+- **Save layout detail:** `NUM_DEX_FLAG_BYTES = ceil((NATIONAL_DEX_COUNT+1)/8)`, and the two added species leave this at **129 bytes**, so the existing seen/caught bitset byte lengths are unchanged for this specific 2-species patch. This is not proof of complete cross-build save compatibility; back up all saves.
+- The eventual **171-form Dex expansion** will need deliberate save migration since it exceeds the currently allocated bitfield capacity.
+- Inherits Stage 8I custom icon and follower graphics. No original Evergreen source or saves modified.
+- **Test:** capture, Dex registration, category, height, weight, descriptions, number display, saved species, existing save, and national list after unlocking.
+
 ## Stage 8I: Species-specific party icons and followers
 **Status:** [Cloud compile](https://github.com/Lamictal/Eevee/actions/runs/42921554174) started; mGBA validation outstanding.
 **Bug:** [Issue #2](https://github.com/Lamictal/Eevee/issues/2)
