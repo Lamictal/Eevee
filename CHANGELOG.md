@@ -8,6 +8,20 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8H: Following Pokémon and IV/EV summary
+**Status:** GitHub build launched; gameplay and save compatibility unverified.
+**Build:** https://github.com/Lamictal/Eevee/actions/runs/42902820539
+
+**Custom configuration**
+- Enabled `OW_FOLLOWERS_ENABLED=TRUE` while retaining `OW_POKEMON_OBJECT_EVENTS=TRUE` and `OW_SUBSTITUTE_PLACEHOLDER=TRUE`. The first healthy Pokémon in your party can follow in the overworld (subject to map restrictions). Custom Aerieon and Aerartheon may display placeholder overworld sprites pending dedicated walking graphics.
+- Enabled `P_SUMMARY_SCREEN_IV_EV_INFO=TRUE`, `P_SUMMARY_SCREEN_IV_EV_VALUES=TRUE`, and `P_SUMMARY_SCREEN_IV_EV_TILESET=TRUE`. Intended to add Stats/IV/EV views and numeric IV values.
+- Kept ordinary Emerald **PokéNav** and its original story unlock intact. Did **not** turn on **DexNav**, the unrelated wild-Pokémon search UI; it requires nonzero reserved flags/variables and a separate save audit.
+- Inherits Stage 8G's elevated **testing** encounters of 25% Aerieon and 11% Aerartheon. Final balance adjustment remains pending.
+
+**Code:** `stage8h_followers_ivev.py`, `stage8h_patch_builder.py`, cloud workflow.
+
+**Save warning:** The intent is configuration-only changes, but follower systems and IV/EV alternate tileset can affect runtime, graphics, and old saves. Back up the entire .sav and do not overwrite Evergreen saves. Successful compilation is not sufficient to establish compatibility.
+
 ## Stage 8G: Easier test encounters and double-B wild escape
 **Status:** Compiled; emulator behavior unverified.
 **Build:** https://github.com/Lamictal/Eevee/actions/runs/42892764393 (success)
