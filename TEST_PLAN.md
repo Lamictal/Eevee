@@ -21,3 +21,18 @@
 - Not yet 171 implemented species. The manifest covers 171 planned forms; only two proof-of-concept species are installed.
 - This prototype does not preserve Evergreen features or save compatibility.
 - A successful build by itself does not establish emulator correctness.
+
+## Stage 8I and Stage 8J regression checklist (new)
+
+**Builds:** [8I graphics fix](https://github.com/Lamictal/Eevee/actions/runs/42922943309) and [8J Dex fix](https://github.com/Lamictal/Eevee/actions/runs/42923311309). Compilation and gameplay are separate gates.
+
+1. In party screen, verify Aerieon and Aerartheon display their custom 32×32 icons, not Eevee.
+2. Put each custom species first in party and walk outside; follower must display species-specific art rather than Substitute. Check facing down/up/side, running, doorway transitions and swapping party leads.
+3. Visit summary screen and battle; both custom species must retain their correct established battle art.
+4. Catch both on Route 102; Stage 8J must register them with `No. 1026 / 1027`, show correct category, height, weight, and description, not `No. 000`.
+5. Save in-game, close mGBA, relaunch, load .sav, and confirm the party, follower, Pokédex caught status, moves, and trainer progression.
+6. Repeat from a COPY of the prior 8G/8H save; never overwrite the only working backup. Verify no corruption and existing Pokémon remain intact.
+7. Remember the model uses *temporary 25%/11% test rates* and temporary level-6 evolution. This is not final balance.
+8. If the ROM fails to boot, freezes, or shows malformed art, retain the prior ROM and save, take a screenshot and note exact steps.
+
+**Known limitations:** Stage 8I follower sprite art is derived from the species front graphic, so some directional frames are not final hand-drawn art. Custom species are not inserted into the Hoenn **regional** Pokédex list yet; Stage 8J gives National numbers in registration. Official Evergreen content and saves are separate.
