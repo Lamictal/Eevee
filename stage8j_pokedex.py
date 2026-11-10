@@ -84,7 +84,16 @@ def install(checkout: Path):
         x=swap_exact(x,old,new,f)
         old='    if (value == 0)\n        value = NationalToRegionalOrder(num);\n    else\n        value = num;'
         new='    if (value == 0 && num < NATIONAL_DEX_AERIEON)\n        value = NationalToRegionalOrder(num);\n    else\n        value = num;'
-        x=swap_exact(x,old,new,f)
+        # The same regional number selection can occur elsewhere in HGSS code.
+        # Patch ONLY the PrintMonInfo function instead of applying a global edit.
+        method="static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)\n{"
+        start=x.find(method)
+        if start<0 or x.find(method,start+1)>=0:
+            raise ValueError(f"Expected exactly one PrintMonInfo implementation in {f}")
+        at=x.find(old,start)
+        if at<0 or at>start+1100:
+            raise ValueError(f"Regional dex display branch not found inside PrintMonInfo in {f}")
+        x=x[:at]+new+x[at+len(old):]
         files[f]=x
 
     for path,contents in files.items():
