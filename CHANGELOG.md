@@ -8,6 +8,17 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8I: Species-specific party icons and followers
+**Status:** [Cloud compile](https://github.com/Lamictal/Eevee/actions/runs/42921554174) started; mGBA validation outstanding.
+**Bug:** [Issue #2](https://github.com/Lamictal/Eevee/issues/2)
+
+- Replaces temporary Eevee party icons for Aerieon/Aerartheon with original-art-derived 32×64 species icons.
+- Replaces Substitute follower placeholder with six-frame 32×32 overworld sheets and matching species palettes.
+- Generated walking frames are **provisional front-derived motion/angle approximations**, not polished hand-drawn overworld views.
+- Does not change native species IDs, existing battle/summary sprites, Pokédex numbering, or saved-game layout.
+- Uses Pillow during automated GitHub build for deterministic generated assets.
+- **Test:** check party menu icon, follower on multiple maps and after party reorder, and save/reload. Compilation alone is not gameplay verification.
+
 ## Stage 8H: Following Pokémon and IV/EV summary
 **Status:** GitHub build launched; gameplay and save compatibility unverified.
 **Build:** https://github.com/Lamictal/Eevee/actions/runs/42902820539
