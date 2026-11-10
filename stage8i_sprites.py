@@ -181,7 +181,15 @@ def install(root):
         new_region=new_region.replace(block,edited,1)
         print(f"{name}: dedicated 32x64 party icon (palette {best}), six 32x32 follower frames")
     replace_one(public_header,"extern const u16 gMonIconPalettes[][16];",
-        "// STAGE8I_GRAPHICS: custom icons\nextern const u8 gMonIcon_Aerieon[];\nextern const u8 gMonIcon_Aerartheon[];\n")
+        "// STAGE8I_GRAPHICS: custom species icon and overworld declarations\n"
+        "extern const u8 gMonIcon_Aerieon[];\n"
+        "extern const u8 gMonIcon_Aerartheon[];\n"
+        "extern const u32 gObjectEventPic_Aerieon[];\n"
+        "extern const u32 gObjectEventPic_Aerartheon[];\n"
+        "extern const u16 gOverworldPalette_Aerieon[];\n"
+        "extern const u16 gShinyOverworldPalette_Aerieon[];\n"
+        "extern const u16 gOverworldPalette_Aerartheon[];\n"
+        "extern const u16 gShinyOverworldPalette_Aerartheon[];\n")
     replace_one(gfx,"const u32 gMonFrontPic_Egg[]",defs)
     replace_one(owgfx,"const u32 gObjectEventPic_RubySapphireBrendanNormal[]",owdefs)
     replace_one(tablefile,"static const struct SpriteFrameImage sPicTable_Substitute[]",tables)
