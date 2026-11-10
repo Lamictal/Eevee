@@ -1,4 +1,4 @@
-name: Build Eevee expansion Stage 8H followers and IV-EV
+name: Build Eevee expansion Stage 8I species sprite fix
 
 on:
   push:
@@ -13,6 +13,8 @@ on:
       - stage8g_patch_builder.py
       - stage8h_followers_ivev.py
       - stage8h_patch_builder.py
+      - stage8i_sprites.py
+      - stage8i_patch_builder.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -31,7 +33,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             build-essential binutils-arm-none-eabi gcc-arm-none-eabi \
-            libnewlib-arm-none-eabi git libpng-dev python3 unzip xz-utils
+            libnewlib-arm-none-eabi git libpng-dev python3 python3-pil unzip xz-utils
           arm-none-eabi-gcc --version
 
       - name: Unpack and validate prototype
@@ -53,6 +55,9 @@ jobs:
       - name: Enable Stage 8H follower Pokemon and IV-EV summary
         run: python3 stage8h_patch_builder.py
 
+      - name: Enable Stage 8I species icons and followers
+        run: python3 stage8i_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -65,7 +70,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8H-Followers-IV-EV-UNTESTED-GBA
+          name: Eevee-Stage8I-Icons-Followers-UNTESTED-GBA
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
           retention-days: 14
