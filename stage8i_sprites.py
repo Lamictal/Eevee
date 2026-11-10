@@ -132,12 +132,15 @@ def install(root):
     for name in CUSTOM:
         tables += f"static const struct SpriteFrameImage sPicTable_{name}[] = {{\n    overworld_ascending_frames(gObjectEventPic_{name}, 4, 4),\n}};\n"
     gfx = root/"src/data/graphics/pokemon.h"
+    public_header = root/"include/graphics.h"
     owgfx = root/"src/data/object_events/object_event_graphics.h"
     tablefile=root/"src/data/object_events/object_event_pic_tables_followers.h"
     owdefs = "\n// STAGE8I_GRAPHICS: bespoke follower overworld sprites\n"
     for name in CUSTOM:
         key=name.lower()
         owdefs += f'const u32 gObjectEventPic_{name}[] = INCGFX_U32("graphics/pokemon/{key}/overworld.png", ".4bpp.smol", "-mwidth 4 -mheight 4");\n'
+    if public_header.read_text(encoding="utf-8").count("extern const u16 gMonIconPalettes[][16];") != 1:
+        raise ValueError("Missing icon graphics declarations anchor")
     if gfx.read_text(encoding="utf-8").count("const u32 gMonFrontPic_Egg[]") != 1:
         raise ValueError("Missing graphics insertion anchor")
     if owgfx.read_text(encoding="utf-8").count("const u32 gObjectEventPic_RubySapphireBrendanNormal[]") != 1:
@@ -151,10 +154,7 @@ def install(root):
     # Construct the modified species region before writing.
     new_region=region.replace("    // STAGE8C_CUSTOM_EEVEE_PROTO",
                               "    // STAGE8C_CUSTOM_EEVEE_PROTO\n    // STAGE8I_GRAPHICS: custom party icons and overworld followers",1)
-    new_region = ("    // STAGE8I_GRAPHICS: custom icon symbol declarations\n" +
-                  "    extern const u8 gMonIcon_Aerieon[];\n" +
-                  "    extern const u8 gMonIcon_Aerartheon[];\n" +
-                  new_region)
+
     for name in CUSTOM:
         pattern = re.compile(r"(\[SPECIES_"+name.upper()+r"\] = \{)(.*?)(?=\n    \},)",re.S)
         hits=list(pattern.finditer(new_region))
@@ -180,6 +180,8 @@ def install(root):
         edited=edited.replace(learn,ov+learn,1)
         new_region=new_region.replace(block,edited,1)
         print(f"{name}: dedicated 32x64 party icon (palette {best}), six 32x32 follower frames")
+    replace_one(public_header,"extern const u16 gMonIconPalettes[][16];",
+        "// STAGE8I_GRAPHICS: custom icons\nextern const u8 gMonIcon_Aerieon[];\nextern const u8 gMonIcon_Aerartheon[];\n")
     replace_one(gfx,"const u32 gMonFrontPic_Egg[]",defs)
     replace_one(owgfx,"const u32 gObjectEventPic_RubySapphireBrendanNormal[]",owdefs)
     replace_one(tablefile,"static const struct SpriteFrameImage sPicTable_Substitute[]",tables)
