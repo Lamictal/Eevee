@@ -6,6 +6,7 @@ on:
       - stage8e-cloud-prototype
     paths:
       - stage8d-kit.tar.xz.b64
+      - stage8e_hotfix.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -33,6 +34,9 @@ jobs:
           mkdir -p kit
           base64 -d stage8d-kit.tar.xz.b64 | tar -xJ -C kit
           python3 kit/check_kit.py
+
+      - name: Apply verified static-sprite animation hotfix
+        run: python3 stage8e_hotfix.py
 
       - name: Attempt compile (NOT Evergreen)
         shell: bash
