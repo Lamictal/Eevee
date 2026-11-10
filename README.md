@@ -2,7 +2,7 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current stage: 8G**, compiled successfully, not yet fully emulator-tested. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8H**, cloud build running; last confirmed successful compile: Stage 8G. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
@@ -11,6 +11,12 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Stage 8F compiled ROM download](https://github.com/Lamictal/Eevee/actions/runs/42887055365): earlier effectiveness-indicator build.
 - [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
+
+## Stage 8H test additions
+- Following lead party Pokémon, with a substitute overworld sprite where custom walking graphics are missing.
+- Optional IV/EV pages in summary screen, displaying numeric IVs.
+- Standard Emerald PokéNav unchanged. DexNav (wild hunt tool) is not enabled yet.
+- [Stage 8H cloud build](https://github.com/Lamictal/Eevee/actions/runs/42902820539) (check status, no gameplay verification yet).
 
 ## Stage 8G highlights
 - Route 102 canary encounters: **Aerieon 25%** and **Aerartheon 11%** of wild encounters. **Temporary elevated testing rates**, not intended final balance. Proposed final ~10% / 1%, pending a later build and playtesting.
