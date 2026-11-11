@@ -80,7 +80,8 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8K-EeveeStarter-Balanced-UNTESTED-GBA
+          name: Eevee-Stage8K-FreshUpload-GBA
+          compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
           retention-days: 14
