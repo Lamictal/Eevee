@@ -8,6 +8,17 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8K: Eevee starter and encounter balance
+**Status:** [GitHub cloud compilation](https://github.com/Lamictal/Eevee/actions/runs/43092752535) launched; gameplay verification pending.
+**User request:** after Stage 8J successful gameplay tests, add Eevee as a starter and rebalance overly frequent new Eeveelutions.
+
+- **Eevee can be chosen** from Birch's starter bag on Route 101. Since upstream chooser has three slots, Eevee temporarily **replaces Treecko** in the first (grass-position) Poké Ball; it remains a Normal-type Eevee. Torchic and Mudkip remain available. A future four-option starter UI could restore all three original starters.
+- **Route 102 encounters:** Aerieon **10%**, Aerartheon **1%**, normal wild Pokémon **89%**. Keeps other wild locations and all species IDs unchanged. Stage 8G originally set experimental 25% and 11%.
+- Stage 8J graphics fixes, actual custom National Dex entries, followers, numeric IV/EV summary, native effectiveness symbols, and double-B wild escape remain.
+- **Colored and accessible move effectiveness indicators** logged separately as [issue #3](https://github.com/Lamictal/Eevee/issues/3); this is a *wishlist item*, not included.
+- **Save behavior:** Your previously chosen starter will not change when loading an older save. To choose Eevee in Birch's bag, start a new game. Back up the existing `.sav` before opening any new build.
+- **QA:** Fresh new game starter bag and Birch rescue; verify Eevee sprite/name and party, Torchic and Mudkip options, old save remains unaltered, Route 102 approximate wild frequency in manual testing, and other Stage 8J features.
+
 ## Stage 8J: Aerieon/Aerartheon Pokédex registration
 **Status:** [Corrected Stage 8J build](https://github.com/Lamictal/Eevee/actions/runs/42923311309) **compiled successfully**; emulator validation pending. The original build [failed on a duplicate source anchor](https://github.com/Lamictal/Eevee/actions/runs/42923026893), corrected in commit `cbf5e3c`.
 **Bug:** [Issue #1](https://github.com/Lamictal/Eevee/issues/1)
