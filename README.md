@@ -2,7 +2,7 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8J**, compiled successfully. Emulator validation is pending; Stage 8I also compiled successfully. Emulator validation remains incomplete. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8K**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
@@ -11,6 +11,13 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Stage 8F compiled ROM download](https://github.com/Lamictal/Eevee/actions/runs/42887055365): earlier effectiveness-indicator build.
 - [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
+
+## Stage 8K Eevee starter and balanced encounters
+- Eevee temporarily replaces Treecko as the first of Birch's three starter options; Torchic and Mudkip remain available.
+- Route 102 encounters: **10% Aerieon, 1% Aerartheon, 89% regular Pokémon**.
+- A new game is required to choose Eevee at the starter bag; old saves won't retroactively receive Eevee.
+- [Stage 8K build](https://github.com/Lamictal/Eevee/actions/runs/43092752535); compilation and mGBA validation are separate checks.
+- [Future colored effectiveness UI issue](https://github.com/Lamictal/Eevee/issues/3); *not yet included*.
 
 ## Stage 8J Pokédex registration
 - **Aerieon #1026** and **Aerartheon #1027** are now registered as separate National Pokédex species, with descriptions and existing height/weight fields.
