@@ -36,3 +36,12 @@
 8. If the ROM fails to boot, freezes, or shows malformed art, retain the prior ROM and save, take a screenshot and note exact steps.
 
 **Known limitations:** Stage 8I follower sprite art is derived from the species front graphic, so some directional frames are not final hand-drawn art. Custom species are not inserted into the Hoenn **regional** Pokédex list yet; Stage 8J gives National numbers in registration. Official Evergreen content and saves are separate.
+
+## Stage 8K starter and encounter-balance tests
+
+- [ ] On a **new game**, reach Professor Birch's bag and inspect all three balls. First (former Treecko) should say **Eevee**, use its real sprite and show Normal typing when acquired; Torchic/Mudkip should remain selectable.
+- [ ] Take Eevee through Birch's rescue, first rival battle, lab conversations, Pokédex unlock, save and reload. Check that story scripts don't assume the removed Treecko in a way that causes an error.
+- [ ] Use a separate copy of an existing Stage 8J `.sav`: party, lead Pokémon/follower, dex entries, moves and IV/EV view must remain unchanged. Existing saves do **not** gain Eevee automatically.
+- [ ] On Route 102, Aerieon appears in the 10% grass slot and Aerartheon in the 1% slot. Probabilities are theoretical, so a few encounters do not establish actual exact rate.
+- [ ] Check other original wild Pokémon still appear, and that effectiveness symbols remain monochrome until future optional color-label UX work.
+- [ ] Keep an untouched copy of the working Stage 8J ROM and save; don't overwrite with temporary new-game tests.
