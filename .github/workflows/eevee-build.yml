@@ -1,4 +1,4 @@
-name: Build Eevee expansion Stage 8K Eevee starter and balanced encounters
+name: Build Eevee expansion Stage 8L custom Eevee evolution test
 
 on:
   push:
@@ -19,6 +19,8 @@ on:
       - stage8j_patch_builder.py
       - stage8k_starter_balance.py
       - stage8k_patch_builder.py
+      - stage8l_eevee_evolution.py
+      - stage8l_patch_builder.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -68,6 +70,9 @@ jobs:
       - name: Enable Stage 8K Eevee starter and balanced Route 102 encounters
         run: python3 stage8k_patch_builder.py
 
+      - name: Enable Stage 8L Eevee to Aerieon Route 102 test evolution
+        run: python3 stage8l_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -80,7 +85,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8K-FreshUpload-GBA
+          name: Eevee-Stage8L-RouteEvolution-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
