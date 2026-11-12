@@ -12,15 +12,13 @@ Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evoluti
 
 ## Download and play
 
-### [⬇️ DOWNLOAD THE LATEST ALPHA ZIP](https://github.com/Lamictal/Eevee/actions/runs/43279472956/artifacts/13972053637)
+### [Development alpha build (GitHub Actions, temporary)](https://github.com/Lamictal/Eevee/actions/runs/43279472956)
 
 **[New to GitHub? Read the easy download and setup guide.](DOWNLOAD.md)**
 
-The ZIP is named **Eevee-All171-ItemEvolutions-Alpha-GBA**. Extract it, then open the included **.gba** file in a compatible Game Boy Advance emulator. **Start a new game** and keep your old saves backed up.
+The Stage 12 build is for development verification only. **There is not yet a public, permission-cleared patch release.** When one is available, this page will link to its stable release and installation guide.
 
-> **Alpha access warning:** This is a **temporary GitHub Actions download**, retained for 14 days, not a public one-click release. The repository is **currently private**: people without access cannot download it, even with this link. Once distribution permissions and release testing are resolved, the long-term plan is an easier-to-share **ROM patch release**, rather than public distribution of the complete commercial game ROM.
->
-> If that specific build expires, use the **[latest successful 171-form workflow run](https://github.com/Lamictal/Eevee/actions/workflows/eevee-full171-build.yml?query=branch%3Astage8e-cloud-prototype)** and select the alpha ZIP under **Artifacts**.
+ > **Release status:** This repository is public, but GitHub Actions artifacts are temporary and may require GitHub sign-in. A successful build is not a verified, redistributable release. The eventual public download will be a patch, not a complete commercial ROM. Third-party artwork permissions must be resolved first.
 
 ## What's in the game?
 
@@ -83,6 +81,8 @@ We're working toward a **friend-playable Beta 1**, followed by polish and a stab
 - **[Contributing and access](CONTRIBUTING.md)**: how to send suggestions without getting edit rights
 
 ## Credits and legal notes
+
+**Artwork attribution:** Eeveelution designs and provisional sprites are sourced from *Oops! All Eevees!*; creator names, source links and redistribution permissions are still being verified. These assets are not claimed as original artwork. Gameplay mechanics, evolution systems, balancing and stability are the current priorities; customized art is planned for later, subject to permission and contributor availability.
 
 This is an **unofficial, noncommercial Pokémon fan project**, built using the open-source [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) engine and art sourced from *Oops! All Eevees!* for development. Pokémon and associated trademarks and characters belong to their respective owners. This project is not affiliated with or endorsed by Nintendo, Game Freak or The Pokémon Company.
 
