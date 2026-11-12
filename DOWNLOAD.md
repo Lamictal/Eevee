@@ -3,10 +3,12 @@
 **Current development version:** See the latest successful build linked below. The 171-form game remains experimental.
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43279472956 -->
-**No public patch release is available yet.** [View the temporary Stage 12 development build](https://github.com/Lamictal/Eevee/actions/runs/43279472956).
+<!-- data-build-run=43305777808 -->
+**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43305777808)**
 
-**Stage 12 item evolution alpha** · GitHub Actions, for testing only.
+**Stage 13 - Eevee Custom Menu Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43305777808)
+
+On the build page open **Artifacts** for the ZIP if GitHub permits access. Artifacts expire after 14 days; this is not a permanent public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
 
 The linked GitHub Actions run contains the latest experimental build ZIP under **Artifacts**. The name may change between builds; download the item whose name starts with **Eevee-All171-**.
