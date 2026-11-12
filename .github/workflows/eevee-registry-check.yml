@@ -1,0 +1,24 @@
+name: Stage 8N Eeveelution registry and save-layout checks
+
+on:
+  push:
+    branches:
+      - stage8e-cloud-prototype
+    paths:
+      - data/eevee_form_registry.json
+      - tools/validate_eevee_registry.py
+      - .github/workflows/eevee-registry-check.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-registry:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Python validator syntax
+        run: python3 -m py_compile tools/validate_eevee_registry.py
+      - name: Validate 171 types, reserved IDs, and projected save growth
+        run: python3 tools/validate_eevee_registry.py
