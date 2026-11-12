@@ -1,5 +1,9 @@
 # Eevee expansion project
 
+> **Looking for the game instead of build scripts?** Start at the **[player-friendly homepage](https://github.com/Lamictal/Eevee)**, **[download instructions](https://github.com/Lamictal/Eevee/blob/main/DOWNLOAD.md)**, or **[known limitations](https://github.com/Lamictal/Eevee/blob/main/KNOWN_ISSUES.md)**.
+>
+> **Current alpha ZIP (Stage 12):** [Open the verified successful build artifact](https://github.com/Lamictal/Eevee/actions/runs/43279472956/artifacts/13972053637). The repository remains private and GitHub's artifact expires; gameplay testing and public release clearance are still pending.
+
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
 **Current milestone: Stage 12 compiled successfully**, including the [full 171-form dual-evolution and habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956). Its automated 306-route checks passed, but **full-roster gameplay has not yet been validated in mGBA**. See the [Beta 1 release roadmap](BETA1_RELEASE_PLAN.md) for a short smoke-test gate, future polish and a public-distribution checklist. The 171-form ROM changes the saved Pokédex layout: **start a fresh save**, and do not mix with Evergreen saves.
