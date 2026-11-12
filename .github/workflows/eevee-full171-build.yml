@@ -1,4 +1,4 @@
-name: Build Eevee 171-form Hoenn habitat balance alpha
+name: Build Eevee 171-form habitats and verified dual items alpha
 
 on:
   push:
@@ -29,6 +29,8 @@ on:
       - stage10_patch_builder.py
       - stage11_full_ecology.py
       - stage11_patch_builder.py
+      - stage12_verify_dual_items.py
+      - stage12_patch_builder.py
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
@@ -109,6 +111,9 @@ jobs:
       - name: Apply Stage 11 wild habitats after full roster import
         run: python3 stage11_patch_builder.py
 
+      - name: Repair 18 dual-item effects and check all 306 evolution routes
+        run: python3 stage12_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -121,7 +126,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-All171-Habitats-Alpha-GBA
+          name: Eevee-All171-ItemEvolutions-Alpha-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
