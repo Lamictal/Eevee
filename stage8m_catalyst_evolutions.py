@@ -37,6 +37,7 @@ def patch(checkout: Path):
         "eevee": root / "src/data/pokemon/species_info/gen_1_families.h",
         "custom": root / "src/data/pokemon/species_info.h",
         "shop": root / "data/maps/OldaleTown_Mart/scripts.inc",
+        "pokedex": root / "src/pokedex_plus_hgss.c",
     }
     old = {key: path.read_text(encoding="utf-8") for key, path in files.items()}
     if any(STAGE in content for content in old.values()):
@@ -173,6 +174,33 @@ def patch(checkout: Path):
         shop_anchor + "\t.2byte ITEM_SKY_CATALYST @ STAGE8M: expanded shop only\n",
         "Oldale Mart expanded inventory",
     )
+
+    # The HGSS Pokédex has an exhaustive switch describing evolution
+    # requirements. Render both new predicates instead of breaking -Wswitch.
+    pokedex_anchor = """                case CONDITIONS_END:
+                    break;
+                }
+
+                if (evolutions[i].params[j+1].condition != CONDITIONS_END)"""
+    pokedex_custom = """                case IF_MIN_LEVEL:
+                    StringAppend(gStringVar4, COMPOUND_STRING("at level "));
+                    ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 3);
+                    StringAppend(gStringVar4, gStringVar2);
+                    StringAppend(gStringVar4, COMPOUND_STRING(" or higher"));
+                    break;
+                case IF_MIN_BADGES:
+                    StringAppend(gStringVar4, COMPOUND_STRING("after earning "));
+                    ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 2);
+                    StringAppend(gStringVar4, gStringVar2);
+                    StringAppend(gStringVar4, COMPOUND_STRING(" badges"));
+                    break;
+                case CONDITIONS_END:
+                    break;
+                }
+
+                if (evolutions[i].params[j+1].condition != CONDITIONS_END)"""
+    new["pokedex"] = replace_exact(old["pokedex"], pokedex_anchor, pokedex_custom,
+                                    "HGSS evolution requirement descriptions")
 
     # Validate all in-memory changes before touching any checkout file.
     if not all(new[key] != old[key] for key in files):
