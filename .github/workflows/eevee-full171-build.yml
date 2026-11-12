@@ -1,4 +1,4 @@
-name: Build Eevee 171-form habitats and verified dual items alpha
+name: Build Eevee 171 forms with custom Eevee menu alpha
 
 on:
   push:
@@ -31,11 +31,14 @@ on:
       - stage11_patch_builder.py
       - stage12_verify_dual_items.py
       - stage12_patch_builder.py
+      - stage13_custom_menu.py
+      - stage13_patch_builder.py
+      - tools/sync_latest_build.py
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   compile:
@@ -114,6 +117,9 @@ jobs:
       - name: Repair 18 dual-item effects and check all 306 evolution routes
         run: python3 stage12_patch_builder.py
 
+      - name: Install custom Eevee menu graphics and labels
+        run: python3 stage13_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -126,11 +132,18 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-All171-ItemEvolutions-Alpha-GBA
+          name: Eevee-All171-EeveeMenu-Alpha-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
           retention-days: 14
+
+      - name: Refresh latest build links on homepage and download guide
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EEVEE_BUILD_LABEL: Stage 13 - Eevee Custom Menu Alpha
+        run: python3 tools/sync_latest_build.py
 
       - name: Upload diagnostic logs
         if: always()
