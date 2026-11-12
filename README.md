@@ -2,7 +2,11 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 12**, [full-roster dual-item repair build](https://github.com/Lamictal/Eevee/actions/runs/43279472956) in progress. [Stage 11 habitat ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43276563803), but it lacks the necessary effect flags on the type-boosting items for dual evolution. **Use Stage 12 when its build is successful.** Full-roster gameplay in mGBA still requires verification. The 171-form ROM has an expanded save layout; **start a fresh save**, and do not mix with Evergreen saves.
+**Current milestone: Stage 12 compiled successfully**, including the [full 171-form dual-evolution and habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956). Its automated 306-route checks passed, but **full-roster gameplay has not yet been validated in mGBA**. See the [Beta 1 release roadmap](BETA1_RELEASE_PLAN.md) for a short smoke-test gate, future polish and a public-distribution checklist. The 171-form ROM changes the saved Pokédex layout: **start a fresh save**, and do not mix with Evergreen saves.
+
+## Beta 1 readiness and release notes
+- [Beta 1 release plan](BETA1_RELEASE_PLAN.md): short first-playthrough checks, graphics and balancing roadmap, and read-only public sharing notes.
+- [Successful Stage 12 all-171 build](https://github.com/Lamictal/Eevee/actions/runs/43279472956): use this newer experimental alpha, not Stage 11, for deliberate dual evolution.
 
 ## Player guide: where to find Eevee, all 18 types, items and dual evolutions
 
