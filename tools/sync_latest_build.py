@@ -104,26 +104,26 @@ def main():
     foot=f"\n{END}"
     main_block=(
       base+
-      f"### [⬇️ DOWNLOAD THE LATEST ALPHA ZIP]({link})\n\n"
+      f"### [VIEW THE LATEST DEVELOPMENT BUILD]({run})\n\n"
       f"**{safe_label}** · [Build details]({run})\n\n"
-      "**Temporary GitHub artifact:** sign-in and repository access may be "
-      "required; this is not a permanent public download. "
+      "**Not a public patch release:** the build page contains a temporary GitHub "
+      "Actions artifact for testing. Sign-in may be required. "
       "See [the download guide](DOWNLOAD.md)."
       +foot
     )
     download_block=(
       base+
-      f"**[⬇️ DOWNLOAD THE CURRENT ALPHA ZIP]({link})**\n\n"
+      f"**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD]({run})**\n\n"
       f"**{safe_label}** · [Successful build details]({run})\n\n"
-      "This is a temporary 14-day GitHub Actions artifact. "
-      "The repository must be publicly accessible or the visitor must have access."
+      "On the build page open **Artifacts** for the ZIP if GitHub permits access. "
+      "Artifacts expire after 14 days; this is not a permanent public patch release."
       +foot
     )
     dev_block=(
       base+
-      f"> **Latest alpha:** [{safe_label} download]({link}) · "
-      f"[GitHub build]({run}). "
-      "Temporary artifact, not a cleared public distribution package."
+      f"> **Latest development build:** [{safe_label}]({run}). "
+      "Find its alpha ZIP under **Artifacts**; temporary artifact, "
+      "not a cleared public patch release."
       +foot
     )
     for branch,path,block in [
