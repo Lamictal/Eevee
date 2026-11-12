@@ -1,49 +1,92 @@
-# Eevee: 171-form Emerald Expansion
+# Eevee: 171 Forms
 
-A Pokémon Emerald Expansion project adding **18 single-type + 153 unique dual-type Eeveelutions** while keeping ordinary Hoenn Pokémon and the regular story.
+### A bigger Eevee adventure in Pokémon Emerald
 
-### Player guide
+**171 Eeveelution forms. All 18 Pokémon types. The original Hoenn adventure.**
 
-**[Wild Eevee and Eeveelution locations, all catalysts and item shops, plus dual evolution rules](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**
+Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evolutions**, ranging from single-type favorites to unusual dual-type combinations. Catch them in habitats across the region or choose a second type by using a special item.
 
-**Are all 153 dual forms available in the wild?** No. **Nine distinct dual forms** have rare (mostly 1%) late-game wild encounters. Most are obtained through type-item evolutions.
+**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest successful build:** Stage 12 · **Gameplay QA:** In progress
 
-**Can every single type evolve into any dual type?** The current source defines **17 evolution choices from each of the 18 single-type forms**, making every unordered dual combination available through two possible single-type parents. At **level 38+ and six badges**, use the type-boosting item for the **second type** on your single-type Eeveelution, e.g. **Aerieon + Silver Powder → Aerartheon**.
+---
 
-**Latest build:** [Stage 12 compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43279472956) and source-validated all **306** directed dual evolution paths. Earlier Stage 11 lacked the effect flags needed to use type boosters as evolution items. The current Stage 12 alpha **has not completed emulator gameplay QA**; use a fresh save and preserve existing saves. See the [Beta 1 release plan](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md) for the remaining checks and public-sharing precautions.
+## Download and play
 
-### Eevee sightings
+### [⬇️ DOWNLOAD THE LATEST ALPHA ZIP](https://github.com/Lamictal/Eevee/actions/runs/43279472956/artifacts/13972053637)
 
-| Place | Encounter chance |
-|---|---:|
-| Professor Birch's starter bag | Choose Eevee (replaces Treecko option) |
-| Route 101 | 5% |
-| Route 102 | 10% |
-| Route 104 | 5% |
-| Route 117 | 5% |
+**[New to GitHub? Read the easy download and setup guide.](DOWNLOAD.md)**
 
-The other **18 single-type forms** have their own Hoenn habitats; see the full guide for exact routes and rates.
+The ZIP is named **Eevee-All171-ItemEvolutions-Alpha-GBA**. Extract it, then open the included **.gba** file in a compatible Game Boy Advance emulator. **Start a new game** and keep your old saves backed up.
 
-### Evolution items and towns
+> **Alpha access warning:** This is a **temporary GitHub Actions download**, retained for 14 days, not a public one-click release. The repository is **currently private**: people without access cannot download it, even with this link. Once distribution permissions and release testing are resolved, the long-term plan is an easier-to-share **ROM patch release**, rather than public distribution of the complete commercial game ROM.
+>
+> If that specific build expires, use the **[latest successful 171-form workflow run](https://github.com/Lamictal/Eevee/actions/workflows/eevee-full171-build.yml?query=branch%3Astage8e-cloud-prototype)** and select the alpha ZIP under **Artifacts**.
 
-| Town | Added Eevee-related item access |
+## What's in the game?
+
+- **171 Eeveelution forms:** 18 single-type and 153 unique dual-type combinations, including the eight official Eeveelutions.
+- **Keep the regular Pokémon:** the original Hoenn story and normal Pokémon remain, rather than being replaced by Eevees.
+- **Eevee from the beginning:** pick Eevee from Professor Birch's bag (replacing the Treecko choice in this alpha), or find one on Routes 101, 102, 104 and 117.
+- **Wild single types:** all 18 single-type forms appear in locations suited to their type, including forests, caves, mountains and spooky areas.
+- **Rare wild duals:** nine different dual-type forms have especially rare late-game encounters. The others are designed to be obtained through evolution.
+- **Choose the second type:** use the appropriate type-boosting item to evolve one of 18 single-type forms into a dual type. There are **306 item routes** targeting all 153 unique dual forms.
+- **Helpful features:** move-effectiveness hints, numeric IV/EV information, and provisional following Pokémon and party icons.
+
+### How dual-type evolution works
+
+1. Get any **single-type Eeveelution**.
+2. Level it to **38+** and earn **at least six Hoenn badges**.
+3. In your Bag, **Use** the booster item representing the second type you want to add.
+
+For example, **Aerieon (Flying) + Silver Powder (Bug) → Aerartheon (Flying/Bug)**. The reverse route, **Artheon (Bug) + Sharp Beak (Flying)**, targets the same dual-type Pokémon.
+
+The item effect and all 306 routes were checked automatically in Stage 12, but **not every possible in-game evolution has been emulator-tested yet**.
+
+**[Full evolution item and location guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**
+
+## Where can I find Eevee?
+
+| Location | How to get Eevee |
 |---|---|
-| Oldale | Sky Catalyst |
-| Rustboro | Fire/Water/Thunder Stones; Neutral, Swarm, Stone Catalysts |
-| Slateport | Valor, Venom Catalysts; Silk Scarf, Mystic Water, Miracle Seed |
-| Mauville | Alloy, Earth Catalysts; Leaf/Ice Stones, Magnet, Twisted Spoon |
-| Lavaridge | Charcoal, Hard Stone, Soft Sand |
-| Fortree | Spirit, Dragon Catalysts; Flying/Bug/Ghost/Dark/Fighting/Poison/Steel type boosters |
-| Lilycove Dept. Store 4F | **All 18 second-type boosters**, plus nine first-stage custom Catalysts (Sky is in Oldale) |
+| Professor Birch's starter bag | Choose Eevee instead of Treecko |
+| Route 101 | 5% wild encounter |
+| Route 102 | 10% wild encounter |
+| Route 104 | 5% wild encounter |
+| Route 117 | 5% wild encounter |
 
-### Current development
+For the other Eeveelutions, see the **[full wild encounter guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**. Regular Pokémon remain at least 90% of land encounters in the modified habitat tables.
 
-- [**Active source development branch**](https://github.com/Lamictal/Eevee/tree/stage8e-cloud-prototype)
-- [**Complete player-facing encounter and evolution item guide**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)
-- [**Stage 11 habitat and progression design notes**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE11_HABITATS.md)
-- [**Full-roster Stage 12 build status**](https://github.com/Lamictal/Eevee/actions/runs/43279472956)
-- [**Beta 1 release and sharing checklist**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md)
+## Evolution items and shops
 
-**Save compatibility:** the 171-form alpha expands the Pokédex save structure. Start a **new save** and keep prior saves backed up; older Stage 8/9 and separate Evergreen saves have not been migrated. A green compile is not a claim of full in-game verification.
+| Location | Examples of new items |
+|---|---|
+| **Oldale** | Sky Catalyst |
+| **Rustboro** | Fire, Water and Thunder Stones; Neutral, Swarm and Stone Catalysts |
+| **Slateport** | Valor and Venom Catalysts; Silk Scarf, Mystic Water, Miracle Seed |
+| **Mauville** | Alloy and Earth Catalysts; Leaf and Ice Stones, Magnet, Twisted Spoon |
+| **Lavaridge** | Charcoal, Hard Stone, Soft Sand |
+| **Fortree** | Spirit and Dragon Catalysts; Flying/Bug/Ghost/Dark/Fighting/Poison/Steel boosters |
+| **Lilycove Department Store, 4F** | **All 18 second-type boosters** and nine first-stage custom Catalysts (Sky remains in Oldale) |
 
-This `main` README is a landing page. The actual ROM build scripts, issue tracking, and the detailed guide live on the `stage8e-cloud-prototype` branch.
+See **[the full item-by-type chart](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md#5-single-type-form--any-dual-type-choose-the-second-type)** for the exact item needed to evolve each form.
+
+## Is it finished?
+
+**It's a working build, not a verified complete game.** Stage 12 compiled successfully and passed its automated evolution-route checks. However, starter progression, all evolution-item behavior, save/reload, party icons, follower art and full story progression still need emulator testing.
+
+We're working toward a **friend-playable Beta 1**, followed by polish and a stable v1.0.
+
+- **[Known limitations](KNOWN_ISSUES.md)**: what is and isn't tested
+- **[Beta 1 roadmap](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md)**: what's next
+- **[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**: use the simple bug report template
+- **[Development source](https://github.com/Lamictal/Eevee/tree/stage8e-cloud-prototype)**: build scripts, changes and project history
+- **[Contributing and access](CONTRIBUTING.md)**: how to send suggestions without getting edit rights
+
+## Credits and legal notes
+
+This is an **unofficial, noncommercial Pokémon fan project**, built using the open-source [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) engine and art sourced from *Oops! All Eevees!* for development. Pokémon and associated trademarks and characters belong to their respective owners. This project is not affiliated with or endorsed by Nintendo, Game Freak or The Pokémon Company.
+
+**Rights to publicly redistribute the third-party Eeveelution sprites have not been verified.** Public code access does not grant anyone a license to reuse that artwork, and a public release should use an appropriate patch rather than hosting a full commercial game ROM.
+
+---
+*Built for Eevee fans who thought eight evolutions was a suspiciously low number.*
