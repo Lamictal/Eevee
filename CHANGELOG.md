@@ -8,6 +8,23 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 11: 18 single-type habitats plus rare endgame duals
+**Build:** [171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803), following [successful Stage 10 171-form build](https://github.com/Lamictal/Eevee/actions/runs/43273919245).
+**Status:** Source habitat patch is integrated; compiler / emulator verification are tracked separately.
+
+- Adds wild habitats across 28 specific Hoenn Emerald land maps, including the early/midgame single-type ecosystem and rarer dual-type sightings in advanced areas.
+- Preserves vanilla Pokémon dominance (at least 90%) in every modified map, and keeps previously balanced Eevee sightings and Aerieon/Aerartheon.
+- All 18 single types appear in the wild; eight unique dual forms have occasional 1% sightings across endgame sites. The remaining dual combinations are evolution-first, using the Stage 10 item's progression framework.
+- Adds source assertions for every map count, species symbol, prior encounter, probability cap, and coverage.
+- No species ID or new save-layout changes beyond Stage 10. Use a fresh save when playing the complete 171-form version. Gameplay remains unverified.
+
+## Stage 10: complete 171-form source alpha
+**Status:** [Full 171-form ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43273919245); in-game QA pending.
+- Ported artwork and stats from the original Oops! All Eevees artwork supplied by the user into a separate Emerald Expansion build.
+- Includes original eight and 163 custom Eeveelution forms in source. The user can also encounter native Hoenn Pokémon.
+- Adds item-targeted dual evolutions with six badges and level 38, retains existing canonical Eevee evolution routes.
+- Save structure differs from previous two-species alpha; start a fresh save until migration exists.
+
 ## Stage 8N: reserve entire Eeveelution roster and save-layout plan
 **Status:** [Registry CI passed](https://github.com/Lamictal/Eevee/actions/runs/43267372542). No new species are compiled or save structures changed by this planning stage.
 **Previous build:** [Stage 8M ROM compilation succeeded](https://github.com/Lamictal/Eevee/actions/runs/43265195678). In-game verification deferred to a later milestone.
