@@ -36,4 +36,4 @@ The latest successful GitHub run should automatically update the **main README**
 5. Test B returning to the title screen.
 6. Confirm Mystery Gift and error-menu variants still respond normally.
 
-**Status:** Source builder installed; GitHub compilation and emulator visual verification are separate gates. The original Pokémon Emerald title animation is retained for now; this stage customizes the **selection menu after pressing Start**, not the earlier splash/title animation.
+**Status:** [Stage 13 GBA ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43305777808), and the GitHub download-link sync step passed. The menu is still awaiting actual emulator visual/control verification. The original Pokémon Emerald title animation is retained for now; this stage customizes the **selection menu after pressing Start**, not the earlier splash/title animation.
