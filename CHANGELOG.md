@@ -8,6 +8,16 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 12: dual evolution item effect repair and player guide
+**Build:** [All-171 source with corrected type-boosting item effects](https://github.com/Lamictal/Eevee/actions/runs/43279472956); build and gameplay verification tracked separately.
+
+- Confirmed Stage 10/11 source added 18 × 17 item evolution routes (306 directed paths) targeting all 153 unique unordered dual species, subject to level 38 and six Hoenn badges.
+- Found and fixed an actual engine issue: the 18 ordinary type-boosting held items had party-use callbacks but lacked `.effect = gItemEffect_EvoItem`; the engine's item-effect handler would reject them before checking evolution targets.
+- Added source check to validate all 18 booster effects, all 306 source/target evolutions, exact mapping to 153 unique dual forms, and item availability in Lilycove Department Store 4F.
+- Preserved their traditional held-type power boosts and all existing wild encounters, other items and species IDs; this patch introduces no new save-layout changes beyond the previous full-roster alpha.
+- Published [EEVEE_FIELD_GUIDE.md](EEVEE_FIELD_GUIDE.md) with wild Eevee areas, all 18 singles, nine rare wild duals, first-stage catalyst locations, second-stage boosters and shop locations.
+- Full 171-form ROM is **not yet gameplay verified**; use fresh saves for the full-roster alpha.
+
 ## Stage 11: 18 single-type habitats plus rare endgame duals
 **Build:** [171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803), following [successful Stage 10 171-form build](https://github.com/Lamictal/Eevee/actions/runs/43273919245).
 **Status:** Source habitat patch is integrated; compiler / emulator verification are tracked separately.
