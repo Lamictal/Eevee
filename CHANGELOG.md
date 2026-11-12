@@ -8,6 +8,21 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8M: deliberate Sky Catalyst path
+**Status:** [Stage 8M cloud build](https://github.com/Lamictal/Eevee/actions/runs/43170210160) initiated, awaiting separate emulator verification.
+**Confirmed by user:** Stage 8L Eevee -> Aerieon evolution worked in mGBA. The remaining evolution paths were not tested.
+
+- New ITEM_SKY_CATALYST = 874, appended after the current upstream items to avoid changing prior item IDs, sold in Oldale Mart's expanded inventory.
+- Eevee -> Aerieon through deliberate use of Sky Catalyst at level 15+.
+- Aerieon -> Aerartheon through deliberate use of Sky Catalyst at level 38+ and with six badges.
+- New IF_MIN_LEVEL and IF_MIN_BADGES conditions are appended to the evolution condition enumeration.
+- Both previous level-6 automatic test evolutions removed. Original Eeveelutions remain intact.
+- Stage 8K encounter rates unchanged; Stage 8I/J graphics, Dex, follower, battle hints and IV/EV views retained.
+- Dawn Stone icon is placeholder artwork. This is not yet a dedicated multiple-evolution choice screen.
+- Source modules: stage8m_catalyst_evolutions.py and stage8m_patch_builder.py.
+- Open tests: build compilation, item availability and use, badge gate, item consumption, saves and canonical Eevee paths.
+- Never overwrite the user's original Evergreen save.
+
 ## Stage 8K: Eevee starter and encounter balance
 **Status:** [GitHub cloud compilation](https://github.com/Lamictal/Eevee/actions/runs/43092752535) launched; gameplay verification pending.
 **User request:** after Stage 8J successful gameplay tests, add Eevee as a starter and rebalance overly frequent new Eeveelutions.
