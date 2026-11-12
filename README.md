@@ -2,7 +2,18 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 11**, [wild-habitat alpha build](https://github.com/Lamictal/Eevee/actions/runs/43276563803). The [Stage 10 full 171-form alpha](https://github.com/Lamictal/Eevee/actions/runs/43273919245) compiled successfully; full-roster gameplay has not yet been validated in mGBA. This Emerald Expansion ROM is separate from the user's earlier Evergreen 2.0 Stage 8A.1 ROM/save. The full 171-form alpha changes the saved Pokédex layout: **use a fresh save**.
+**Current development stage: 12**, [full-roster dual-item repair build](https://github.com/Lamictal/Eevee/actions/runs/43279472956) in progress. [Stage 11 habitat ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43276563803), but it lacks the necessary effect flags on the type-boosting items for dual evolution. **Use Stage 12 when its build is successful.** Full-roster gameplay in mGBA still requires verification. The 171-form ROM has an expanded save layout; **start a fresh save**, and do not mix with Evergreen saves.
+
+## Player guide: where to find Eevee, all 18 types, items and dual evolutions
+
+**[Read the complete Eevee Field Guide](EEVEE_FIELD_GUIDE.md)** (wild encounters, evolution items, towns and requirements).
+
+- **Eevee:** starter option and wild on **Routes 101 (5%), 102 (10%), 104 (5%), and 117 (5%)**.
+- **All 18 single-type Eeveelutions:** distributed across Hoenn habitats including Granite Cave, Fiery Path, Route 119, Mt. Pyre, Shoal Cave, Meteor Falls and Sky Pillar; regular Pokémon retain at least 90% of affected land encounters.
+- **Are all 153 dual types wild? No.** Nine distinct duals have very rare late-game wild locations (generally **1%**). Others are evolution-only.
+- **Can every single become any dual with an item?** The Stage 12 source defines **17 choices per single × 18 singles = 306 item paths**, covering all **153 unordered dual pairs**. At **Lv. 38+ with six badges**, **Use** the booster item representing the *second* type (e.g., Aerieon + Silver Powder = Aerartheon). Stage 12 repairs the missing item effect from Stage 11.
+- **Items:** original and custom first-stage catalysts appear in **Oldale, Rustboro, Slateport, Mauville, Fortree and Lilycove**; type boosters in Slateport, Mauville, Lavaridge, Fortree, and **all 18 boosters at Lilycove Department Store 4F**. See the [complete shop chart](EEVEE_FIELD_GUIDE.md#6-shops-by-town-quick-index).
+- **Playability:** a successful compilation plus source-route validation does **not** guarantee emulator-tested gameplay. Use a fresh save for the all-171 ROM.
 
 ## Stage 11: all-type habitat balance
 - [Encounter maps and item progression](STAGE11_HABITATS.md): all 18 single-type Eeveelutions have wild locations, with selected rare dual types in endgame areas.
