@@ -94,7 +94,7 @@ def patch(checkout: Path) -> None:
     data = json.loads(original)
     wild = [e for group in data["wild_encounter_groups"]
             for e in group.get("encounters", []) if e.get("land_mons")]
-    available = {key: [e for e in wild if e["map"] == key] for key in HABITATS}
+    available = {key: [e for e in wild if e.get("map") == key] for key in HABITATS}
     for key, matches in available.items():
         if len(matches) != 1 or len(matches[0]["land_mons"]["mons"]) != 12:
             raise ValueError(f"Expected one 12-slot land table for {key}, got {len(matches)}")
