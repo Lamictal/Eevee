@@ -2,7 +2,17 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8K**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8M**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+
+## Stage 8M: deliberate Sky Catalyst evolution (prototype)
+- **Sky Catalyst**, new evolution item ID 874, available for 3,000 at Oldale Town Mart after Poké Balls unlock. Temporarily uses the Dawn Stone icon.
+- **Eevee -> Aerieon:** use Sky Catalyst on Eevee at level 15+.
+- **Aerieon -> Aerartheon:** use another Sky Catalyst at level 38+ and with at least six badges.
+- Neither of these custom evolutions now triggers from leveling up automatically.
+- All eight canonical Eeveelutions are retained; Route 102 wild rates remain 10% Aerieon / 1% Aerartheon.
+- This is an initial controlled item path, not a 171-form selection menu.
+- [Stage 8M build](https://github.com/Lamictal/Eevee/actions/runs/43170210160), separate from gameplay QA.
+- Back up .sav files; same-save compatibility is not yet verified.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
