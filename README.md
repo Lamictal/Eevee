@@ -2,7 +2,13 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8N**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 11**, [wild-habitat alpha build](https://github.com/Lamictal/Eevee/actions/runs/43276563803). The [Stage 10 full 171-form alpha](https://github.com/Lamictal/Eevee/actions/runs/43273919245) compiled successfully; full-roster gameplay has not yet been validated in mGBA. This Emerald Expansion ROM is separate from the user's earlier Evergreen 2.0 Stage 8A.1 ROM/save. The full 171-form alpha changes the saved Pokédex layout: **use a fresh save**.
+
+## Stage 11: all-type habitat balance
+- [Encounter maps and item progression](STAGE11_HABITATS.md): all 18 single-type Eeveelutions have wild locations, with selected rare dual types in endgame areas.
+- At least **90% of land encounters** on each affected map remain ordinary Pokémon; no existing fishing or surfing encounter tables changed.
+- Stage 9/10 evolution catalysts remain distributed through shops; Lilycove remains the full type-item hub.
+- [New 171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803); full ROM build verification separate from scripted source checks. No manual testing is required for this development step.
 
 ## Stage 8M: deliberate Sky Catalyst evolution (prototype)
 - **Sky Catalyst**, new evolution item ID 874, available for 3,000 at Oldale Town Mart after Poké Balls unlock. Temporarily uses the Dawn Stone icon.
