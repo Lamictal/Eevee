@@ -159,7 +159,7 @@ def patch(root:Path):
     n=menu(root,image)
     art='''
 // STAGE14_EEVEE_TITLE: 240x160 mode-4 title composed from supplied artwork.
-static const u8 sEeveeTitleBitmap[] = INCBIN_U8("graphics/title_screen/eevee_stage14_bitmap.bin");
+static const u32 sEeveeTitleBitmap[] = INCBIN_U32("graphics/title_screen/eevee_stage14_bitmap.bin");
 static const u16 sEeveeTitlePal[] = INCBIN_U16("graphics/title_screen/eevee_stage14_palette.gbapal");
 static u16 sEeveeTitleTick;
 
@@ -212,7 +212,7 @@ static void Stage14_InitEeveeTitle(void)
     ResetPaletteFade();
     DmaFill16(3, 0, (void *)VRAM, VRAM_SIZE);
     DmaFill32(3, 0, (void *)OAM, OAM_SIZE);
-    DmaCopy16(3, sEeveeTitleBitmap, (void *)VRAM, sizeof(sEeveeTitleBitmap));
+    DmaCopy32(3, sEeveeTitleBitmap, (void *)VRAM, sizeof(sEeveeTitleBitmap));
     LoadPalette(sEeveeTitlePal, BG_PLTT_ID(0), sizeof(sEeveeTitlePal));
     SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(0));
     SetGpuReg(REG_OFFSET_BG2PA, 0x100);
