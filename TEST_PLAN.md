@@ -45,3 +45,15 @@
 - [ ] On Route 102, Aerieon appears in the 10% grass slot and Aerartheon in the 1% slot. Probabilities are theoretical, so a few encounters do not establish actual exact rate.
 - [ ] Check other original wild Pokémon still appear, and that effectiveness symbols remain monochrome until future optional color-label UX work.
 - [ ] Keep an untouched copy of the working Stage 8J ROM and save; don't overwrite with temporary new-game tests.
+
+## Stage 8M selective evolution smoke tests
+
+- [ ] Verify Stage 8M Actions run succeeds and publishes a ROM.
+- [ ] Oldale Mart expanded stock offers Sky Catalyst for 3,000.
+- [ ] Eevee under level 15 should not evolve with Sky Catalyst. At 15+, using it should evolve into Aerieon.
+- [ ] Eevee leveling up on Route 102 should not evolve automatically.
+- [ ] Aerieon should not auto-evolve at level 6.
+- [ ] Aerieon level 38+, fewer than six badges: Sky Catalyst should not evolve it.
+- [ ] Aerieon level 38+, six badges: Sky Catalyst should evolve into Aerartheon.
+- [ ] Confirm one catalyst is consumed per successful evolution; standard Eevee evolution paths remain unchanged.
+- [ ] Back up saves and check save/reload and a copy of a Stage 8L save. Never mix Evergreen saves with this engine.
