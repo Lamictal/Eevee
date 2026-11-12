@@ -3,8 +3,8 @@
 > **Looking for the game instead of build scripts?** Start at the **[player-friendly homepage](https://github.com/Lamictal/Eevee)**, **[download instructions](https://github.com/Lamictal/Eevee/blob/main/DOWNLOAD.md)**, or **[known limitations](https://github.com/Lamictal/Eevee/blob/main/KNOWN_ISSUES.md)**.
 >
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43305777808 -->
-> **Latest development build:** [Stage 13 - Eevee Custom Menu Alpha](https://github.com/Lamictal/Eevee/actions/runs/43305777808). Find its alpha ZIP under **Artifacts**; temporary artifact, not a cleared public patch release.
+<!-- data-build-run=43318859008 -->
+> **Latest development build:** [Stage 14 - Eevee Animated Title and Menu Alpha](https://github.com/Lamictal/Eevee/actions/runs/43318859008). Find its alpha ZIP under **Artifacts**; temporary artifact, not a cleared public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
