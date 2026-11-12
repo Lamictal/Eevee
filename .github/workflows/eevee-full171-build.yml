@@ -1,0 +1,134 @@
+name: Build Eevee full 171-form experimental alpha
+
+on:
+  push:
+    branches:
+      - stage8e-cloud-prototype
+    paths:
+      - stage8d-kit.tar.xz.b64
+      - stage8e_hotfix.py
+      - stage8f_enable_battle_ui.py
+      - stage8f_patch_builder.py
+      - stage8g_encounters_quickrun.py
+      - stage8g_patch_builder.py
+      - stage8h_followers_ivev.py
+      - stage8h_patch_builder.py
+      - stage8i_sprites.py
+      - stage8i_patch_builder.py
+      - stage8j_pokedex.py
+      - stage8j_patch_builder.py
+      - stage8k_starter_balance.py
+      - stage8k_patch_builder.py
+      - stage8l_eevee_evolution.py
+      - stage8l_patch_builder.py
+      - stage8m_catalyst_evolutions.py
+      - stage8m_patch_builder.py
+      - stage9_world_balance.py
+      - stage9_patch_builder.py
+      - .github/workflows/eevee-full171-build.yml
+      - stage10_patch_builder.py
+      - 'data/full171_bundle_part*.b64'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GBA build requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential binutils-arm-none-eabi gcc-arm-none-eabi \
+            libnewlib-arm-none-eabi git libpng-dev python3 python3-pil unzip xz-utils
+          arm-none-eabi-gcc --version
+
+      - name: Unpack and validate prototype
+        run: |
+          test -s stage8d-kit.tar.xz.b64
+          mkdir -p kit
+          base64 -d stage8d-kit.tar.xz.b64 | tar -xJ -C kit
+          python3 kit/check_kit.py
+
+      - name: Apply verified static-sprite animation hotfix
+        run: python3 stage8e_hotfix.py
+
+      - name: Enable Unbound-style type indicators in build
+        run: python3 stage8f_patch_builder.py
+
+      - name: Enable Stage 8G increased test encounters and double-B escape
+        run: python3 stage8g_patch_builder.py
+
+      - name: Enable Stage 8H follower Pokemon and IV-EV summary
+        run: python3 stage8h_patch_builder.py
+
+      - name: Enable Stage 8I species icons and followers
+        run: python3 stage8i_patch_builder.py
+
+      - name: Register Stage 8J custom Pokedex numbers without changing flag buffer bytes
+        run: python3 stage8j_patch_builder.py
+
+      - name: Enable Stage 8K Eevee starter and balanced Route 102 encounters
+        run: python3 stage8k_patch_builder.py
+
+      - name: Enable Stage 8L Eevee to Aerieon Route 102 test evolution
+        run: python3 stage8l_patch_builder.py
+
+      - name: Enable Stage 8M deliberate Sky Catalyst and progression evolution
+        run: python3 stage8m_patch_builder.py
+
+      - name: Apply Stage 9 Eevee habitats and distributed evolution items
+        run: python3 stage9_patch_builder.py
+
+      - name: Reassemble original Oops Eevee art and canonical 171-form roster
+        run: |
+          cat data/full171_bundle_part*.b64 | base64 --decode > stage10_bundle.zip
+          mkdir -p stage10
+          python3 -m zipfile -e stage10_bundle.zip stage10
+          python3 stage10/reconstruct_shared_art.py stage10
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("stage10/manifest.json").read_text())
+          assert len(x["forms"])==171
+          assert len([f for f in x["forms"] if f["national_dex"]>=1028])==161
+          assert len(list(Path("stage10/art").glob("*"))) == 171
+          print("Original 171-form artwork and source manifest validated")
+          PY
+
+      - name: Install all 171 forms and dual evolution routes into source builder
+        run: python3 stage10_patch_builder.py
+
+      - name: Attempt compile (NOT Evergreen)
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 kit/build_stage8d.py \
+            --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
+            --jobs 4 2>&1 | tee stage8d_attempt.log
+
+      - name: Upload prototype ROM if successful
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-All171-Alpha-GBA
+          compression-level: 0
+          path: pokeemerald-expansion-stage8d/pokeemerald.gba
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload diagnostic logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-Stage8E-logs
+          path: |
+            stage8d_attempt.log
+            kit/stage8d_build.log
+          if-no-files-found: warn
+          retention-days: 14
