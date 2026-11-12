@@ -2,15 +2,15 @@
 
 **Current version:** Stage 12, an experimental 171-form Pokémon Emerald Expansion build.
 
-**[DOWNLOAD CURRENT ALPHA ZIP](https://github.com/Lamictal/Eevee/actions/runs/43279472956/artifacts/13972053637)**
+**No public patch release is available yet.** [View the temporary Stage 12 development build](https://github.com/Lamictal/Eevee/actions/runs/43279472956).
 
 This is the exact artifact from the [successful Stage 12 GitHub build](https://github.com/Lamictal/Eevee/actions/runs/43279472956). It is called **Eevee-All171-ItemEvolutions-Alpha-GBA**.
 
-> **Important:** This is a **temporary development build**, not a permanent public release or an officially supported download. The repository is currently private; only people with access to it can use the link. GitHub build artifacts typically expire (this workflow retains them for **14 days**). Public redistribution of the full ROM or the original *Oops! All Eevees!* artwork has not been cleared.
+ > **Important:** The repository is public, but this temporary development artifact is not a stable public release. It may expire after 14 days or require GitHub sign-in. Redistribution rights for third-party art have not been established. Do not redistribute the complete commercial game ROM.
 
 ## Getting the game (no GitHub experience required)
 
-1. **Open the download link above.** Sign in to GitHub if prompted. You need access to this repository while it is private. If it says **404** or **Not Found**, you do not currently have access; this is not an issue with your emulator.
+1. **Open the download link above.** Sign in to GitHub if prompted. The repository is public, though downloading Actions artifacts may require signing in. If the artifact is unavailable, it may have expired.
 2. **Download the ZIP file** if prompted. If the link opens the build page instead, find **Artifacts** at the bottom and select **Eevee-All171-ItemEvolutions-Alpha-GBA**.
 3. **Extract/unzip the download.** You should get a **.gba** game file (typically \`pokeemerald.gba\`). Do **not** try to open the ZIP as a save file.
 4. **Open the extracted .gba in your GBA emulator** (for example, mGBA on a computer). Use your emulator's normal **Open ROM / Import** command.
@@ -37,7 +37,7 @@ Use a GBA emulator that can import a \`.gba\` game file. You may need to extract
 
 ## Common questions
 
-**Why does the link say 404?** The repository is private until its owner makes it public, so a random friend cannot download it yet. Also check that the artifact has not expired.
+**Why does the link say 404?** The repository is public, but the artifact may have expired or GitHub may require sign-in.
 
 **Can my friend edit the project when it becomes public?** No. Public GitHub repositories are viewable and forkable by anyone, but only authorized collaborators can directly push edits.
 
@@ -49,7 +49,7 @@ Use a GBA emulator that can import a \`.gba\` game file. You may need to extract
 
 ## Bugs and feedback
 
-**[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**. Include the build version, emulator, steps to reproduce, and what happened. If the repository is private, the reporter needs access.
+**[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**. Include the build version, emulator, steps to reproduce, and what happened. The public repository accepts issue reports from signed-in GitHub users.
 
 ## Release and attribution notes
 
