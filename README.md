@@ -6,13 +6,18 @@
 
 Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evolutions**, ranging from single-type favorites to unusual dual-type combinations. Catch them in habitats across the region or choose a second type by using a special item.
 
-**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest successful build:** Stage 12 · **Gameplay QA:** In progress
+**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest successful build:** See download section · **Gameplay QA:** In progress
 
 ---
 
 ## Download and play
 
+<!-- EEVEE_LATEST_BUILD_START -->
+<!-- data-build-run=43279472956 -->
 ### [Development alpha build (GitHub Actions, temporary)](https://github.com/Lamictal/Eevee/actions/runs/43279472956)
+
+**Stage 12 item evolution alpha** · GitHub Actions, for testing only.
+<!-- EEVEE_LATEST_BUILD_END -->
 
 **[New to GitHub? Read the easy download and setup guide.](DOWNLOAD.md)**
 
