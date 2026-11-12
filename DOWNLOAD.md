@@ -1,17 +1,22 @@
 # Download and play Eevee (Alpha)
 
-**Current version:** Stage 12, an experimental 171-form Pokémon Emerald Expansion build.
+**Current development version:** See the latest successful build linked below. The 171-form game remains experimental.
 
+<!-- EEVEE_LATEST_BUILD_START -->
+<!-- data-build-run=43279472956 -->
 **No public patch release is available yet.** [View the temporary Stage 12 development build](https://github.com/Lamictal/Eevee/actions/runs/43279472956).
 
-This is the exact artifact from the [successful Stage 12 GitHub build](https://github.com/Lamictal/Eevee/actions/runs/43279472956). It is called **Eevee-All171-ItemEvolutions-Alpha-GBA**.
+**Stage 12 item evolution alpha** · GitHub Actions, for testing only.
+<!-- EEVEE_LATEST_BUILD_END -->
+
+The linked GitHub Actions run contains the latest experimental build ZIP under **Artifacts**. The name may change between builds; download the item whose name starts with **Eevee-All171-**.
 
  > **Important:** The repository is public, but this temporary development artifact is not a stable public release. It may expire after 14 days or require GitHub sign-in. Redistribution rights for third-party art have not been established. Do not redistribute the complete commercial game ROM.
 
 ## Getting the game (no GitHub experience required)
 
 1. **Open the download link above.** Sign in to GitHub if prompted. The repository is public, though downloading Actions artifacts may require signing in. If the artifact is unavailable, it may have expired.
-2. **Download the ZIP file** if prompted. If the link opens the build page instead, find **Artifacts** at the bottom and select **Eevee-All171-ItemEvolutions-Alpha-GBA**.
+2. **Download the ZIP file** if prompted. If the link opens the build page instead, find **Artifacts** at the bottom and select the latest **Eevee-All171-...** ZIP.
 3. **Extract/unzip the download.** You should get a **.gba** game file (typically \`pokeemerald.gba\`). Do **not** try to open the ZIP as a save file.
 4. **Open the extracted .gba in your GBA emulator** (for example, mGBA on a computer). Use your emulator's normal **Open ROM / Import** command.
 5. Select **New Game**. **Do not load an older Eevee alpha or Evergreen save.** This build expands the Pokédex save layout. Keep your existing save files separately backed up.
