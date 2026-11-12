@@ -20,7 +20,7 @@ This page separates **confirmed build facts** from **gameplay that has not been 
 - **Use a fresh save.** Old Evergreen or two-form prototypes have no migration guarantee.
 - Only **nine** dual-type Eeveelutions appear wild; the other duals are designed to be obtained by item evolution.
 - Certain custom icons/followers may look provisional even when battle artwork is present.
-- The download is a **14-day GitHub Actions build artifact** in a **private** repository, not a stable public release.
+- The download is a **14-day GitHub Actions build artifact** in a **public** repository, not a stable public release.
 - Original *Oops! All Eevees!* asset redistribution permissions are not confirmed; public distribution requires rights review and suitable packaging.
 
 [Beginner download guide](DOWNLOAD.md) · [171-form field guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md) · [Beta 1 roadmap](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md) · [Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)
