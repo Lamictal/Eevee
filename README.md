@@ -6,7 +6,7 @@
 
 Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evolutions**, ranging from single-type favorites to unusual dual-type combinations. Catch them in habitats across the region or choose a second type by using a special item.
 
-**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest successful build:** See download section · **Gameplay QA:** In progress
+**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest:** Stage 13 custom-menu build · **Gameplay QA:** In progress
 
 ---
 
@@ -36,6 +36,7 @@ The Stage 12 build is for development verification only. **There is not yet a pu
 - **Rare wild duals:** nine different dual-type forms have especially rare late-game encounters. The others are designed to be obtained through evolution.
 - **Choose the second type:** use the appropriate type-boosting item to evolve one of 18 single-type forms into a dual type. There are **306 item routes** targeting all 153 unique dual forms.
 - **Helpful features:** move-effectiveness hints, numeric IV/EV information, and provisional following Pokémon and party icons.
+- **Custom Eevee selection menu:** starry artwork and Eevee-themed branding with **New Journey**, **Continue** and **Settings** while retaining original menu behavior. [Menu details](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE13_CUSTOM_MENU.md).
 
 ### How dual-type evolution works
 
