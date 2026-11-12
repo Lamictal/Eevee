@@ -13,10 +13,12 @@ Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evoluti
 ## Download and play
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43279472956 -->
-### [Development alpha build (GitHub Actions, temporary)](https://github.com/Lamictal/Eevee/actions/runs/43279472956)
+<!-- data-build-run=43305777808 -->
+### [VIEW THE LATEST DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43305777808)
 
-**Stage 12 item evolution alpha** · GitHub Actions, for testing only.
+**Stage 13 - Eevee Custom Menu Alpha** · [Build details](https://github.com/Lamictal/Eevee/actions/runs/43305777808)
+
+**Not a public patch release:** the build page contains a temporary GitHub Actions artifact for testing. Sign-in may be required. See [the download guide](DOWNLOAD.md).
 <!-- EEVEE_LATEST_BUILD_END -->
 
 **[New to GitHub? Read the easy download and setup guide.](DOWNLOAD.md)**
