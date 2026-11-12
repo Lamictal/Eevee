@@ -190,11 +190,11 @@ static void Stage14_EeveeTitleMain(void)
         sEeveeTitleTick++;
         // Three isolated palette colors: stars, sea glints and prompt text.
         color = (sEeveeTitleTick & 16) ? RGB(31, 31, 28) : RGB(17, 12, 26);
-        LoadPalette(&color, BG_PLTT_ID(253), sizeof(color));
+        LoadPalette(&color, 253, sizeof(color));
         color = (sEeveeTitleTick & 32) ? RGB(31, 27, 14) : RGB(12, 17, 25);
-        LoadPalette(&color, BG_PLTT_ID(254), sizeof(color));
+        LoadPalette(&color, 254, sizeof(color));
         color = (sEeveeTitleTick & 32) ? RGB(31, 31, 27) : RGB(22, 15, 23);
-        LoadPalette(&color, BG_PLTT_ID(255), sizeof(color));
+        LoadPalette(&color, 255, sizeof(color));
     }
 }
 
