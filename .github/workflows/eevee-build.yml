@@ -1,4 +1,4 @@
-name: Build Eevee expansion Stage 8M catalyst evolution gates
+name: Build Eevee expansion Stage 9 balanced Hoenn ecology and items
 
 on:
   push:
@@ -23,6 +23,8 @@ on:
       - stage8l_patch_builder.py
       - stage8m_catalyst_evolutions.py
       - stage8m_patch_builder.py
+      - stage9_world_balance.py
+      - stage9_patch_builder.py
       - .github/workflows/eevee-build.yml
   workflow_dispatch:
 
@@ -78,6 +80,9 @@ jobs:
       - name: Enable Stage 8M deliberate Sky Catalyst and progression evolution
         run: python3 stage8m_patch_builder.py
 
+      - name: Apply Stage 9 Eevee habitats and distributed evolution items
+        run: python3 stage9_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -90,7 +95,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-Stage8M-SkyCatalyst-GBA
+          name: Eevee-Stage9-BalancedWorld-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
