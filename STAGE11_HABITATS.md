@@ -1,6 +1,8 @@
 # Stage 11: full-roster wild ecology across Hoenn
 
-**Build:** [171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276333214), separate from the [previous successful 171-form source alpha](https://github.com/Lamictal/Eevee/actions/runs/43273919245).
+**Corrected build:** [Stage 11 habitat alpha compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43276563803). **Stage 12** repairs missing evolution effects on type-booster items in the [updated build](https://github.com/Lamictal/Eevee/actions/runs/43279472956). For the complete player-facing wild encounter and evolution-item tables, see **[EEVEE_FIELD_GUIDE.md](EEVEE_FIELD_GUIDE.md)**. All 153 dual forms have 306 intended item routes, but only nine distinct duals spawn in the wild.
+
+**Build:** [171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803), separate from the [previous successful 171-form source alpha](https://github.com/Lamictal/Eevee/actions/runs/43273919245).
 
 The game retains all original Emerald wild species and existing encounters except selected 5%, 4%, or 1% land slots. **At least 90% of the land encounter probability in every modified map remains regular Pokémon.** Eevee continues to be wild on Routes 101/102/104/117 and is the starter option. Stage 9's Aerieon (Route 119, 5%) and Aerartheon (Victory Road 1F, 1%) encounters are retained.
 
