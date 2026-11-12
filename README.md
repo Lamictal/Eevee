@@ -10,7 +10,7 @@ A Pokémon Emerald Expansion project adding **18 single-type + 153 unique dual-t
 
 **Can every single type evolve into any dual type?** The current source defines **17 evolution choices from each of the 18 single-type forms**, making every unordered dual combination available through two possible single-type parents. At **level 38+ and six badges**, use the type-boosting item for the **second type** on your single-type Eeveelution, e.g. **Aerieon + Silver Powder → Aerartheon**.
 
-**Important version note:** [Stage 11 compiled](https://github.com/Lamictal/Eevee/actions/runs/43276563803) but its type-boosters were missing the evolution item-effect flag. The [Stage 12 correction build](https://github.com/Lamictal/Eevee/actions/runs/43279472956) fixes that source issue and checks all **306** directed item routes. The game has not yet undergone full emulator QA; use the **latest successful Stage 12 artifact** for actual item-evolution gameplay.
+**Latest build:** [Stage 12 compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43279472956) and source-validated all **306** directed dual evolution paths. Earlier Stage 11 lacked the effect flags needed to use type boosters as evolution items. The current Stage 12 alpha **has not completed emulator gameplay QA**; use a fresh save and preserve existing saves. See the [Beta 1 release plan](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md) for the remaining checks and public-sharing precautions.
 
 ### Eevee sightings
 
@@ -42,6 +42,7 @@ The other **18 single-type forms** have their own Hoenn habitats; see the full g
 - [**Complete player-facing encounter and evolution item guide**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)
 - [**Stage 11 habitat and progression design notes**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE11_HABITATS.md)
 - [**Full-roster Stage 12 build status**](https://github.com/Lamictal/Eevee/actions/runs/43279472956)
+- [**Beta 1 release and sharing checklist**](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md)
 
 **Save compatibility:** the 171-form alpha expands the Pokédex save structure. Start a **new save** and keep prior saves backed up; older Stage 8/9 and separate Evergreen saves have not been migrated. A green compile is not a claim of full in-game verification.
 
