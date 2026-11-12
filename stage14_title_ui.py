@@ -95,6 +95,7 @@ def title(root,img):
     # Use 253 ordinary colors, plus three animation-specific palette indices.
     p=im.quantize(colors=253, method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
     pal=p.getpalette()[:253*3]
+    pal.extend([0]*(253*3-len(pal)))
     pal.extend([255,255,248, 255,230,155, 255,244,197])
     p.putpalette(pal)
     dp=ImageDraw.Draw(p)
