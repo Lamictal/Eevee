@@ -1,4 +1,4 @@
-name: Build Eevee full 171-form experimental alpha
+name: Build Eevee 171-form Hoenn habitat balance alpha
 
 on:
   push:
@@ -27,6 +27,8 @@ on:
       - stage9_patch_builder.py
       - .github/workflows/eevee-full171-build.yml
       - stage10_patch_builder.py
+      - stage11_full_ecology.py
+      - stage11_patch_builder.py
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
@@ -104,6 +106,9 @@ jobs:
       - name: Install all 171 forms and dual evolution routes into source builder
         run: python3 stage10_patch_builder.py
 
+      - name: Apply Stage 11 wild habitats after full roster import
+        run: python3 stage11_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -116,7 +121,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-All171-Alpha-GBA
+          name: Eevee-All171-Habitats-Alpha-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
@@ -130,5 +135,6 @@ jobs:
           path: |
             stage8d_attempt.log
             kit/stage8d_build.log
+            stage11_ecology_report.json
           if-no-files-found: warn
           retention-days: 14
