@@ -11,6 +11,11 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 
 **Current milestone: Stage 12 compiled successfully**, including the [full 171-form dual-evolution and habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956). Its automated 306-route checks passed, but **full-roster gameplay has not yet been validated in mGBA**. See the [Beta 1 release roadmap](BETA1_RELEASE_PLAN.md) for a short smoke-test gate, future polish and a public-distribution checklist. The 171-form ROM changes the saved Pokédex layout: **start a fresh save**, and do not mix with Evergreen saves.
 
+## Stage 13: custom Eevee selection menu
+- [Custom menu design and QA plan](STAGE13_CUSTOM_MENU.md): original starry Eevee background, **NEW JOURNEY** and **SETTINGS** button labels, original menu handlers and save-file logic retained.
+- [Stage 13 build](https://github.com/Lamictal/Eevee/actions/runs/43305777808): build status and artifact availability are verified separately.
+- Successful full-roster builds are now configured to refresh the latest download links on the **main README**, **DOWNLOAD.md**, and this development README automatically after their artifact uploads. Old runs cannot overwrite newer links.
+
 ## Beta 1 readiness and release notes
 - [Beta 1 release plan](BETA1_RELEASE_PLAN.md): short first-playthrough checks, graphics and balancing roadmap, and read-only public sharing notes.
 - [Successful Stage 12 all-171 build](https://github.com/Lamictal/Eevee/actions/runs/43279472956): use this newer experimental alpha, not Stage 11, for deliberate dual evolution.
