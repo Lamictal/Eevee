@@ -8,6 +8,18 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 8N: reserve entire Eeveelution roster and save-layout plan
+**Status:** [Registry CI passed](https://github.com/Lamictal/Eevee/actions/runs/43267372542). No new species are compiled or save structures changed by this planning stage.
+**Previous build:** [Stage 8M ROM compilation succeeded](https://github.com/Lamictal/Eevee/actions/runs/43265195678). In-game verification deferred to a later milestone.
+
+- Machine-readable registry of 18 single type + 153 unique unordered dual type forms.
+- Eight official Eeveelutions already exist in upstream; 163 custom forms to implement, two already integrated, 161 reserved.
+- Preserve Aerieon custom National Dex #1026 and Aerartheon #1027. Reserve #1028–#1188 deterministically.
+- Automated validator confirms combinations, official names/Dex positions, stable custom ID allocation, and evolution planning constraints.
+- Save schema impact: current 129-byte seen/caught arrays would become 149 bytes each (+40 bytes together), and must not be enlarged blindly.
+- Previous Evergreen 8A.1 save/ROM remain unrelated and unmodified.
+- Stage 8N produces no additional playable forms. Next development milestone should recover the former 30-form art/rules before generating the missing forms.
+
 ## Stage 8M: deliberate Sky Catalyst path
 **Status:** [Stage 8M cloud build](https://github.com/Lamictal/Eevee/actions/runs/43170210160) initiated, awaiting separate emulator verification.
 **Confirmed by user:** Stage 8L Eevee -> Aerieon evolution worked in mGBA. The remaining evolution paths were not tested.
