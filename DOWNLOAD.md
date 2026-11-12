@@ -3,10 +3,10 @@
 **Current development version:** See the latest successful build linked below. The 171-form game remains experimental.
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43305777808 -->
-**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43305777808)**
+<!-- data-build-run=43318859008 -->
+**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43318859008)**
 
-**Stage 13 - Eevee Custom Menu Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43305777808)
+**Stage 14 - Eevee Animated Title and Menu Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43318859008)
 
 On the build page open **Artifacts** for the ZIP if GitHub permits access. Artifacts expire after 14 days; this is not a permanent public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
