@@ -87,22 +87,27 @@ def create_art(path):
     d.text((13,148),"171 FORMS",font=font(10),fill=COLORS[11])
     d.line((6,124,98,124),fill=COLORS[8],width=2)
     # GBA 4bpp tile order: 32x32 tiles, each tile 8x8, packed two pixels/byte.
+    # Tile graphics must fit BEFORE BG1 screenblock 7 (0x3800):
+    # 448 distinct tiles maximum, not 1024 sequential tiles.
     raw=bytearray()
+    tilemap=bytearray()
+    tile_ids={}
     for ty in range(32):
         for tx in range(32):
+            tile=bytearray()
             for py in range(8):
                 for px in range(0,8,2):
                     i0=index(image.getpixel((tx*8+px,ty*8+py)))
                     i1=index(image.getpixel((tx*8+px+1,ty*8+py)))
-                    raw.append(i0 | i1<<4)
-    if len(raw) != 32768:
-        raise AssertionError(len(raw))
+                    tile.append(i0 | i1<<4)
+            tile=bytes(tile)
+            if tile not in tile_ids:
+                tile_ids[tile]=len(tile_ids)
+                raw.extend(tile)
+            tilemap.extend((tile_ids[tile]|0x1000).to_bytes(2,"little"))
+    if len(raw)>0x3800 or len(raw)%32 or len(tilemap)!=2048:
+        raise ValueError(f"Background overlaps tilemap: {len(tile_ids)} unique tiles")
     path.joinpath("eevee_menu_bg.4bpp").write_bytes(raw)
-    # 1024 map entries, palette bank 1 and tile number 0..1023.
-    tilemap=bytearray()
-    for n in range(1024):
-        entry=n|0x1000
-        tilemap.extend(entry.to_bytes(2,"little"))
     path.joinpath("eevee_menu_bg.bin").write_bytes(tilemap)
     palette=bytearray()
     for r,g,b in COLORS:
@@ -111,7 +116,7 @@ def create_art(path):
     path.joinpath("eevee_menu_bg.gbapal").write_bytes(palette)
     # Preview is intentionally local build collateral, not a runtime resource.
     image.crop((0,0,240,160)).save(path.joinpath("eevee_menu_preview.png"))
-    return 32768,2048,32
+    return len(raw),len(tilemap),len(palette)
 
 def patch(root: Path):
     root=root.resolve()
@@ -124,7 +129,7 @@ def patch(root: Path):
     gfx=root/"graphics/interface"
     gfx.mkdir(parents=True,exist_ok=True)
     sizes=create_art(gfx)
-    if sizes!=(32768,2048,32):
+    if not (32<=sizes[0]<=0x3800 and sizes[1:]==(2048,32)):
         raise AssertionError("Invalid GBA background data sizes")
 
     anchor='static const u16 sMainMenuTextPal[] = INCGFX_U16("graphics/interface/main_menu_text.pal", ".gbapal");'
@@ -170,7 +175,7 @@ def patch(root: Path):
     source.write_text(modified,encoding="utf8")
     print("Stage 13: original custom Eevee background installed in GBA main menu.")
     print("Stage 13: NEW JOURNEY / CONTINUE / SETTINGS retain original button callbacks.")
-    print("Stage 13: size 32KB tiles, 2KB tilemap, 32-byte palette; no saved data changes.")
+    print("Stage 13: deduplicated 4bpp tiles fit BG1 charblock before screenblock 7; no save changes.")
 
 if __name__=="__main__":
     ap=argparse.ArgumentParser(description=__doc__)
