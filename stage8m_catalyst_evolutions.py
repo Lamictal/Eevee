@@ -61,8 +61,8 @@ def patch(checkout: Path):
         .name = ITEM_NAME("Sky Catalyst"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "A special stone that\\\\n"
-            "awakens skyward\\\\n"
+            "A special stone that\\n"
+            "awakens skyward\\n"
             "Eevee evolutions."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_STONE,
