@@ -71,7 +71,7 @@ def world_balance(root: Path) -> None:
                  for e in g.get("encounters", []) if e.get("land_mons")]
     route_index = {name: [] for name in ROUTES}
     for item in locations:
-        if item["map"] in route_index:
+        if item.get("map") in route_index:
             route_index[item["map"]].append(item)
     if any(len(found) != 1 for found in route_index.values()):
         raise ValueError("Expected exactly one 12-slot land encounter per target route")
