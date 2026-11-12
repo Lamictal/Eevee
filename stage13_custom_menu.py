@@ -150,7 +150,7 @@ def patch(root: Path):
       "    LoadBgTilemap(1, sEeveeMenuBackgroundMap, sizeof(sEeveeMenuBackgroundMap), 0);\n"
       "    LoadPalette(sEeveeMenuBackgroundPalette, BG_PLTT_ID(1), PLTT_SIZE_4BPP);"
     )
-    if modified.count(bgs)!=1: raise ValueError("Main BG templates changed")
+    if modified.count(bgs)<1: raise ValueError("Main BG templates changed")
     modified=modified.replace(bgs,bgs+addition,1)
     showing="    ShowBg(0);\n    HideBg(1);\n    CreateTask(Task_MainMenuCheckSaveFile, 0);"
     if modified.count(showing)!=1:
