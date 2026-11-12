@@ -2,7 +2,7 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
-**Current development stage: 8M**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
+**Current development stage: 8N**, [cloud build running](https://github.com/Lamictal/Eevee/actions/runs/43092752535); last confirmed successful compile is Stage 8J, whose battle UI has been tested in mGBA. Only **Aerieon and Aerartheon** are integrated as additional species in this source-based prototype. The working Evergreen 2.0 Stage 8A.1 ROM and save are a **separate project** and remain untouched.
 
 ## Stage 8M: deliberate Sky Catalyst evolution (prototype)
 - **Sky Catalyst**, new evolution item ID 874, available for 3,000 at Oldale Town Mart after Poké Balls unlock. Temporarily uses the Dawn Stone icon.
@@ -13,6 +13,13 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - This is an initial controlled item path, not a 171-form selection menu.
 - [Stage 8M build](https://github.com/Lamictal/Eevee/actions/runs/43170210160), separate from gameplay QA.
 - Back up .sav files; same-save compatibility is not yet verified.
+
+## Stage 8N: 171-form registry and save-compatibility guardrails
+- [Full fixed-form roster](data/eevee_form_registry.json): **18 singles + 153 unordered duals** = 171 forms, including **eight official Eeveelutions**, so **163 custom forms** total.
+- Custom National Dex IDs reserved **#1026..#1188**; Aerieon #1026 and Aerartheon #1027 are unchanged.
+- [Save and migration contract](STAGE8N_SAVE_AND_ROSTER.md): full roster would increase each Dex seen/caught array **129 → 149 bytes**, requiring explicit migration or an audited alternate layout. Stage 8N **does not modify the ROM's saves**.
+- [Automated registry checks](https://github.com/Lamictal/Eevee/actions/runs/43267372542) passed. The 161 additional forms remain *reserved*, not yet implemented.
+- [Stage 8M cloud ROM build](https://github.com/Lamictal/Eevee/actions/runs/43265195678) compiled successfully; it still needs eventual milestone gameplay verification. No Stage 8N manual tests required.
 
 ## Development reference
 - [CHANGELOG.md](CHANGELOG.md): stage-by-stage changes, inherited engine QoL, planned balance, and test status.
