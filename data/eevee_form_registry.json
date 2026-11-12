@@ -1,0 +1,3898 @@
+{
+  "schema_version": 1,
+  "stage": "8N",
+  "type_order": [
+    "NORMAL",
+    "FIGHTING",
+    "FLYING",
+    "POISON",
+    "GROUND",
+    "ROCK",
+    "BUG",
+    "GHOST",
+    "STEEL",
+    "FIRE",
+    "WATER",
+    "GRASS",
+    "ELECTRIC",
+    "PSYCHIC",
+    "ICE",
+    "DRAGON",
+    "DARK",
+    "FAIRY"
+  ],
+  "purpose": "Stable registry and save-migration planning. This JSON DOES NOT create 171 playable Pokémon in the ROM.",
+  "scope": {
+    "single_type_forms": 18,
+    "dual_type_forms": 153,
+    "total_forms": 171,
+    "official_existing_forms": 8,
+    "custom_single_type_forms": 10,
+    "custom_dual_type_forms": 153,
+    "total_custom_forms": 163
+  },
+  "stable_custom_dex_range": {
+    "first": 1026,
+    "last": 1188,
+    "locked_ids": {
+      "1026": "SPECIES_AERIEON",
+      "1027": "SPECIES_AERARTHEON"
+    },
+    "unallocated_custom_symbol_policy": "Reserved entries do not yet have definitive species symbols or artwork"
+  },
+  "save_layout_plan": {
+    "current_national_dex_count": 1027,
+    "full_national_dex_count": 1188,
+    "current_seen_caught_bytes_each": 129,
+    "projected_seen_caught_bytes_each": 149,
+    "growth_bytes_each": 20,
+    "number_of_arrays": 2,
+    "requires_migration": true,
+    "status": "No save-layout modification in Stage 8N. Implement migration or fixed-capacity preservation before expanding actual engine species."
+  },
+  "forms": [
+    {
+      "key": "SINGLE_NORMAL",
+      "category": "single",
+      "types": [
+        "NORMAL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1028,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "NORMAL"
+      }
+    },
+    {
+      "key": "SINGLE_FIGHTING",
+      "category": "single",
+      "types": [
+        "FIGHTING"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1029,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "FIGHTING"
+      }
+    },
+    {
+      "key": "SINGLE_FLYING",
+      "category": "single",
+      "types": [
+        "FLYING"
+      ],
+      "name": "Aerieon",
+      "species_symbol": "SPECIES_AERIEON",
+      "national_dex": 1026,
+      "origin": "custom",
+      "integration_status": "integrated_custom",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "FLYING"
+      }
+    },
+    {
+      "key": "SINGLE_POISON",
+      "category": "single",
+      "types": [
+        "POISON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1030,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "POISON"
+      }
+    },
+    {
+      "key": "SINGLE_GROUND",
+      "category": "single",
+      "types": [
+        "GROUND"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1031,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "GROUND"
+      }
+    },
+    {
+      "key": "SINGLE_ROCK",
+      "category": "single",
+      "types": [
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1032,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "ROCK"
+      }
+    },
+    {
+      "key": "SINGLE_BUG",
+      "category": "single",
+      "types": [
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1033,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "BUG"
+      }
+    },
+    {
+      "key": "SINGLE_GHOST",
+      "category": "single",
+      "types": [
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1034,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "GHOST"
+      }
+    },
+    {
+      "key": "SINGLE_STEEL",
+      "category": "single",
+      "types": [
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1035,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "STEEL"
+      }
+    },
+    {
+      "key": "SINGLE_FIRE",
+      "category": "single",
+      "types": [
+        "FIRE"
+      ],
+      "name": "Flareon",
+      "species_symbol": "SPECIES_FLAREON",
+      "national_dex": 136,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_WATER",
+      "category": "single",
+      "types": [
+        "WATER"
+      ],
+      "name": "Vaporeon",
+      "species_symbol": "SPECIES_VAPOREON",
+      "national_dex": 134,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_GRASS",
+      "category": "single",
+      "types": [
+        "GRASS"
+      ],
+      "name": "Leafeon",
+      "species_symbol": "SPECIES_LEAFEON",
+      "national_dex": 470,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_ELECTRIC",
+      "category": "single",
+      "types": [
+        "ELECTRIC"
+      ],
+      "name": "Jolteon",
+      "species_symbol": "SPECIES_JOLTEON",
+      "national_dex": 135,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_PSYCHIC",
+      "category": "single",
+      "types": [
+        "PSYCHIC"
+      ],
+      "name": "Espeon",
+      "species_symbol": "SPECIES_ESPEON",
+      "national_dex": 196,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_ICE",
+      "category": "single",
+      "types": [
+        "ICE"
+      ],
+      "name": "Glaceon",
+      "species_symbol": "SPECIES_GLACEON",
+      "national_dex": 471,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_DRAGON",
+      "category": "single",
+      "types": [
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1036,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "typed_catalyst",
+        "min_level": 15,
+        "requires_item_type": "DRAGON"
+      }
+    },
+    {
+      "key": "SINGLE_DARK",
+      "category": "single",
+      "types": [
+        "DARK"
+      ],
+      "name": "Umbreon",
+      "species_symbol": "SPECIES_UMBREON",
+      "national_dex": 197,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "SINGLE_FAIRY",
+      "category": "single",
+      "types": [
+        "FAIRY"
+      ],
+      "name": "Sylveon",
+      "species_symbol": "SPECIES_SYLVEON",
+      "national_dex": 700,
+      "origin": "official",
+      "integration_status": "inherited_engine",
+      "planned_evolution": {
+        "from": "EEVEE",
+        "method": "existing_canon",
+        "min_level": null,
+        "requires_item_type": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_FIGHTING",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "FIGHTING"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1037,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_FIGHTING"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_FLYING",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1038,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_FLYING"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_POISON",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "POISON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1039,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_POISON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_GROUND",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "GROUND"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1040,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_GROUND"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_ROCK",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1041,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_ROCK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_BUG",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1042,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_GHOST",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1043,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_STEEL",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1044,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_FIRE",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1045,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_WATER",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1046,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_GRASS",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1047,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1048,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1049,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_ICE",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1050,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_DRAGON",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1051,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_DARK",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1052,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_NORMAL_FAIRY",
+      "category": "dual",
+      "types": [
+        "NORMAL",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1053,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_NORMAL",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_FLYING",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "FLYING"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1054,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_FLYING"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_POISON",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "POISON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1055,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_POISON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_GROUND",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "GROUND"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1056,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_GROUND"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_ROCK",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1057,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_ROCK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_BUG",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1058,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_GHOST",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1059,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_STEEL",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1060,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_FIRE",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1061,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_WATER",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1062,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_GRASS",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1063,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1064,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1065,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_ICE",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1066,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_DRAGON",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1067,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_DARK",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1068,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIGHTING_FAIRY",
+      "category": "dual",
+      "types": [
+        "FIGHTING",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1069,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIGHTING",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_POISON",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "POISON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1070,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_POISON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_GROUND",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "GROUND"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1071,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_GROUND"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_ROCK",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1072,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_ROCK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_BUG",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "BUG"
+      ],
+      "name": "Aerartheon",
+      "species_symbol": "SPECIES_AERARTHEON",
+      "national_dex": 1027,
+      "origin": "custom",
+      "integration_status": "integrated_custom",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": "Current Stage 8M test prototype uses Sky Catalyst from Aerieon; final routing to be implemented."
+      }
+    },
+    {
+      "key": "DUAL_FLYING_GHOST",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1073,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_STEEL",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1074,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_FIRE",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1075,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_WATER",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1076,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_GRASS",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1077,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1078,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1079,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_ICE",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1080,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_DRAGON",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1081,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_DARK",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1082,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FLYING_FAIRY",
+      "category": "dual",
+      "types": [
+        "FLYING",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1083,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FLYING",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_GROUND",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "GROUND"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1084,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_GROUND"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_ROCK",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1085,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_ROCK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_BUG",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1086,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_GHOST",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1087,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_STEEL",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1088,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_FIRE",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1089,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_WATER",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1090,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_GRASS",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1091,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1092,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1093,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_ICE",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1094,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_DRAGON",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1095,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_DARK",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1096,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_POISON_FAIRY",
+      "category": "dual",
+      "types": [
+        "POISON",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1097,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_POISON",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_ROCK",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "ROCK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1098,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_ROCK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_BUG",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1099,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_GHOST",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1100,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_STEEL",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1101,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_FIRE",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1102,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_WATER",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1103,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_GRASS",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1104,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1105,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1106,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_ICE",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1107,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_DRAGON",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1108,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_DARK",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1109,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GROUND_FAIRY",
+      "category": "dual",
+      "types": [
+        "GROUND",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1110,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GROUND",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_BUG",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "BUG"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1111,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_BUG"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_GHOST",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1112,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_STEEL",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1113,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_FIRE",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1114,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_WATER",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1115,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_GRASS",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1116,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1117,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1118,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_ICE",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1119,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_DRAGON",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1120,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_DARK",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1121,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ROCK_FAIRY",
+      "category": "dual",
+      "types": [
+        "ROCK",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1122,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ROCK",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_GHOST",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "GHOST"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1123,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_GHOST"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_STEEL",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1124,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_FIRE",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1125,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_WATER",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1126,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_GRASS",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1127,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1128,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1129,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_ICE",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1130,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_DRAGON",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1131,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_DARK",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1132,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_BUG_FAIRY",
+      "category": "dual",
+      "types": [
+        "BUG",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1133,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_BUG",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_STEEL",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "STEEL"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1134,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_STEEL"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_FIRE",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1135,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_WATER",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1136,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_GRASS",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1137,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1138,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1139,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_ICE",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1140,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_DRAGON",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1141,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_DARK",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1142,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GHOST_FAIRY",
+      "category": "dual",
+      "types": [
+        "GHOST",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1143,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GHOST",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_FIRE",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "FIRE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1144,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_FIRE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_WATER",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1145,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_GRASS",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1146,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1147,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1148,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_ICE",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1149,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_DRAGON",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1150,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_DARK",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1151,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_STEEL_FAIRY",
+      "category": "dual",
+      "types": [
+        "STEEL",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1152,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_STEEL",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_WATER",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "WATER"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1153,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_WATER"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_GRASS",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1154,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1155,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1156,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_ICE",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1157,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_DRAGON",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1158,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_DARK",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1159,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_FIRE_FAIRY",
+      "category": "dual",
+      "types": [
+        "FIRE",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1160,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_FIRE",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_GRASS",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "GRASS"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1161,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_GRASS"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1162,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1163,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_ICE",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1164,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_DRAGON",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1165,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_DARK",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1166,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_WATER_FAIRY",
+      "category": "dual",
+      "types": [
+        "WATER",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1167,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_WATER",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_ELECTRIC",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "ELECTRIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1168,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_ELECTRIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1169,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_ICE",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1170,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_DRAGON",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1171,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_DARK",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1172,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_GRASS_FAIRY",
+      "category": "dual",
+      "types": [
+        "GRASS",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1173,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_GRASS",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ELECTRIC_PSYCHIC",
+      "category": "dual",
+      "types": [
+        "ELECTRIC",
+        "PSYCHIC"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1174,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ELECTRIC",
+          "SINGLE_PSYCHIC"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ELECTRIC_ICE",
+      "category": "dual",
+      "types": [
+        "ELECTRIC",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1175,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ELECTRIC",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ELECTRIC_DRAGON",
+      "category": "dual",
+      "types": [
+        "ELECTRIC",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1176,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ELECTRIC",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ELECTRIC_DARK",
+      "category": "dual",
+      "types": [
+        "ELECTRIC",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1177,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ELECTRIC",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ELECTRIC_FAIRY",
+      "category": "dual",
+      "types": [
+        "ELECTRIC",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1178,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ELECTRIC",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_PSYCHIC_ICE",
+      "category": "dual",
+      "types": [
+        "PSYCHIC",
+        "ICE"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1179,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_PSYCHIC",
+          "SINGLE_ICE"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_PSYCHIC_DRAGON",
+      "category": "dual",
+      "types": [
+        "PSYCHIC",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1180,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_PSYCHIC",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_PSYCHIC_DARK",
+      "category": "dual",
+      "types": [
+        "PSYCHIC",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1181,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_PSYCHIC",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_PSYCHIC_FAIRY",
+      "category": "dual",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1182,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_PSYCHIC",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ICE_DRAGON",
+      "category": "dual",
+      "types": [
+        "ICE",
+        "DRAGON"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1183,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ICE",
+          "SINGLE_DRAGON"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ICE_DARK",
+      "category": "dual",
+      "types": [
+        "ICE",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1184,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ICE",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_ICE_FAIRY",
+      "category": "dual",
+      "types": [
+        "ICE",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1185,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_ICE",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_DRAGON_DARK",
+      "category": "dual",
+      "types": [
+        "DRAGON",
+        "DARK"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1186,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_DRAGON",
+          "SINGLE_DARK"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_DRAGON_FAIRY",
+      "category": "dual",
+      "types": [
+        "DRAGON",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1187,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_DRAGON",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    },
+    {
+      "key": "DUAL_DARK_FAIRY",
+      "category": "dual",
+      "types": [
+        "DARK",
+        "FAIRY"
+      ],
+      "name": null,
+      "species_symbol": null,
+      "national_dex": 1188,
+      "origin": "custom",
+      "integration_status": "reserved",
+      "planned_evolution": {
+        "from_either_single": [
+          "SINGLE_DARK",
+          "SINGLE_FAIRY"
+        ],
+        "requires_catalyst_for_added_type": true,
+        "min_level": 38,
+        "min_badges": 6,
+        "note": null
+      }
+    }
+  ]
+}
