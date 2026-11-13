@@ -24,9 +24,9 @@ The GitHub repository is public, but this is **not a tagged GitHub Release or a 
 ## What's in the latest build?
 
 - **Original Hoenn starters:** Professor Birch offers **Treecko, Torchic and Mudkip**. Eevee does **not** replace a starter anymore.
-- **Wild Eevee early on:** Catch Eevee on Routes **101 (5%), 102 (10%), 104 (5%) and 117 (5%)**.
+- **Wild Eevee early on:** Catch Eevee on Routes **101 (5% core-slot rate), 102 (10%), 104 (5%) and 117 (5%)**. On Routes 104 and 117, Stage 15's bonus species pool reduces the approximate overall Eevee chance to **4.4%**; the percentages in the table are base slot weights, not always final odds.
 - **171 Eeveelution forms:** 18 singles and 153 distinct dual types. All eight original Eeveelutions retain their native evolution options.
-- **Solo National Pokédex design:** The latest source assigns wild encounter habitats to **all 1,025 official National Dex species**, including trade-evolution and event-only Pokémon. It places 1,024 bonus species across **61 Hoenn land habitats**, with Eevee already in the existing encounter tables. This has passed source/compilation checks, **not a completed in-game Pokédex playthrough**.
+- **Solo National Pokédex design:** Source checks assign a potential wild encounter to **all 1,025 official National Dex species**, including trade-evolution and event-only Pokémon, through 1,024 bonus species across **61 Hoenn land habitats** plus existing wild Eevee. This is **not proof** that every habitat is reachable, every encounter works in-game, or the Pokédex is fully completable yet.
 - **Explore to collect:** All 18 single-type Eeveelutions appear in suitable wild habitats. Nine distinct dual-type forms have rare wild encounters; other dual forms are designed to come through evolution.
 - **Evolution items:** Custom first-stage catalysts and second-type booster items are sold throughout Hoenn. The code defines **306 single-to-dual evolution routes** for all 153 unique duals.
 - **Quality-of-life features:** IV/EV details, basic move-effectiveness indicators, quick fleeing and provisional following Pokémon and party icons.
