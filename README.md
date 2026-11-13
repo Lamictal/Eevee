@@ -9,6 +9,13 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
+## Stage 15.1: Monoamine title credit + emulator cover art
+
+- Title screen credit changed from **2025 LAMICTAL PROJECTS** to **2026 MONOAMINE**.
+- The build now produces matching optional **square emulator thumbnails and portrait GBA cover art**, downloadable with the ROM artifact and as a separate cover-art ZIP.
+- **A GBA ROM cannot embed a universally recognized emulator library cover**; manually associate the companion PNG in an emulator that supports custom covers.
+- See the [v0.1.0-alpha release-candidate notes](RELEASE_NOTES_v0.1.0-alpha.md). This is an **alpha build, not a published GitHub Release**. Art/sprite licensing and gameplay QA remain necessary before a proper public patch release.
+
 ## Stage 15: original Birch starters + solo National Dex (alpha)
 - **Birch now offers Treecko / Torchic / Mudkip** again. Eevee remains catchable on Route 102 and other early routes; the old Stage 8K Eevee-starter configuration below is historical.
 - **All 1,025 canonical National Pokédex species** have a designed wild encounter route somewhere in Hoenn, including trade evolutions, mythicals and other event-only Pokémon. Bonus encounters are biome-based; all original tables remain.
