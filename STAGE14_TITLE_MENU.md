@@ -6,7 +6,7 @@
 
 - Uses the user's supplied Eevee sunset/title illustration, reconstructed as a compact 32-color 240 × 160 indexed source and stored under `data/stage14_title_source.b85`.
 - Generates a true **GBA mode-4, 240 × 160, 8bpp bitmap** with a 256-entry palette. No browser renderer is used in the ROM.
-- Redraws the small captions (**171 FORMS**, **EMERALD EXPANSION**, **PRESS START**, **2025 LAMICTAL PROJECTS**) at their native resolution using explicitly plotted 5×7 glyphs instead of antialiasing an enlarged desktop font. The large logo and illustration remain derived from the supplied source and naturally lose some detail at 240 × 160.
+- Redraws the small captions (**171 FORMS**, **EMERALD EXPANSION**, **PRESS START**, **2026 MONOAMINE**) at their native resolution using explicitly plotted 5×7 glyphs instead of antialiasing an enlarged desktop font. The large logo and illustration remain derived from the supplied source and naturally lose some detail at 240 × 160.
 - Reserves three title-screen palette indices for low-cost title animation: starlight, water glints and a gently blinking/pulsing Start label.
 - Preserves the title music and sends A/Start into Emerald's **real** main menu. Existing B/Select diagnostic shortcuts are still routed to the original callbacks.
 
@@ -22,6 +22,14 @@
 - `stage14_patch_builder.py`: chains this after Stage 13 in the full-171 cloud build.
 - `.github/workflows/eevee-full171-build.yml`: builds the new alpha when files change and publishes a temporary GitHub Actions artifact, not a public ROM release.
 
+## Stage 14C: Birch intro BG1 regression correction
+
+A prior Stage 14B patch restored BG1 screenblock **only in the hardware register**. This was insufficient: Emerald's `ShowBg(1)` reads its **cached background config** and overwrote that register, showing old menu tiles under Birch's green palette.
+
+The Stage 14C patch instead calls `SetBgAttribute(1, BG_ATTR_MAPBASEINDEX, 7)` during `Task_NewGameBirchSpeech_Init`, after initializing Birch's BG0 and before `ShowBg(1)`. This restores the manager's saved BG1 screenblock so Birch's own map data is visible.
+
+**Not visually certified until tested in mGBA.** An earlier build compiled despite still displaying the logo behind Birch. After this patch compiles, verify New Journey → Birch, then Settings return and Continue, especially with custom title and menu graphics loaded.
+
 ## Acceptance tests (actual emulator)
 
 1. Fresh boot in mGBA: full Eevee sunset, crisp small caption text, subtle stars/sea/prompt color cycling, no missing graphics.
@@ -31,4 +39,4 @@
 5. Any native Mystery Gift and diagnostic menu variants still work if enabled.
 6. Confirm all 171 forms, custom sprites, starter choice, evolution items, routes and save/reload remain unaffected.
 
-**Important:** GitHub compilation is not visual or controller QA. This remains an alpha until an in-emulator test succeeds. The user-provided fan artwork may need permissions/attribution before public redistribution; keep the repo private and do not distribute a full commercial ROM as a public release.
+**Important:** GitHub compilation is not visual or controller QA. This remains an alpha until an in-emulator test succeeds. The user-provided fan artwork may need permissions/attribution before public redistribution; the repository is now public, but do not distribute a full commercial ROM as a public release.
