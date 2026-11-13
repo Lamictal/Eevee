@@ -141,6 +141,21 @@ def patch(root):
     before='#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_EEVEE) // STAGE8K_EEVEE_STARTER: grass-position ball; still Eevee (Normal type)'
     after='#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_TREECKO) // STAGE15_SOLO_DEX: restore Hoenn starters'
     if src.count(before)!=1:raise ValueError('Starter layout changed; refusing unsafe patch')
+    # STAGE15_ART_AUDIT: investigate PC preview mismatch reported for Artheon.
+    # The full 171-form bundle is reconstructed at build time.
+    manifest=Path(__file__).parent/'stage10'/'manifest.json'
+    if manifest.exists():
+        forms=json.loads(manifest.read_text(encoding='utf-8')).get('forms',[])
+        for form in forms:
+            if 'ARTHEON' in form.get('name','').upper() or form.get('name','').upper() in ('AERIEON','AERARTHEON'):
+                key=form['name'].upper()
+                src_info=(root/'src/data/pokemon/species_info.h').read_text()
+                hit=re.search(r'\\[SPECIES_'+re.escape(key)+r'\\]\\s*=\\s*\\{([\\s\\S]*?)(?=\\n    \\},)',src_info)
+                block=hit.group(1) if hit else ''
+                ref=lambda prop:(re.search(r'\\.'+prop+r'\\s*=\\s*([^,\\n]+)',block).group(1).strip()
+                                 if re.search(r'\\.'+prop+r'\\s*=\\s*([^,\\n]+)',block) else None)
+                print('STAGE15_ART_AUDIT:',json.dumps({'form':form,'front':ref('frontPic'),'icon':ref('iconSprite'),
+                     'iconPalIndex':ref('iconPalIndex'),'back':ref('backPic')},sort_keys=True)[:1500])
     names,types,power,stages=read_dex(root)
     maps=available_areas(root)
     pools=defaultdict(list)
