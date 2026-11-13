@@ -1,4 +1,6 @@
-# Stage 9: keep original Hoenn Pokémon and distribute Eevee evolutions sensibly
+# Stage 9: keep original Hoenn Pokémon and distribute Eevee evolutions sensibly (historical)
+
+> **Historical Stage 9 implementation notes.** The slot percentages below describe the **core Emerald land tables at Stage 9**. Current Stage 15.1 keeps wild Eevee and the original Hoenn starters, but adds bonus encounters across 61 Hoenn land habitats. These lower some effective core-table encounter percentages; see the [current Field Guide](EEVEE_FIELD_GUIDE.md) and [Stage 15 notes](STAGE15_SOLO_DEX.md).
 
 ## Why the balance differs from Oops! All Eevees!
 The user's target game is still a traditional Pokémon Emerald playthrough,
