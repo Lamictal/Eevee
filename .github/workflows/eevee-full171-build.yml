@@ -40,6 +40,7 @@ on:
       - stage14_patch_builder.py
       - stage15_solo_dex.py
       - stage15_patch_builder.py
+      - stage16_custom_icons.py
       - data/stage14_title_source.b85
       - tools/sync_latest_build.py
       - 'data/full171_bundle_part*.b64'
@@ -200,6 +201,7 @@ jobs:
             kit/stage8d_build.log
             stage11_ecology_report.json
             stage15_solo_dex_report.json
+            stage16_icon_report.json
             EEVEE_LEVEL_UP_MOVES.md
           if-no-files-found: warn
           retention-days: 14
