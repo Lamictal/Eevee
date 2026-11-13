@@ -244,7 +244,42 @@ static void Stage14_InitEeveeTitle(void)
     after='        .bg = 1,\n        .charBaseIndex = 0,\n        .mapBaseIndex = 15, // STAGE14_EEVEE_TITLE: room for faithful 4bpp title-derived art'
     if mm.count(before)!=1 or 'STAGE13_EEVEE_MENU' not in mm:
         raise ValueError('Stage13 menu BG layout changed; refusing modification')
-    menu_c.write_text(mm.replace(before,after,1),encoding='utf8')
+    # Stage 14B: Emerald's menu window masks originally expose only BG0.
+    # Make BG1 visible behind the native menu buttons, including inside WIN0.
+    patched_menu = mm.replace(before,after,1)
+    win_inside = 'WININ_WIN0_BG0 | WININ_WIN0_OBJ'
+    win_outside = 'WINOUT_WIN01_BG0 | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR'
+    if patched_menu.count(win_inside) != 3 or patched_menu.count(win_outside) != 3:
+        raise ValueError('Stage14B: unexpected main-menu window mask layout')
+    patched_menu = patched_menu.replace(
+        win_inside,
+        'WININ_WIN0_BG0 | WININ_WIN0_BG1 | WININ_WIN0_OBJ')
+    patched_menu = patched_menu.replace(
+        win_outside,
+        'WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1 | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR')
+
+    # Birch loads his introduction tilemap into BG1 screenblock 7. Stage 14
+    # moves the title-derived menu backdrop to screenblock 15. Without this
+    # reset, Birch appears over the recycled Eevee backdrop in the wrong colors.
+    birch_anchor = (
+        'static void Task_NewGameBirchSpeech_Init(u8 taskId)\\n'
+        '{\\n'
+        '    SetGpuReg(REG_OFFSET_DISPCNT, 0);\\n'
+        '    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);\\n'
+        '    InitBgFromTemplate(&sBirchBgTemplate);'
+    )
+    birch_reset = (
+        '    // STAGE14B_EEVEE_TRANSITION: restore the original Birch BG1 tilemap.\\n'
+        '    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0)\\n'
+        '               | BGCNT_SCREENBASE(7) | BGCNT_16COLOR | BGCNT_TXT256x256);'
+    )
+    if patched_menu.count(birch_anchor) != 1:
+        raise ValueError('Stage14B: Birch intro initializer changed; refusing patch')
+    patched_menu = patched_menu.replace(birch_anchor, birch_anchor + '\\n' + birch_reset, 1)
+    # Avoid writing either file before all the content checks pass.
+    menu_c.write_text(patched_menu,encoding='utf8')
+    print('Stage14B: menu BG1 is visible in all three native main-menu window states.')
+    print('Stage14B: Birch BG1 mapbase is restored to 7 before his intro begins.')
     print(f'Stage14: pixel-perfect GBA 240x160 title, {n} BG1 tiles, true main-menu callbacks retained')
     print('Stage14: title palette animation (stars/water/prompt), native 5x7 crisp labels')
 
