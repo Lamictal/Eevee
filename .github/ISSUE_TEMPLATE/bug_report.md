@@ -7,7 +7,7 @@ assignees: []
 ---
 
 ## Build and device
-- **Build:** Stage 12 / other (include a download or build run link)
+- **Build:** Stage 15.1 or another version (include a download or build-run link)
 - **Emulator:** mGBA / another GBA emulator, and its version
 - **Device / operating system:**
 - **New save started with this build?** Yes / No
@@ -24,7 +24,7 @@ Describe what should have happened instead.
 3. 
 
 ## Pokémon / locations / items involved
-Which Eeveelution forms, route, badge count, level, and evolution item were involved, if applicable?
+Which Eeveelution forms, wild route / encounter method, badge count, level, or evolution item were involved? For the Birch introduction bug, say whether the custom green Eevee background still appears.
 
 ## Screenshots or error messages
 Add screenshots or relevant error messages if possible. **Do not post a copyrighted ROM file or personal information.**
