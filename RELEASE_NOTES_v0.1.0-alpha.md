@@ -15,7 +15,7 @@ This is the first compiled candidate for a full-playthrough **alpha test**, not 
 
 ## Known limitations before Beta 1
 
-- Compilation passed for Stage 15. The revised title credit and optional cover packaging still require their **own** successful build.
+- **Stage 15.1 compiled successfully** in [Actions run #43465510674](https://github.com/Lamictal/Eevee/actions/runs/43465510674), including the 2026 Monoamine title credit and companion cover art. The **Stage 14C Birch background fix** is being rebuilt after a real emulator screenshot showed Stage 14B's earlier fix was incomplete; it still requires emulator verification.
 - New-game graphics transitions, save/reload behavior, custom evolution outcomes, and long-term story progression remain to be tested in mGBA.
 - Stage 15's bonus encounter pools guarantee scripted species coverage, not reasonable completion time or optimized in-game UX. Some species can be very rare individually.
 - Several custom follower frames, icons, movesets, stats, abilities and Pokédex strings still need polishing.
