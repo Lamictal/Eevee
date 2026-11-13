@@ -1,8 +1,8 @@
 # Pokémon Eevee: complete wild encounter rates by area
 
-<!-- generated-by-run=43506764573 -->
+<!-- generated-by-run=43522636352 -->
 
-Source build: https://github.com/Lamictal/Eevee/actions/runs/43506764573
+Source build: https://github.com/Lamictal/Eevee/actions/runs/43522636352
 
 > **Automatically generated from the source of the successful Stage 15.1+ Monoamine ROM build.** These are expected encounter probabilities, **not** results from catching Pokémon in an emulator.
 
@@ -12,7 +12,7 @@ Source build: https://github.com/Lamictal/Eevee/actions/runs/43506764573
 
 **Important limitations:** The source includes alternate and Kanto/FRLG map tables, some of which may not be reachable in this Emerald-based hack. Duplicate areas are listed as separate source variants, **not** merged. Static encounters, NPC trades, gift Pokémon and scripted events are not covered. Abilities, lures, fishing-chain effects, Feebas-specific tiles, repel, alternate time-of-day tables, and special events can change practical outcomes. The displayed rates are *baseline* type-selection rates without these modifiers.
 
-**Coverage:** 240 distinct maps, 388 source area tables, 1024 supplementary National Dex species.
+**Coverage:** 240 distinct maps, 388 source area tables, 1023 supplementary land National Dex species; 1 aquatic-only species use native water/fishing tables.
 
 ## Jump to an area
 
@@ -338,7 +338,6 @@ Source map: MAP_ROUTE103.
 | Poochyena | 57.60% | 2–4 | Native / custom slot |
 | Wingull | 19.20% | 2–4 | Native / custom slot |
 | Zigzagoon | 19.20% | 3–4 | Native / custom slot |
-| Carvanha | 0.286% | 2–4 | National Dex bonus |
 | Chinchou | 0.286% | 2–4 | National Dex bonus |
 | Clauncher | 0.286% | 2–4 | National Dex bonus |
 | Dewpider | 0.286% | 2–4 | National Dex bonus |
@@ -348,6 +347,7 @@ Source map: MAP_ROUTE103.
 | Mantyke | 0.286% | 2–4 | National Dex bonus |
 | Meowth | 0.286% | 2–4 | National Dex bonus |
 | Shroodle | 0.286% | 2–4 | National Dex bonus |
+| Spinda | 0.286% | 2–4 | National Dex bonus |
 | Swablu | 0.286% | 2–4 | National Dex bonus |
 | Tirtouga | 0.286% | 2–4 | National Dex bonus |
 | Wooloo | 0.286% | 2–4 | National Dex bonus |
@@ -770,13 +770,13 @@ Source map: MAP_ROUTE112.
 | Flabébé | 0.533% | 14–16 | National Dex bonus |
 | Growlithe | 0.533% | 14–16 | National Dex bonus |
 | Heatmor | 0.533% | 14–16 | National Dex bonus |
+| Monferno | 0.533% | 18 | National Dex bonus |
 | Nidorino | 0.533% | 18 | National Dex bonus |
 | Oranguru | 0.533% | 14–16 | National Dex bonus |
+| Patrat | 0.533% | 14–16 | National Dex bonus |
 | Quilava | 0.533% | 18 | National Dex bonus |
-| Rotom | 0.533% | 14–16 | National Dex bonus |
 | Shellos | 0.533% | 14–16 | National Dex bonus |
 | Simisear | 0.533% | 18 | National Dex bonus |
-| Spinda | 0.533% | 14–16 | National Dex bonus |
 
 ---
 
@@ -793,6 +793,7 @@ Source map: MAP_ROUTE113.
 | Slugma | 18.90% | 14–17 | National Dex bonus, Native / custom slot |
 | Skarmory | 4.60% | 16 | Native / custom slot |
 | Vireon | 4.60% | 15–17 | Native / custom slot |
+| Ambipom | 0.500% | 18 | National Dex bonus |
 | Camerupt | 0.500% | 18 | National Dex bonus |
 | Clodsire | 0.500% | 14–17 | National Dex bonus |
 | Darumaka | 0.500% | 14–17 | National Dex bonus |
@@ -800,7 +801,6 @@ Source map: MAP_ROUTE113.
 | Drampa | 0.500% | 14–17 | National Dex bonus |
 | Furret | 0.500% | 18 | National Dex bonus |
 | Linoone | 0.500% | 18 | National Dex bonus |
-| Monferno | 0.500% | 18 | National Dex bonus |
 | Pignite | 0.500% | 18 | National Dex bonus |
 | Ponyta | 0.500% | 14–17 | National Dex bonus |
 | Salazzle | 0.500% | 18 | National Dex bonus |
@@ -826,7 +826,7 @@ Source map: MAP_ROUTE114.
 | Seviper | 8.28% | 15–17 | Native / custom slot |
 | Champeon | 4.60% | 17–19 | Native / custom slot |
 | Nuzleaf | 0.920% | 15 | Native / custom slot |
-| Blipbug | 0.533% | 15–19 | National Dex bonus |
+| Copperajah | 0.533% | 18–19 | National Dex bonus |
 | Dottler | 0.533% | 18–19 | National Dex bonus |
 | Exeggutor | 0.533% | 18–19 | National Dex bonus |
 | Herdier | 0.533% | 18–19 | National Dex bonus |
@@ -836,9 +836,9 @@ Source map: MAP_ROUTE114.
 | Miltank | 0.533% | 15–19 | National Dex bonus |
 | Persian | 0.533% | 18–19 | National Dex bonus |
 | Purugly | 0.533% | 18–19 | National Dex bonus |
-| Shelmet | 0.533% | 15–19 | National Dex bonus |
 | Smoliv | 0.533% | 15–19 | National Dex bonus |
 | Snubbull | 0.533% | 15–19 | National Dex bonus |
+| Spewpa | 0.533% | 15–19 | National Dex bonus |
 | Trapinch | 0.533% | 15–19 | National Dex bonus |
 | Wishiwashi | 0.533% | 15–19 | National Dex bonus |
 
@@ -985,17 +985,17 @@ Source map: MAP_ROUTE117.
 | Seedot | 0.920% | 13 | Native / custom slot |
 | Volbeat | 0.920% | 13 | Native / custom slot |
 | Bibarel | 0.533% | 18 | National Dex bonus |
+| Blipbug | 0.533% | 12–16 | National Dex bonus |
 | Flapple | 0.533% | 18 | National Dex bonus |
 | Foongus | 0.533% | 12–16 | National Dex bonus |
 | Gloom | 0.533% | 18 | National Dex bonus |
 | Grubbin | 0.533% | 12–16 | National Dex bonus |
 | Ivysaur | 0.533% | 18 | National Dex bonus |
 | Koffing | 0.533% | 12–16 | National Dex bonus |
+| Meowstic | 0.533% | 12–16 | National Dex bonus |
 | Silcoon | 0.533% | 18 | National Dex bonus |
-| Spewpa | 0.533% | 12–16 | National Dex bonus |
 | Surskit | 0.533% | 12–16 | National Dex bonus |
 | Tadbulb | 0.533% | 12–16 | National Dex bonus |
-| Thwackey | 0.533% | 18 | National Dex bonus |
 | Togetic | 0.533% | 18 | National Dex bonus |
 | Whimsicott | 0.533% | 18 | National Dex bonus |
 | Yanmega | 0.533% | 18 | National Dex bonus |
@@ -1170,18 +1170,17 @@ Source map: MAP_ROUTE120.
 | Oddish | 23.00% | 25–27 | Native / custom slot |
 | Poochyena | 18.40% | 25 | Native / custom slot |
 | Marill | 9.20% | 25 | Native / custom slot |
-| Leafeon | 4.60% | 25–28 | Native / custom slot |
+| Leafeon | 5.13% | 25–28 | National Dex bonus, Native / custom slot |
 | Absol | 3.68% | 25 | Native / custom slot |
 | Espeon | 3.68% | 25–28 | Native / custom slot |
 | Kecleon | 0.920% | 25 | Native / custom slot |
 | Seedot | 0.920% | 25 | Native / custom slot |
-| Ambipom | 0.533% | 25–28 | National Dex bonus |
+| Aromatisse | 0.533% | 25–28 | National Dex bonus |
 | Bellsprout | 0.533% | 25–28 | National Dex bonus |
 | Clefairy | 0.533% | 25–28 | National Dex bonus |
 | Dwebble | 0.533% | 25–28 | National Dex bonus |
 | Fomantis | 0.533% | 25–28 | National Dex bonus |
 | Lokix | 0.533% | 25–28 | National Dex bonus |
-| Meowstic | 0.533% | 25–28 | National Dex bonus |
 | Milcery | 0.533% | 25–28 | National Dex bonus |
 | Pineco | 0.533% | 25–28 | National Dex bonus |
 | Scizor | 0.533% | 25–28 | National Dex bonus |
@@ -1237,15 +1236,15 @@ Source map: MAP_ROUTE121.
 | Wingull | 8.28% | 26–28 | Native / custom slot |
 | Sylveon | 4.60% | 26–29 | Native / custom slot |
 | Kecleon | 0.920% | 25 | Native / custom slot |
-| Aromatisse | 0.533% | 25–29 | National Dex bonus |
 | Dolliv | 0.533% | 25–29 | National Dex bonus |
 | Durant | 0.533% | 25–29 | National Dex bonus |
 | Ferrothorn | 0.533% | 25–29 | National Dex bonus |
 | Granbull | 0.533% | 25–29 | National Dex bonus |
-| Lurantis | 0.533% | 25–29 | National Dex bonus |
+| Lycanroc | 0.533% | 25–29 | National Dex bonus |
 | Nuzleaf | 0.533% | 25–29 | National Dex bonus |
 | Pidgey | 0.533% | 25–29 | National Dex bonus |
 | Swalot | 0.533% | 25–29 | National Dex bonus |
+| Thwackey | 0.533% | 25–29 | National Dex bonus |
 | Toxicroak | 0.533% | 25–29 | National Dex bonus |
 | Toxtricity | 0.533% | 25–29 | National Dex bonus |
 | Tranquill | 0.533% | 25–29 | National Dex bonus |
@@ -2188,7 +2187,6 @@ Source map: MAP_METEOR_FALLS_1F_2R.
 | Clobbopus | 0.625% | 33–40 | National Dex bonus |
 | Conkeldurr | 0.625% | 34–40 | National Dex bonus |
 | Cubchoo | 0.625% | 33–40 | National Dex bonus |
-| Dreepy | 0.625% | 33–40 | National Dex bonus |
 | Frogadier | 0.625% | 33–40 | National Dex bonus |
 | Graveler | 0.625% | 33–40 | National Dex bonus |
 | Hakamo O | 0.625% | 33–40 | National Dex bonus |
@@ -2199,6 +2197,7 @@ Source map: MAP_METEOR_FALLS_1F_2R.
 | Octillery | 0.625% | 33–40 | National Dex bonus |
 | Snorunt | 0.625% | 33–40 | National Dex bonus |
 | Tyranitar | 0.625% | 34–40 | National Dex bonus |
+| Ursaluna | 0.625% | 34–40 | National Dex bonus |
 | Wartortle | 0.625% | 33–40 | National Dex bonus |
 
 ### Surf (base encounter-frequency setting: 4)
@@ -2308,6 +2307,7 @@ Source map: MAP_METEOR_FALLS_B1F_2R.
 | Cranidos | 0.619% | 25–40 | National Dex bonus |
 | Dewott | 0.619% | 25–40 | National Dex bonus |
 | Diglett | 0.619% | 25–40 | National Dex bonus |
+| Dondozo | 0.619% | 25–40 | National Dex bonus |
 | Drednaw | 0.619% | 25–40 | National Dex bonus |
 | Flygon | 0.619% | 34–40 | National Dex bonus |
 | Frosmoth | 0.619% | 25–40 | National Dex bonus |
@@ -2319,7 +2319,6 @@ Source map: MAP_METEOR_FALLS_B1F_2R.
 | Mawile | 0.619% | 25–40 | National Dex bonus |
 | Shellder | 0.619% | 25–40 | National Dex bonus |
 | Starmie | 0.619% | 25–40 | National Dex bonus |
-| Ursaluna | 0.619% | 34–40 | National Dex bonus |
 | Diancie | 0.111% | 45 | Rare bonus pool |
 | Groudon | 0.111% | 45 | Rare bonus pool |
 | Iron Leaves | 0.111% | 45 | Rare bonus pool |
@@ -2373,7 +2372,7 @@ Source map: MAP_METEOR_FALLS_STEVENS_CAVE.
 | Golbat | 57.91% | 33–40 | Native / custom slot |
 | Solrock | 31.80% | 33–40 | National Dex bonus, Native / custom slot |
 | Arctibax | 0.619% | 33–40 | National Dex bonus |
-| Copperajah | 0.619% | 33–40 | National Dex bonus |
+| Dreepy | 0.619% | 33–40 | National Dex bonus |
 | Glalie | 0.619% | 33–40 | National Dex bonus |
 | Goomy | 0.619% | 33–40 | National Dex bonus |
 | Klang | 0.619% | 33–40 | National Dex bonus |
@@ -2847,7 +2846,7 @@ Source map: MAP_PETALBURG_WOODS.
 | Grookey | 0.267% | 5–6 | National Dex bonus |
 | Hoppip | 0.267% | 5–6 | National Dex bonus |
 | Ledyba | 0.267% | 5–6 | National Dex bonus |
-| Patrat | 0.267% | 5–6 | National Dex bonus |
+| Pansage | 0.267% | 5–6 | National Dex bonus |
 | Petilil | 0.267% | 5–6 | National Dex bonus |
 | Sprigatito | 0.267% | 5–6 | National Dex bonus |
 | Spritzee | 0.267% | 5–6 | National Dex bonus |
@@ -2901,7 +2900,7 @@ This is a separate source table. Availability can depend on game mode or special
 | Ekans | 0.625% | 22–31 | National Dex bonus |
 | Forretress | 0.625% | 22–31 | National Dex bonus |
 | Larvesta | 0.625% | 22–31 | National Dex bonus |
-| Lycanroc | 0.625% | 22–31 | National Dex bonus |
+| Lurantis | 0.625% | 22–31 | National Dex bonus |
 | Meganium | 0.625% | 34 | National Dex bonus |
 | Paras | 0.625% | 22–31 | National Dex bonus |
 | Serperior | 0.625% | 34 | National Dex bonus |
@@ -2965,7 +2964,7 @@ This is a separate source table. Availability can depend on game mode or special
 | Ekans | 0.625% | 22–31 | National Dex bonus |
 | Forretress | 0.625% | 22–31 | National Dex bonus |
 | Larvesta | 0.625% | 22–31 | National Dex bonus |
-| Lycanroc | 0.625% | 22–31 | National Dex bonus |
+| Lurantis | 0.625% | 22–31 | National Dex bonus |
 | Meganium | 0.625% | 34 | National Dex bonus |
 | Paras | 0.625% | 22–31 | National Dex bonus |
 | Serperior | 0.625% | 34 | National Dex bonus |
@@ -3031,11 +3030,11 @@ This is a separate source table. Availability can depend on game mode or special
 | Golbat | 0.625% | 22–33 | National Dex bonus |
 | Grotle | 0.625% | 22–33 | National Dex bonus |
 | Iron Valiant | 0.625% | 22–33 | National Dex bonus |
-| Joltik | 0.625% | 22–33 | National Dex bonus |
 | Leavanny | 0.625% | 34 | National Dex bonus |
 | Ninjask | 0.625% | 22–33 | National Dex bonus |
 | Pidgeot | 0.625% | 34 | National Dex bonus |
 | Scovillain | 0.625% | 22–33 | National Dex bonus |
+| Shelmet | 0.625% | 22–33 | National Dex bonus |
 | Shiftry | 0.625% | 34 | National Dex bonus |
 | Skiddo | 0.625% | 22–33 | National Dex bonus |
 | Skorupi | 0.625% | 22–33 | National Dex bonus |
@@ -3094,11 +3093,11 @@ This is a separate source table. Availability can depend on game mode or special
 | Golbat | 0.625% | 22–33 | National Dex bonus |
 | Grotle | 0.625% | 22–33 | National Dex bonus |
 | Iron Valiant | 0.625% | 22–33 | National Dex bonus |
-| Joltik | 0.625% | 22–33 | National Dex bonus |
 | Leavanny | 0.625% | 34 | National Dex bonus |
 | Ninjask | 0.625% | 22–33 | National Dex bonus |
 | Pidgeot | 0.625% | 34 | National Dex bonus |
 | Scovillain | 0.625% | 22–33 | National Dex bonus |
+| Shelmet | 0.625% | 22–33 | National Dex bonus |
 | Shiftry | 0.625% | 34 | National Dex bonus |
 | Skiddo | 0.625% | 22–33 | National Dex bonus |
 | Skorupi | 0.625% | 22–33 | National Dex bonus |
@@ -3166,10 +3165,10 @@ Source map: MAP_SAFARI_ZONE_NORTH.
 | Maractus | 0.625% | 27–31 | National Dex bonus |
 | Quilladin | 0.625% | 27–31 | National Dex bonus |
 | Seviper | 0.625% | 27–31 | National Dex bonus |
+| Sewaddle | 0.625% | 27–31 | National Dex bonus |
 | Steenee | 0.625% | 27–31 | National Dex bonus |
 | Tangrowth | 0.625% | 27–31 | National Dex bonus |
 | Tinkatuff | 0.625% | 27–31 | National Dex bonus |
-| Unfezant | 0.625% | 34 | National Dex bonus |
 | Vileplume | 0.625% | 34 | National Dex bonus |
 
 ### Rock Smash (base encounter-frequency setting: 25)
@@ -3202,12 +3201,12 @@ Source map: MAP_SAFARI_ZONE_NORTHEAST.
 | Cascoon | 0.625% | 33–40 | National Dex bonus |
 | Deerling | 0.625% | 33–40 | National Dex bonus |
 | Furfrou | 0.625% | 33–40 | National Dex bonus |
-| Leafeon | 0.625% | 33–40 | National Dex bonus |
 | Masquerain | 0.625% | 33–40 | National Dex bonus |
 | Metapod | 0.625% | 33–40 | National Dex bonus |
 | Oricorio | 0.625% | 33–40 | National Dex bonus |
 | Rabsca | 0.625% | 33–40 | National Dex bonus |
 | Roserade | 0.625% | 34–40 | National Dex bonus |
+| Rotom | 0.625% | 33–40 | National Dex bonus |
 | Sunflora | 0.625% | 33–40 | National Dex bonus |
 | Tinkaton | 0.625% | 34–40 | National Dex bonus |
 | Whirlipede | 0.625% | 33–40 | National Dex bonus |
@@ -3413,10 +3412,10 @@ Source map: MAP_SAFARI_ZONE_SOUTH.
 | Dudunsparce | 0.625% | 25–29 | National Dex bonus |
 | Gorebyss | 0.625% | 25–29 | National Dex bonus |
 | Meowscarada | 0.625% | 34 | National Dex bonus |
-| Pansage | 0.625% | 25–29 | National Dex bonus |
 | Rellor | 0.625% | 25–29 | National Dex bonus |
 | Sceptile | 0.625% | 34 | National Dex bonus |
 | Scyther | 0.625% | 25–29 | National Dex bonus |
+| Simipour | 0.625% | 25–29 | National Dex bonus |
 | Tsareena | 0.625% | 34 | National Dex bonus |
 | Unown | 0.625% | 25–29 | National Dex bonus |
 
@@ -3510,15 +3509,15 @@ Source map: MAP_SAFARI_ZONE_SOUTHWEST.
 | Corviknight | 0.625% | 34 | National Dex bonus |
 | Grafaiai | 0.625% | 25–29 | National Dex bonus |
 | Heracross | 0.625% | 25–29 | National Dex bonus |
+| Joltik | 0.625% | 25–29 | National Dex bonus |
 | Nidoqueen | 0.625% | 34 | National Dex bonus |
 | Noivern | 0.625% | 25–29 | National Dex bonus |
 | Polteageist | 0.625% | 25–29 | National Dex bonus |
 | Roselia | 0.625% | 25–29 | National Dex bonus |
-| Scolipede | 0.625% | 34 | National Dex bonus |
 | Seadra | 0.625% | 25–29 | National Dex bonus |
-| Simipour | 0.625% | 25–29 | National Dex bonus |
 | Togekiss | 0.625% | 34 | National Dex bonus |
 | Torterra | 0.625% | 34 | National Dex bonus |
+| Unfezant | 0.625% | 34 | National Dex bonus |
 | Volcarona | 0.625% | 25–29 | National Dex bonus |
 | Weepinbell | 0.625% | 25–29 | National Dex bonus |
 
@@ -3583,7 +3582,7 @@ This is a separate source table. Availability can depend on game mode or special
 | Morpeko | 0.625% | 22–32 | National Dex bonus |
 | Oddish | 0.625% | 22–32 | National Dex bonus |
 | Porygon-Z | 0.625% | 34 | National Dex bonus |
-| Sewaddle | 0.625% | 22–32 | National Dex bonus |
+| Scolipede | 0.625% | 34 | National Dex bonus |
 | Victreebel | 0.625% | 34 | National Dex bonus |
 | Vivillon | 0.625% | 22–32 | National Dex bonus |
 | Volbeat | 0.625% | 22–32 | National Dex bonus |
@@ -3647,7 +3646,7 @@ This is a separate source table. Availability can depend on game mode or special
 | Morpeko | 0.625% | 22–32 | National Dex bonus |
 | Oddish | 0.625% | 22–32 | National Dex bonus |
 | Porygon-Z | 0.625% | 34 | National Dex bonus |
-| Sewaddle | 0.625% | 22–32 | National Dex bonus |
+| Scolipede | 0.625% | 34 | National Dex bonus |
 | Victreebel | 0.625% | 34 | National Dex bonus |
 | Vivillon | 0.625% | 22–32 | National Dex bonus |
 | Volbeat | 0.625% | 22–32 | National Dex bonus |
@@ -3910,8 +3909,8 @@ Source map: MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM.
 | Brionne | 0.667% | 26–32 | National Dex bonus |
 | Carracosta | 0.667% | 26–32 | National Dex bonus |
 | Croconaw | 0.667% | 26–32 | National Dex bonus |
-| Dondozo | 0.667% | 26–32 | National Dex bonus |
 | Drizzile | 0.667% | 26–32 | National Dex bonus |
+| Iron Bundle | 0.667% | 26–32 | National Dex bonus |
 | Kingler | 0.667% | 26–32 | National Dex bonus |
 | Milotic | 0.667% | 26–32 | National Dex bonus |
 | Piloswine | 0.667% | 26–32 | National Dex bonus |
@@ -3966,21 +3965,20 @@ Source map: MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM.
 | Zubat | 35.64% | 26–30 | Native / custom slot |
 | Snorunt | 8.91% | 26–30 | Native / custom slot |
 | Golbat | 4.46% | 30–32 | Native / custom slot |
-| Avalugg | 0.660% | 26–32 | National Dex bonus |
-| Chewtle | 0.660% | 26–32 | National Dex bonus |
-| Clamperl | 0.660% | 26–32 | National Dex bonus |
-| Dewgong | 0.660% | 26–32 | National Dex bonus |
-| Frillish | 0.660% | 26–32 | National Dex bonus |
-| Glaceon | 0.660% | 26–32 | National Dex bonus |
-| Iron Bundle | 0.660% | 26–32 | National Dex bonus |
-| Kingdra | 0.660% | 34 | National Dex bonus |
-| Lanturn | 0.660% | 26–32 | National Dex bonus |
-| Pyukumuku | 0.660% | 26–32 | National Dex bonus |
-| Swinub | 0.660% | 26–32 | National Dex bonus |
-| Tentacool | 0.660% | 26–32 | National Dex bonus |
-| Tympole | 0.660% | 26–32 | National Dex bonus |
-| Wailmer | 0.660% | 26–32 | National Dex bonus |
-| Wiglett | 0.660% | 26–32 | National Dex bonus |
+| Avalugg | 0.707% | 26–32 | National Dex bonus |
+| Chewtle | 0.707% | 26–32 | National Dex bonus |
+| Clamperl | 0.707% | 26–32 | National Dex bonus |
+| Dewgong | 0.707% | 26–32 | National Dex bonus |
+| Frillish | 0.707% | 26–32 | National Dex bonus |
+| Glaceon | 0.707% | 26–32 | National Dex bonus |
+| Kingdra | 0.707% | 34 | National Dex bonus |
+| Lanturn | 0.707% | 26–32 | National Dex bonus |
+| Pyukumuku | 0.707% | 26–32 | National Dex bonus |
+| Swinub | 0.707% | 26–32 | National Dex bonus |
+| Tentacool | 0.707% | 26–32 | National Dex bonus |
+| Tympole | 0.707% | 26–32 | National Dex bonus |
+| Wailmer | 0.707% | 26–32 | National Dex bonus |
+| Wiglett | 0.707% | 26–32 | National Dex bonus |
 | Cosmoem | 0.111% | 45 | Rare bonus pool |
 | Deoxys | 0.111% | 45 | Rare bonus pool |
 | Giratina | 0.111% | 45 | Rare bonus pool |
