@@ -86,7 +86,7 @@ def enable_colored_effectiveness(checkout: Path):
             raise ValueError(f'Palette slot {index} already in use; aborting patch')
     for index, rgb in colors.items():
         lines[index + 3] = rgb
-    palette.write_text('\\n'.join(lines) + '\\n', encoding='utf-8')
+    palette.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print('Battle UI: effectiveness now uses colored multipliers: 4x/2x green, 1x neutral, 1/2 or 1/4 red, 0x blue.')
 
 
