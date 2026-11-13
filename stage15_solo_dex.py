@@ -48,6 +48,11 @@ MID_BONUS_PERCENT = 8
 LATE_BONUS_PERCENT = 10
 LEGENDARY_BONUS_PERCENT = 1
 
+# Fish that already have a proper native aquatic encounter must never be
+# assigned to the land-only National Dex supplement. A Water type alone is
+# not evidence of an exclusively aquatic habitat (e.g. Marill).
+NATIVE_AQUATIC_ONLY = {'CARVANHA'}
+
 
 def progression_tier(map_id):
     if map_id in EARLY_MAPS or map_id.startswith('MAP_GRANITE_CAVE'):
@@ -157,6 +162,21 @@ def patch(root):
                 print('STAGE15_ART_AUDIT:',json.dumps({'form':form,'front':ref('frontPic'),'icon':ref('iconSprite'),
                      'iconPalIndex':ref('iconPalIndex'),'back':ref('backPic')},sort_keys=True)[:1500])
     names,types,power,stages=read_dex(root)
+    # This bonus generator hooks LAND only. Carvanha is already accessible by
+    # rod, so preserve the intended fishing habitat instead of also putting
+    # level-2 Carvanha in Route 103 grass.
+    encounters=json.loads((root/'src/data/wild_encounters.json').read_text(encoding='utf-8'))
+    native_aquatic={
+        mon['species'].removeprefix('SPECIES_')
+        for group in encounters['wild_encounter_groups'] if group.get('for_maps')
+        for entry in group.get('encounters', [])
+        if not entry.get('map','').endswith('_FRLG')
+        for method in ('water_mons','fishing_mons')
+        for mon in entry.get(method,{}).get('mons',[])
+    }
+    if not NATIVE_AQUATIC_ONLY <= native_aquatic:
+        raise ValueError('A water-only species lacks a native Surf/fishing path: '
+                         +str(NATIVE_AQUATIC_ONLY-native_aquatic))
     maps=available_areas(root)
     pools=defaultdict(list)
 
@@ -177,7 +197,7 @@ def patch(root):
         return 0
 
     for n in names:
-        if n=='EEVEE':continue  # Existing Route 102 wild Eevee stays unchanged.
+        if n=='EEVEE' or n in NATIVE_AQUATIC_ONLY:continue  # Existing native encounter tables stay unchanged.
         rare=n in RARE
         if n in STARTERS:
             candidates=[STARTERS[n]]
@@ -201,7 +221,7 @@ def patch(root):
         m=min(candidates,key=score)
         pools[(m,rare)].append(n)
     total={n for pool in pools.values() for n in pool}
-    if total!=set(names)-{'EEVEE'} or max(map(len,pools.values()))>65:
+    if total!=set(names)-{'EEVEE'}-NATIVE_AQUATIC_ONLY or max(map(len,pools.values()))>65:
         raise ValueError('Progression-aware solo National Dex coverage/pool capacity failed')
     early_encounters={n for (m,rare),group in pools.items()
                       if progression_tier(m)==0 for n in group}
@@ -215,11 +235,11 @@ def patch(root):
         ordinary=pools[(m,False)];legend=pools[(m,True)]
         a=len(flat);flat.extend(ordinary);b=len(flat);flat.extend(legend)
         entries.append(f'    {{MAP_GROUP({m}), MAP_NUM({m}), {a}, {len(ordinary)}, {b}, {len(legend)}, {bonus_percent(m)}}},')
-    if len(flat)!=1024:raise ValueError('Incorrect pool count')
+    if len(flat)!=1024-len(NATIVE_AQUATIC_ONLY):raise ValueError('Incorrect pool count')
     data='\n'.join('    '+', '.join('SPECIES_'+n for n in flat[i:i+6])+',' for i in range(0,len(flat),6))
     mins='\n'.join('    '+', '.join(str(min_wild_level(n)) for n in flat[i:i+20])+',' for i in range(0,len(flat),20))
     c='''
-// STAGE15_SOLO_DEX: biome-aware bonus catch pools for 1,024 National species.
+// STAGE15_SOLO_DEX: biome-aware land bonus species; aquatic natives stay aquatic.
 // Eevee already appears natively on Route 102. No encounter table is removed.
 struct Stage15Habitat { u8 group, num; u16 first, count, rareFirst, rareCount; u8 bonusChance; };
 static const u16 sStage15Species[] = {
@@ -275,6 +295,7 @@ static bool8 Stage15_TryWildEncounter(enum WildPokemonArea area, enum Species *s
     target.write_text(orig)
     report={'national_dex_species':1025,'bonus_species':len(flat),'wild_eevee':'MAP_ROUTE102',
        'restored_starters':['TREECKO','TORCHIC','MUDKIP'],'bonus_map_count':len(entries),
+       'native_aquatic_only_species':sorted(NATIVE_AQUATIC_ONLY),
        'ordinary_encounter_chance_percent_by_tier':{'early':4,'mid':8,'late':10},
        'rare_encounter_chance_percent':1,
        'minimum_levels':{n:min_wild_level(n) for n in flat},
@@ -286,6 +307,7 @@ static bool8 Stage15_TryWildEncounter(enum WildPokemonArea area, enum Species *s
     print(f'Stage15: restored Treecko / Torchic / Mudkip; Eevee remains wild Route 102.')
     print(f'Stage15: {len(flat)} additional species placed across {len(entries)} progression-safe Hoenn land habitats.')
     print('Stage15: early bonus 4%, mid 8%, late 10%; rare 1%; evolved species get minimum wild levels.')
+    print('Stage15: Carvanha reserved for native fishing/Surf encounters, never bonus land grass.')
     print('Stage15: all 1,025 National entries have an encounter path; no early final evolutions.')
     print('Stage15: original wild tables, all 171 Eevee forms, and saves unchanged.')
 
