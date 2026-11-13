@@ -1,4 +1,6 @@
-# Eevee expansion prototype: source migration and current status
+# Eevee expansion prototype: Stage 8E migration (historical)
+
+> **Archived November 10, 2026 snapshot.** The “latest” build, rarity, test evolutions, and only-two-species statements below describe early Stage 8E–8J prototypes, **not** the current game. The current compiled Stage 15.1 build has the complete 171-form roster, Treecko/Torchic/Mudkip starters, wild Eevee and deliberate catalyst evolution. See the [latest release-candidate notes](RELEASE_NOTES_v0.1.0-alpha.md) and [current field guide](EEVEE_FIELD_GUIDE.md).
 
 This document began with Stage 8E, the first source-based Pokémon Emerald Expansion build. For current version-by-version changes, **see [CHANGELOG.md](CHANGELOG.md)**.
 
