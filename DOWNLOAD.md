@@ -30,9 +30,9 @@ Extract the ZIP using your device's file manager, then import the `.gba` in your
 ## What is actually in Stage 15.1?
 
 - The **original Birch trio**: Treecko, Torchic and Mudkip.
-- **Eevee in the wild**, including Route 102 (10% of the normal land-encounter slots), Route 101 (5%), Route 104 (5%) and Route 117 (5%).
+- **Eevee in the wild**, including Route 102 (10% of the normal land-encounter slots), Route 101 (5%), and Route 104/117 (5% core-table slots, approximately 4.4% overall after their Stage 15 bonus pool when applicable).
 - **171 Eeveelution forms**, including 18 singles and 153 unique dual-type combinations.
-- Expanded solo National Dex catchability designed for all **1,025 official species**, including trade and event-only Pokémon, using extra rare encounters across 61 habitats.
+- Expanded solo National Dex encounter **design** assigns habitats to all **1,025 official species**, including trade and event-only Pokémon, using bonus pools across 61 habitats. **Complete in-game catchability is not verified**.
 - Catalyst and typed-item evolutions, IV/EV summaries, effectiveness hints, and provisional Pokémon followers.
 - New animated Eevee title, **2026 MONOAMINE** credit, and companion emulator cover art.
 
