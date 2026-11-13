@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Enable Unbound-like type indicators using native pokeemerald-expansion settings.
+"""Enable effectiveness hints and convenient Gen 3 in-battle move rearrangement.
 
-Run with the path to an expansion checkout after the species installer and
-before make. Only the two battle UI config defines are edited.
+Run with an expansion checkout after the species installer and before make.
+The engine already supports reordering moves on the Pokemon summary screen;
+setting B_MOVE_REARRANGEMENT_IN_BATTLE=GEN_3 also enables Select on the
+battle move-selection screen (not link battles). No save layout is changed.
 """
 import argparse
 from pathlib import Path
@@ -18,6 +20,9 @@ def enable(checkout: Path):
         'B_SHOW_EFFECTIVENESS': ('SHOW_EFFECTIVENESS_ALWAYS', {
             'SHOW_EFFECTIVENESS_NEVER', 'SHOW_EFFECTIVENESS_SEEN',
             'SHOW_EFFECTIVENESS_CAUGHT', 'SHOW_EFFECTIVENESS_ALWAYS'}),
+        'B_MOVE_REARRANGEMENT_IN_BATTLE': ('GEN_3', {
+            'GEN_1', 'GEN_2', 'GEN_3', 'GEN_4', 'GEN_5',
+            'GEN_6', 'GEN_7', 'GEN_8', 'GEN_9', 'GEN_LATEST'}),
     }
     edited = text
     for name, (replacement, accepted) in rules.items():
@@ -33,6 +38,7 @@ def enable(checkout: Path):
         config.write_text(edited, encoding='utf-8')
     print('Battle UI: B_SHOW_TYPES=SHOW_TYPES_ALWAYS')
     print('Battle UI: B_SHOW_EFFECTIVENESS=SHOW_EFFECTIVENESS_ALWAYS')
+    print('Battle UI: B_MOVE_REARRANGEMENT_IN_BATTLE=GEN_3 (Select swaps move slots).')
     print('Native effectiveness labels replace PP during move selection; L opens move details.')
 
 
