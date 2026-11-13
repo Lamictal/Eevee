@@ -29,6 +29,7 @@ The GitHub repository is public, but this is **not a tagged GitHub Release or a 
 - **Solo National Pokédex design:** Source checks assign a potential wild encounter to **all 1,025 official National Dex species**, including trade-evolution and event-only Pokémon, through 1,024 bonus species across **61 Hoenn land habitats** plus existing wild Eevee. This is **not proof** that every habitat is reachable, every encounter works in-game, or the Pokédex is fully completable yet.
 - **Explore to collect:** All 18 single-type Eeveelutions appear in suitable wild habitats. Nine distinct dual-type forms have rare wild encounters; other dual forms are designed to come through evolution.
 - **Evolution items:** Custom first-stage catalysts and second-type booster items are sold throughout Hoenn. The code defines **306 single-to-dual evolution routes** for all 153 unique duals.
+- **Level-up moves for every form:** [Searchable-by-heading move-level tables for Eevee and all 171 Eeveelutions](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_LEVEL_UP_MOVES.md). All tables are extracted from the compiled ROM source; custom movesets are still being balanced.
 - **Quality-of-life features:** IV/EV details, basic move-effectiveness indicators, quick fleeing and provisional following Pokémon and party icons.
 - **Custom visuals:** Animated Eevee sunset title screen, **2026 MONOAMINE** credit, and custom New Journey/Continue/Settings menu artwork. Optional square and portrait GBA-style **emulator cover PNGs** are packaged with the latest build.
 
