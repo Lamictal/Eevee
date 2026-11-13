@@ -127,14 +127,17 @@ def generate(checkout, bonus_report, output):
     weights = rates_by_type(group["fields"])
     fishing_groups = {k: weights[k] for k in ("old_rod","good_rod","super_rod")}
     report = json.loads(bonus_report.read_text(encoding="utf-8"))
-    if report["national_dex_species"] != 1025 or report["bonus_species"] != 1024:
+    aquatic_only=set(report.get("native_aquatic_only_species",[]))
+    if report["national_dex_species"] != 1025 or report["bonus_species"] != 1024-len(aquatic_only):
         raise ValueError("Encounter balance report does not cover all 1025 species")
     habitats = report["habitats"]
     minimum = report["minimum_levels"]
     rare_pct = report["rare_encounter_chance_percent"]
     extra = [n for b in habitats.values() for n in b.get("common", []) + b.get("rare", [])]
-    if len(extra) != 1024 or len(set(extra)) != 1024:
+    if len(extra) != report["bonus_species"] or len(set(extra)) != len(extra):
         raise ValueError("Duplicate or missing National Dex pool species")
+    if aquatic_only.intersection(extra):
+        raise ValueError("Native aquatic-only Pokémon included in land bonus pools")
     if set(extra) != set(minimum):
         raise ValueError("Missing minimum wild levels for bonus species")
     maps = defaultdict(list)
@@ -144,6 +147,15 @@ def generate(checkout, bonus_report, output):
             maps[entry["map"]].append(entry)
     if len(maps) < 180:
         raise ValueError(f"Too few wild encounter maps: {len(maps)}")
+    native_aquatic={
+        mon["species"].removeprefix("SPECIES_")
+        for area_entries in maps.values()
+        for entry in area_entries
+        for method in ("water_mons","fishing_mons")
+        for mon in entry.get(method,{}).get("mons",[])
+    }
+    if not aquatic_only <= native_aquatic:
+        raise ValueError("Aquatic-only species missing from fishing/Surf tables")
 
     def sort_key(mapid):
         route = re.fullmatch(r"MAP_ROUTE(\d+)", mapid)
@@ -178,7 +190,8 @@ def generate(checkout, bonus_report, output):
         "",
         f"**Coverage:** {len(map_ids)} distinct maps, "
         f"{sum(len(items) for items in maps.values())} source area tables, "
-        f"{len(extra)} supplementary National Dex species.",
+        f"{len(extra)} supplementary land National Dex species; "
+        f"{len(aquatic_only)} aquatic-only species use native water/fishing tables.",
         "",
         "## Jump to an area",
         "",
@@ -225,6 +238,13 @@ def generate(checkout, bonus_report, output):
     for name in ("AZUMARILL","DECIDUEYE","QUILLADIN"):
         if name in checks.get("Route 104 grass", {}):
             raise ValueError(f"Unexpected early {name} on Route 104")
+    if aquatic_only:
+        for mapid,area_entries in maps.items():
+            for entry in area_entries:
+                rows=entries_for_method(entry,"land_mons",weights,fishing_groups,
+                                        habitats.get(mapid,{}),minimum,rare_pct)
+                if rows and any(n in aquatic_only for n,rec in rows):
+                    raise ValueError(f"Aquatic-only Pokemon appears in grass at {mapid}")
     if "EEVEE" not in checks.get("Route 102 grass",{}):
         raise ValueError("Route 102 Eevee was lost from native wild encounters")
     output.parent.mkdir(parents=True, exist_ok=True)
