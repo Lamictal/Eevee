@@ -9,11 +9,17 @@
 - **Every dual form is intended to be obtainable without a wild encounter** via these evolutions. Individual in-game evolution outcomes are still pending emulator QA.
 - Original Emerald Pokémon, standard fishing/surfing encounters, story, and vanilla Eevee evolutions remain. At least **90%** of wild land encounters on each newly modified map are ordinary Pokémon.
 
+## Stage 15: Complete the National Pokédex without online trades
+
+The latest build adds biome-specific wild encounter pools for **all 1,025 official National Pokédex species**, including trade-evolution species and event-only Pokémon, while retaining the existing Hoenn wildlife and Eevee forms. Birch now offers the **original Treecko, Torchic and Mudkip** starter trio. Eevee stays wild on Route 102 and other early routes. Rare legendary/mythical species are concentrated in later locations.
+
+See the [complete solo-Dex design, starter location chart, rarity notes, and testing checklist](STAGE15_SOLO_DEX.md). The build also generates a per-map species report, packaged with its diagnostic logs. Compilation alone is not emulator confirmation.
+
 ## 1. Where to find Eevee
 
 | Location | Eevee level | Encounter chance |
 |---|---:|---:|
-| **Starter**: Professor Birch's bag | Starter level | Replaces Treecko as a choice; Torchic and Mudkip remain |
+| **Birch's starter bag** | Level 5 | **Treecko, Torchic, and Mudkip restored; Eevee is caught in the wild instead** |
 | Route 101 | 3–4 | **5%** of land encounters |
 | Route 102 | 4–5 | **10%** |
 | Route 104 | 5–7 | **5%** |
