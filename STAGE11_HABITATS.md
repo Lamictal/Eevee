@@ -1,10 +1,12 @@
 # Stage 11: full-roster wild ecology across Hoenn
 
+> **Historical Stage 11 snapshot, not the current Stage 15.1 encounter rules.** The latest ROM restores Treecko/Torchic/Mudkip, keeps wild Eevee, and adds Stage 15 bonus pools that can override ordinary wild encounters. See the [current Field Guide](EEVEE_FIELD_GUIDE.md), [Stage 15 design](STAGE15_SOLO_DEX.md), and [latest successful ROM](https://github.com/Lamictal/Eevee/actions/runs/43467069844).
+
 **Corrected build:** [Stage 11 habitat alpha compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43276563803). **Stage 12** repairs missing evolution effects on type-booster items in the [updated build](https://github.com/Lamictal/Eevee/actions/runs/43279472956). For the complete player-facing wild encounter and evolution-item tables, see **[EEVEE_FIELD_GUIDE.md](EEVEE_FIELD_GUIDE.md)**. All 153 dual forms have 306 intended item routes, but only nine distinct duals spawn in the wild.
 
 **Build:** [171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803), separate from the [previous successful 171-form source alpha](https://github.com/Lamictal/Eevee/actions/runs/43273919245).
 
-The game retains all original Emerald wild species and existing encounters except selected 5%, 4%, or 1% land slots. **At least 90% of the land encounter probability in every modified map remains regular Pokémon.** Eevee continues to be wild on Routes 101/102/104/117 and is the starter option. Stage 9's Aerieon (Route 119, 5%) and Aerartheon (Victory Road 1F, 1%) encounters are retained.
+**Stage 11 behavior at the time:** the ecology patch retained the underlying Emerald wild tables while replacing selected 5%, 4%, or 1% land slots. The Stage 11 table validator kept at least 90% of those **table slot weights** for ordinary species. **This is not a guarantee for the current Stage 15.1 game:** Stage 15 adds a separate 12% normal / optional 3% rare bonus encounter override on 61 maps. Eevee remains wild on Routes 101/102/104/117, but **Birch now offers Treecko/Torchic/Mudkip**, not Eevee. The Stage 9 Aerieon (Route 119, 5% core slot) and Aerartheon (Victory Road 1F, 1% core slot) entries still exist.
 
 The ecology patch requires the complete Stage 10 roster. It is never applied to the separate Stage 9 two-form ROM.
 
@@ -49,7 +51,7 @@ Each dual sighting occupies **a 1% slot** in these advanced areas:
 | Victory Road B2F | Dragon/Fairy and Dragon/Dark |
 | Meteor Falls B1F 2R | Water/Dragon |
 
-These are *selected* rare sightings. **All 153 duals remain obtainable via the deliberate type-item evolution system** added in Stage 10; they are not all assigned separate wild slots. That avoids making each map an improbable lottery.
+These are *selected* rare core-table sightings. **All 153 duals have intended routes through the type-item evolution system** added in Stage 10 and repaired in Stage 12; live gameplay has not yet verified all those routes. The Stage 15 official-National-Dex bonus pools do not add custom dual Eevee forms. That avoids making each map an improbable lottery.
 
 ## Evolution-item progression
 
@@ -67,7 +69,7 @@ The Stage 10 importer provides the 18-type second-stage item routes and six-badg
 ## Implementation and testing
 
 - **Source:** `stage11_full_ecology.py`, after `stage10/import_full_roster_alpha.py` in the full-alpha workflow.
-- **Automatic checks:** every target map has exactly one 12-slot Emerald land table; all 18 single types have a habitat; rare duals occupy 1% slots only; species symbols are defined; at least 90% of slots remain native; the Stage 9 encounters are not removed.
+- **Historical Stage 11 automatic checks:** each target map has a single 12-slot Emerald land table; all 18 singles have a habitat; dedicated rare duals occupy 1% slots; species symbols are defined; at least 90% of Stage 11 **core table weight** remains ordinary. Current Stage 15.1 adds separate bonus encounters, so total observed rates differ.
 - **Save:** no additional species IDs or save changes in this stage compared with Stage 10. The full 171-form alpha itself has an expanded save layout. **Use a fresh save; migration not available.**
 - **Status distinction:** a successful GitHub compile is not the same as gameplay verification. No manual tests required at this milestone unless a gameplay bug appears later.
 
