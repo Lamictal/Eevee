@@ -3,10 +3,10 @@
 **Current version:** Stage 15.1, Monoamine 2026 · GBA · Experimental alpha. This is not yet a permanent GitHub Release.
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43467069844 -->
-**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43467069844)**
+<!-- data-build-run=43473796334 -->
+**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43473796334)**
 
-**Stage 15.1 - Monoamine 2026 Title and Cover Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43467069844)
+**Stage 15.1 - Monoamine 2026 Title and Cover Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43473796334)
 
 On the build page open **Artifacts** for the ZIP if GitHub permits access. Artifacts expire after 14 days; this is not a permanent public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
