@@ -6,8 +6,8 @@
 
 - Birch's starter bag uses **Treecko, Torchic and Mudkip**, not Eevee. Eevee is catchable on **Route 102** and other early routes.
 - The source includes **18 single-type Eeveelutions plus 153 unique dual-type combinations** and validates **306 directed item-evolution routes**.
-- Each of the **1,025 official National Dex species** is assigned a direct wild catchability route. The additional 1,024 species are in bonus encounter pools covering 61 Hoenn land habitats. This is static coverage, not a completed in-game Pokédex.
-- Original wild encounter tables are retained, with bonus species selected by a separate encounter chance. Rare species can be difficult to find individually.
+- Each of the **1,025 official National Dex species** has an assigned potential wild encounter location in the source. The additional 1,024 species are in bonus pools covering 61 Hoenn habitats. Map accessibility and full in-game Pokédex completion are **not verified**.
+- Original wild encounter tables remain in source, but Stage 15's additional encounter override can replace **12%** of land encounters, with a **3%-first rare pool** on applicable maps. This reduces effective base-table species odds. Bonus Pokémon inherit the level selected by the original encounter slot, which still needs balance testing.
 - The **2026 MONOAMINE** title credit and optional square/portrait emulator cover PNGs are included in Stage 15.1.
 - Cover art is a companion image, **not an embedded GBA thumbnail**.
 
