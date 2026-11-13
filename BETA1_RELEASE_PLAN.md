@@ -1,10 +1,10 @@
 # Beta 1 and first public release roadmap
 
-_Last reviewed source status: 2026-11-13 (Stage 15.1; Birch correction pending emulator verification)._
+_Last reviewed source status: 2026-11-13 (Stage 15.1 / Stage 14C compiled; Birch correction pending emulator verification)._
 
 ## Current deliverable
 
-[Stage 15.1 full 171-form Monoamine alpha](https://github.com/Lamictal/Eevee/actions/runs/43465510674): **compiled successfully**, with original Hoenn starters, 1,025-species solo National Dex habitats, animated title, and cover art. The repository is **public**, but the build artifact is not a published GitHub Release or a vetted public redistribution package. Birch's visual transition remains pending fresh emulator verification.
+[Stage 15.1 full 171-form Monoamine alpha](https://github.com/Lamictal/Eevee/actions/runs/43467069844): **compiled successfully**, with original Hoenn starters, 1,025-species solo National Dex habitats, animated title, and cover art. The repository is **public**, but the build artifact is not a published GitHub Release or a vetted public redistribution package. Birch's visual transition remains pending fresh emulator verification.
 
 Existing implemented systems:
 - 18 singles + 153 unordered dual types, 171 total; includes eight original Eeveelutions.
