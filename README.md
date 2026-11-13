@@ -37,6 +37,8 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 
 **[Read the complete Eevee Field Guide](EEVEE_FIELD_GUIDE.md)** (wild encounters, evolution items, towns and requirements).
 
+**[All 172 Eevee-family level-up move lists](EEVEE_LEVEL_UP_MOVES.md)**, generated from the actual compiled Stage 15.1 Pokémon source (Eevee plus 171 forms). Custom movesets have draft balance and repeated entries; see the guide.
+
 - **Eevee:** **wild**, not a starter, on Routes **101 (5% base-table slot), 102 (10%), 104 (5%) and 117 (5%)**. Stage 15's extra encounter pool can reduce effective rates on Routes 104/117 to approximately **4.4%**. Birch offers Treecko, Torchic and Mudkip.
 - **All 18 single-type Eeveelutions:** distributed across Hoenn habitats including Granite Cave, Fiery Path, Route 119, Mt. Pyre, Shoal Cave, Meteor Falls and Sky Pillar. Listed encounter percentages are **core table-slot weights**; Stage 15 bonus pools can replace some encounters on 61 maps. The older at-least-90%-ordinary-encounters claim no longer applies to actual Stage 15.1 encounters.
 - **Are all 153 dual types wild? No.** Nine distinct duals have very rare late-game wild locations (generally **1%**). Others are evolution-only.
