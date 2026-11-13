@@ -1,15 +1,15 @@
 # Beta 1 and first public release roadmap
 
-_Last verified source status: 2026-11-12._
+_Last reviewed source status: 2026-11-13 (Stage 15.1; Birch correction pending emulator verification)._
 
 ## Current deliverable
 
-[Stage 12 full 171-form item-evolution alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956): **compiled successfully**. The action uploaded the artifact `Eevee-All171-ItemEvolutions-Alpha-GBA` for internal testing. The repository is currently **private**. This is a build artifact, not a vetted public distribution package.
+[Stage 15.1 full 171-form Monoamine alpha](https://github.com/Lamictal/Eevee/actions/runs/43465510674): **compiled successfully**, with original Hoenn starters, 1,025-species solo National Dex habitats, animated title, and cover art. The repository is **public**, but the build artifact is not a published GitHub Release or a vetted public redistribution package. Birch's visual transition remains pending fresh emulator verification.
 
 Existing implemented systems:
 - 18 singles + 153 unordered dual types, 171 total; includes eight original Eeveelutions.
 - The normal Emerald Pokémon and storyline, with species-specific wild encounter distributions for all 18 singles plus nine rare wild dual forms.
-- Eevee starter option; early wild Eevee on Routes 101/102/104/117.
+- Treecko, Torchic, Mudkip restored as normal Hoenn starters; **wild Eevee** on Routes 101/102/104/117.
 - 306 directed item evolution routes from the 18 singles to all 153 unordered pairs; six-badge/level-38 dual evolution gating.
 - First-stage catalysts and type-boosting items available in Hoenn marts; Lilycove stocks all 18 type boosters.
 - IV/EV summary, move effectiveness hints, double-B fleeing, provisional followers/icons.
@@ -25,7 +25,7 @@ Existing implemented systems:
 
 ## Minimum gate for a friend-playable v0.1 beta
 
-1. Fresh game boots in mGBA, Birch gives Eevee, normal route wild Pokémon and custom species appear.
+1. Fresh game boots in mGBA; **Birch's intro background renders correctly**, his starter bag offers Treecko / Torchic / Mudkip, and wild Eevee appears early.
 2. Eevee evolves with one custom first-stage catalyst at the right level, and doesn't evolve before the threshold.
 3. Both dual-evolution paths into one unordered pair work, with six badges and level 38; wrong badge/level checks block correctly.
 4. One traditional Eevee evolution still works (e.g., a Fire Stone for Flareon).
@@ -40,7 +40,7 @@ This is a **small milestone QA pass**, not 171 manual evolutions. Automated sour
 - Better following Pokémon animations and party icons for all 163 custom forms.
 - Readable colored move-effectiveness UI (tracked by [issue #3](https://github.com/Lamictal/Eevee/issues/3)).
 - Better evolution selection UI, item descriptions, and clearer badge/level error messages.
-- Alternative four-option starter selection restoring Treecko alongside Eevee, Torchic and Mudkip.
+- Optional future starter selection customization, only if we actually need an extra Eevee starter slot (currently not planned; wild Eevee makes it unnecessary).
 - Regional/National Pokédex usability improvements and comprehensive habitat index.
 - Stronger balancing for moves, stats, abilities, and late-game dual-type opponents.
 - Save migration or frozen versioned save schema for upgrades.
@@ -48,7 +48,7 @@ This is a **small milestone QA pass**, not 171 manual evolutions. Automated sour
 
 ## Public sharing and ownership checklist
 
-The GitHub repository was **private** when this document was written. Publishing a repository makes **all repository code and histories visible**, but visitors don't gain write permission unless separately granted it. Don't add your friend as a write collaborator just for download access.
+The GitHub repository is **public**. Anyone can browse and fork its public source, but only authorized collaborators have write permissions. Don't grant edit access merely so someone can test the game.
 
 Before changing visibility or making a public Release:
 - Inspect source and history for sensitive files or secrets.
@@ -58,4 +58,4 @@ Before changing visibility or making a public Release:
 - Don't describe the game as endorsed by Pokémon, Nintendo, Game Freak or the *Oops! All Eevees!* creators.
 - Publish release notes with build identifier, version, known limitations, controls, save warning and bug report instructions.
 
-**Current build is experimental and has not completed the small Beta 1 acceptance tests.**
+**Stage 15.1 is an experimental alpha and has not completed the Beta 1 acceptance tests.**
