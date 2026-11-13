@@ -1,6 +1,8 @@
-# Stage 8N: fixed 171-form registry and save-compatibility contract
+# Stage 8N: fixed 171-form registry and save-compatibility contract (historical)
 
-Status: registry and CI validation only. **No additional Pokémon or new save format is installed into the current ROM by Stage 8N.** The last playable candidate remains the [Stage 8M compiled ROM](https://github.com/Lamictal/Eevee/actions/runs/43265195678), whose gameplay features have not yet been verified.
+> **Historical Stage 8N registry-only milestone.** The text below is accurate as a description of that planning stage, **not current ROM content**. Stage 10 later installed the full 171-form source roster; current Stage 15.1 is [here](RELEASE_NOTES_v0.1.0-alpha.md). No safe migration from Stage 8N/Evergreen saves is established; start a fresh save.
+
+**Stage 8N status at that time:** registry and CI validation only; Stage 8N itself added no ROM species or save changes. **Current build:** [Stage 15.1, all 171 forms compiled](https://github.com/Lamictal/Eevee/actions/runs/43467069844).
 
 ## Canonical target
 
