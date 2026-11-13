@@ -1,6 +1,8 @@
-# Stage 13: custom Eevee main menu
+# Stage 13: custom Eevee main menu (historical milestone)
 
-The **New Game / Continue / Options** menu now has an original Eevee-themed background and clearer labels. This is a real GBA background asset, built into the ROM from a reproducible Python art generator. It is **not a static website mockup**.
+> **Archived stage notes.** These describe Stage 13 at the time of implementation, not the current Stage 15.1 title screen. See the [current download guide](https://github.com/Lamictal/Eevee/blob/main/DOWNLOAD.md).
+
+The **historical Stage 13** New Game / Continue / Options menu introduced an original Eevee-themed background and clearer labels. This is a real GBA background asset, built into the ROM from a reproducible Python art generator. It is **not a static website mockup**.
 
 ## Visual design
 
@@ -36,4 +38,4 @@ The latest successful GitHub run should automatically update the **main README**
 5. Test B returning to the title screen.
 6. Confirm Mystery Gift and error-menu variants still respond normally.
 
-**Status:** [Stage 13 GBA ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43305777808), and the GitHub download-link sync step passed. The menu is still awaiting actual emulator visual/control verification. The original Pokémon Emerald title animation is retained for now; this stage customizes the **selection menu after pressing Start**, not the earlier splash/title animation.
+**Historical status:** [Stage 13 ROM compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43305777808). Stage 13 customized the selection menu but at that time left the original title animation intact. **Current Stage 15.1 replaces that earlier title animation with a Monoamine 2026 Eevee title screen** and has a Stage 14C intro-background correction. [Download/test the current build](https://github.com/Lamictal/Eevee/actions/runs/43467069844).
