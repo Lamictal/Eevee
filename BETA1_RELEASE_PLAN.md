@@ -4,7 +4,7 @@ _Last reviewed source status: 2026-11-13 (Stage 15.1 / Stage 14C compiled; Birch
 
 ## Current deliverable
 
-[Stage 15.1 full 171-form Monoamine alpha](https://github.com/Lamictal/Eevee/actions/runs/43467069844): **compiled successfully**, with original Hoenn starters, 1,025-species solo National Dex habitats, animated title, and cover art. The repository is **public**, but the build artifact is not a published GitHub Release or a vetted public redistribution package. Birch's visual transition remains pending fresh emulator verification.
+[Stage 15.1 full 171-form Monoamine alpha and source-generated moves guide](https://github.com/Lamictal/Eevee/actions/runs/43473796334): **compiled successfully**, with original Hoenn starters, 1,025-species solo National Dex habitats, animated title, and cover art. The repository is **public**, but the build artifact is not a published GitHub Release or a vetted public redistribution package. Birch's visual transition remains pending fresh emulator verification.
 
 Existing implemented systems:
 - 18 singles + 153 unordered dual types, 171 total; includes eight original Eeveelutions.
@@ -20,7 +20,7 @@ Existing implemented systems:
 - **A green build is not gameplay validation.** Need a short fresh-save in-emulator smoke test and a save/reload test to verify expanded Pokédex flags and PC boxes.
 - **Some graphics remain provisional.** Party icons and multi-direction follower sheets were previously improved for Aerieon and Aerartheon, not yet hand-polished for all 163 custom species.
 - **Evolution routes require gameplay validation.** Static source checks verify 306 definitions and item effect bits; confirm real item consumption, unchanged native Eevee evolutions, gate behavior and party-menu flow.
-- **Balance requires playtesting.** Abilities, level-up movesets, level curves, wild encounter rates, progression gating and shop pricing need review.
+- **Balance requires playtesting.** The [source-generated level-up guide](EEVEE_LEVEL_UP_MOVES.md) covers Eevee and all 171 forms, but **all 163 custom forms currently have five or six learning-level entries**, and **26** have repeated move-learning entries. [Issue #5](https://github.com/Lamictal/Eevee/issues/5) tracks expanding/rebalancing them, alongside ability, level-curve, wild encounter and shop-price reviews.
 - **Save migration isn't implemented.** Earlier prototypes, Evergreen files, and this full-roster alpha should not be assumed compatible. Back up saves and begin with a new one.
 
 ## Minimum gate for a friend-playable v0.1 beta
@@ -37,6 +37,7 @@ This is a **small milestone QA pass**, not 171 manual evolutions. Automated sour
 
 ## Optional enhancements after Beta 1
 
+- Expand and rebalance the [163 custom Eeveelution level-up movesets](https://github.com/Lamictal/Eevee/issues/5), and keep the generated [moves-by-level reference](EEVEE_LEVEL_UP_MOVES.md) synchronized.
 - Better following Pokémon animations and party icons for all 163 custom forms.
 - Readable colored move-effectiveness UI (tracked by [issue #3](https://github.com/Lamictal/Eevee/issues/3)).
 - Better evolution selection UI, item descriptions, and clearer badge/level error messages.
