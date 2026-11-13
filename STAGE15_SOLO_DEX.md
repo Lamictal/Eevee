@@ -1,6 +1,6 @@
 # Stage 15: Original Hoenn starters and solo National Pokédex
 
-This milestone extends the **171-form Eevee Emerald Expansion alpha**. It is not an Evergreen save-compatible release. Stage 14's animated Eevee title and Birch graphics transition correction remain in place.
+This milestone is part of the **Stage 15.1 Monoamine Eevee Emerald Expansion alpha**. It is not Evergreen save-compatible. The animated title screen is present, and the Stage 14C Birch-background correction **compiled successfully**; actual emulator confirmation is still required.
 
 ## Starters and Eevee
 
@@ -10,9 +10,9 @@ This milestone extends the **171-form Eevee Emerald Expansion alpha**. It is not
 
 ## Solo-completable National Pokédex
 
-- The project generates habitats for **all 1,025 canonical National Pokédex species**, from Bulbasaur through Pecharunt.
+- The source generator assigns a bonus wild habitat to **1,024 of the 1,025 canonical National Pokédex species**, from Bulbasaur through Pecharunt. **Eevee** already appears in normal wild tables. This is an automated coverage claim, **not** a verified completion of the National Dex in-game.
 - Eevee is already available in the normal Route 102 encounter table. The other **1,024 species** are each assigned a deterministic, biome-oriented bonus encounter habitat.
-- **No online trade or limited-time event is needed to get a National Pokédex species**. Even species traditionally evolved via trading, or distributed through events, have a possible direct wild encounter.
+- The intended design avoids online trading and limited-time events, including for trade-evolution and event-only Pokémon. **Every official species has a scripted potential encounter**, but actual map accessibility, encounter behavior, Pokédex registration and catchability still need emulator checks before guaranteeing full completion.
 - This is **National Dex species coverage**, not a guarantee of every alternate battle form, variant, costume, regional form, or gender-specific appearance.
 - The **171 Eevee forms**, including eight canonical species, remain governed by the existing Stage 10–12 item-evolution mechanics. All 153 dual forms are intended to remain reachable via item paths, pending in-game QA.
 
@@ -20,7 +20,9 @@ This milestone extends the **171-form Eevee Emerald Expansion alpha**. It is not
 
 Existing Hoenn land encounter tables are **not replaced**. Fishing, surfing, rocks, story/static encounters, trainer teams, item shops, and Pokédex save layout are not changed.
 
-In selected land habitats, ordinary species are drawn from a local extra-species pool on approximately **12% of wild encounters**. Rare legendary/mythical entries have their own approximately **3% pool** where applicable, largely in late-game locations such as Sky Pillar, Victory Road, Meteor Falls, Shoal Cave, and Mt. Pyre. The odds of *one specific species* are the pool's chance divided by its population; do not mistake 12% for the chance of one specific Pokémon.
+In **61 selected land habitats**, the game can replace a normal table encounter with an extra species: an ordinary pool triggers on **12%** of rolls where reached. In maps with a rare legendary/mythical pool, the **3% rare roll happens first**; if it fails, the 12% ordinary roll runs, leaving approximately **85.36%** of encounters to the original table (versus 88% on maps with only an ordinary bonus pool). On Routes **101 and 102**, the Stage 15 override is disabled. These percentages are **pool probabilities, not odds for a specific Pokémon**; those depend on the local pool size. The original land tables remain in the code, but some actual encounter rates are reduced by the override.
+
+**Important implementation detail:** The bonus replacement happens *after* the engine chooses a level from the original wild encounter slot. A bonus species therefore inherits that slot's chosen level; the current source does **not** define a separate per-species bonus level range. This needs balance testing, especially for legendary/mythical encounters.
 
 ### Starter sightings by generation
 
@@ -48,15 +50,15 @@ Before calling this a beta, manually verify:
 1. New game has Treecko, Torchic, Mudkip, not Eevee, in Birch's bag.
 2. Route 102 still produces Eevee along with native wild Pokémon.
 3. A non-Hoenn starter appears in a listed habitat.
-4. A trade-evolution species (for example Gengar or Alakazam) appears as a wild encounter and can be caught.
-5. The Stage 14B Birch screen is no longer green or backed by the Eevee title image.
+4. A trade-evolution species (for example Gengar or Alakazam) appears in its assigned biome and can be caught, without trading.
+5. The Stage 14C Birch introduction now shows its own background correctly instead of the green-tinted Eevee logo. The code fix compiled but is not visually confirmed yet.
 6. Save and reload after catching a newly introduced species; confirm Pokédex registration and existing custom-Eevee forms.
 
 Use a **fresh save** or a separately backed-up experimental save. Do not reuse your only Evergreen save.
 
 ## Compilation status
 
-**Stage 15 compiled successfully** in [GitHub Actions run #43377956728](https://github.com/Lamictal/Eevee/actions/runs/43377956728). The source checks generated 1,024 bonus species across **61 Hoenn land habitats**, plus the preexisting early wild Eevee, for **1,025/1,025 canonical National Dex species** with a direct wild encounter route. The full-171 ROM artifact was uploaded successfully. These checks do **not** replace a manual mGBA new-game, catch, or save/reload smoke test.
+**Latest Stage 15.1 compiled successfully** in [GitHub Actions run #43467069844](https://github.com/Lamictal/Eevee/actions/runs/43467069844). The source checks generated 1,024 bonus species across **61 Hoenn land habitats**, plus the preexisting early wild Eevee, for **1,025/1,025 canonical National Dex species** with an assigned encounter path. The updated ROM artifact was uploaded. These checks do **not** establish every encounter's in-game accessibility or a fully completable Pokédex; manual mGBA tests of Birch, catching, evolution, saving and loading remain necessary.
 
 ## Source and build
 
