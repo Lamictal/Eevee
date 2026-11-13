@@ -36,6 +36,8 @@ on:
       - stage14_title_ui.py
       - tools/generate_eevee_cover.py
       - tools/generate_eevee_learnsets.py
+      - tools/generate_encounter_guide.py
+      - tools/publish_encounter_guide.py
       - tools/publish_eevee_learnsets.py
       - stage14_patch_builder.py
       - stage15_solo_dex.py
@@ -143,6 +145,20 @@ jobs:
             --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
             --jobs 4 2>&1 | tee stage8d_attempt.log
 
+      - name: Generate accurate wild encounters by area from compiled source
+        if: success()
+        run: |
+          python3 tools/generate_encounter_guide.py \
+            --checkout pokeemerald-expansion-stage8d \
+            --bonus-report stage15_solo_dex_report.json \
+            --output ENCOUNTERS.md
+
+      - name: Publish all-area encounter rates to GitHub
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/publish_encounter_guide.py
+
       - name: Generate all Eevee family level-up move tables from compiled source
         if: success()
         run: |
@@ -203,5 +219,6 @@ jobs:
             stage15_solo_dex_report.json
             stage16_icon_report.json
             EEVEE_LEVEL_UP_MOVES.md
+            ENCOUNTERS.md
           if-no-files-found: warn
           retention-days: 14
