@@ -1,4 +1,4 @@
-name: Build Eevee 171 forms with animated Eevee title and menu alpha
+name: Build Eevee 171 forms with native Hoenn starters and solo National Dex
 
 on:
   push:
@@ -35,6 +35,8 @@ on:
       - stage13_patch_builder.py
       - stage14_title_ui.py
       - stage14_patch_builder.py
+      - stage15_solo_dex.py
+      - stage15_patch_builder.py
       - data/stage14_title_source.b85
       - tools/sync_latest_build.py
       - 'data/full171_bundle_part*.b64'
@@ -126,6 +128,9 @@ jobs:
       - name: Install native animated Eevee title, crisp labels and matching menu artwork
         run: python3 stage14_patch_builder.py
 
+      - name: Restore Treecko and install all-region solo Pokédex encounter habitats
+        run: python3 stage15_patch_builder.py
+
       - name: Attempt compile (NOT Evergreen)
         shell: bash
         run: |
@@ -138,7 +143,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-All171-AnimatedTitleMenu-Alpha-GBA
+          name: Eevee-All171-SoloNationalDex-Stage15-GBA
           compression-level: 0
           path: pokeemerald-expansion-stage8d/pokeemerald.gba
           if-no-files-found: error
@@ -148,7 +153,7 @@ jobs:
         if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EEVEE_BUILD_LABEL: Stage 14 - Eevee Animated Title and Menu Alpha
+          EEVEE_BUILD_LABEL: Stage 15 - Hoenn Starters and Solo National Dex Alpha
         run: python3 tools/sync_latest_build.py
 
       - name: Upload diagnostic logs
@@ -160,5 +165,6 @@ jobs:
             stage8d_attempt.log
             kit/stage8d_build.log
             stage11_ecology_report.json
+            stage15_solo_dex_report.json
           if-no-files-found: warn
           retention-days: 14
