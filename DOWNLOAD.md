@@ -1,6 +1,6 @@
-# Download and play Eevee (Alpha)
+# Download and play Pokémon Eevee (alpha)
 
-**Current development version:** See the latest successful build linked below. The 171-form game remains experimental.
+**Current version:** Stage 15.1, Monoamine 2026 · GBA · Experimental alpha. This is not yet a permanent GitHub Release.
 
 <!-- EEVEE_LATEST_BUILD_START -->
 <!-- data-build-run=43465510674 -->
@@ -11,53 +11,43 @@
 On the build page open **Artifacts** for the ZIP if GitHub permits access. Artifacts expire after 14 days; this is not a permanent public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
 
-The linked GitHub Actions run contains the latest experimental build ZIP under **Artifacts**. The name may change between builds; download the item whose name starts with **Eevee-All171-**.
+## Download the test build
 
- > **Important:** The repository is public, but this temporary development artifact is not a stable public release. It may expire after 14 days or require GitHub sign-in. Redistribution rights for third-party art have not been established. Do not redistribute the complete commercial game ROM.
+1. Open the **latest successful build** above. Sign in to GitHub if required.
+2. Scroll to **Artifacts** and select **Eevee-All171-Monoamine-2026-Alpha-GBA** (or the latest artifact starting with `Eevee-All171-`).
+3. Download and **extract the ZIP**. It contains the game file `pokeemerald.gba` and optional cover images.
+4. Import the **.gba** file into a compatible GBA emulator, such as mGBA. Choose **New Journey**.
+5. **Start a fresh save**, keeping any existing Emerald, Evergreen or earlier Eevee alpha saves backed up separately.
 
-## Getting the game (no GitHub experience required)
+For cover artwork only, choose the separately listed **Eevee-Monoamine-2026-Cover-Art** ZIP. Cover PNGs are separate emulator-library art; they are **not embedded inside the ROM**. Your emulator may let you associate an image with the imported game.
 
-1. **Open the download link above.** Sign in to GitHub if prompted. The repository is public, though downloading Actions artifacts may require signing in. If the artifact is unavailable, it may have expired.
-2. **Download the ZIP file** if prompted. If the link opens the build page instead, find **Artifacts** at the bottom and select the latest **Eevee-All171-...** ZIP.
-3. **Extract/unzip the download.** You should get a **.gba** game file (typically \`pokeemerald.gba\`). Do **not** try to open the ZIP as a save file.
-4. **Open the extracted .gba in your GBA emulator** (for example, mGBA on a computer). Use your emulator's normal **Open ROM / Import** command.
-5. Select **New Game**. **Do not load an older Eevee alpha or Evergreen save.** This build expands the Pokédex save layout. Keep your existing save files separately backed up.
+**[See full-roster build history](https://github.com/Lamictal/Eevee/actions/workflows/eevee-full171-build.yml?query=branch%3Astage8e-cloud-prototype)** if the link above expires. Only choose a run marked **Success** and note that artifacts usually expire after 14 days.
 
-### Where is the latest build if this link expires?
+### On mobile
 
-**[See the latest full-roster build runs](https://github.com/Lamictal/Eevee/actions/workflows/eevee-full171-build.yml?query=branch%3Astage8e-cloud-prototype)**. Open a run marked **Success**, scroll to **Artifacts**, and choose the alpha ZIP. Only download builds from the trusted project repository.
+Extract the ZIP using your device's file manager, then import the `.gba` in your GBA emulator. Import controls and external cover support vary by emulator. Use in-game saving; avoid replacing an existing save with the same ROM filename without backing it up.
 
-### On a phone
+## What is actually in Stage 15.1?
 
-Use a GBA emulator that can import a \`.gba\` game file. You may need to extract the ZIP first in your phone's file manager. The emulator's buttons, import process and save-file location depend on the app.
+- The **original Birch trio**: Treecko, Torchic and Mudkip.
+- **Eevee in the wild**, including Route 102 (10% of the normal land-encounter slots), Route 101 (5%), Route 104 (5%) and Route 117 (5%).
+- **171 Eeveelution forms**, including 18 singles and 153 unique dual-type combinations.
+- Expanded solo National Dex catchability designed for all **1,025 official species**, including trade and event-only Pokémon, using extra rare encounters across 61 habitats.
+- Catalyst and typed-item evolutions, IV/EV summaries, effectiveness hints, and provisional Pokémon followers.
+- New animated Eevee title, **2026 MONOAMINE** credit, and companion emulator cover art.
 
-## What is in this version?
+**[Full Eevee evolution and location guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)** · **[Stage 15 habitats](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE15_SOLO_DEX.md)**
 
-- 18 single-type Eeveelutions and 153 unordered dual-type combinations (**171 total**).
-- Normal Pokémon and Hoenn's original adventure remain.
-- Eevee as a starter option and in selected early routes.
-- All 18 single types appearing in wild encounters; nine distinct rare wild dual forms in advanced locations.
-- Evolution catalysts and 18 second-type booster items across Hoenn. At level **38+**, with **six badges**, use a booster for the desired second type on a single-type Eeveelution.
-- The item evolution code has passed static checks for 306 routes; **not every evolution has been verified in a running emulator**.
+## Before committing to a long playthrough
 
-**[Where to find every Eevee form and evolution item](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**
+**Build Success means the ROM compiled, not that it's bug-free.** Start a new game and verify Birch's opening scene, the three starters, Route 102 Eevee, catching/party/PC behavior, and an ordinary save-reload cycle. Real custom evolution and long-story gameplay validation are still outstanding.
 
-## Common questions
+An old save from a different ROM version may be incompatible: there is **no supported migration path** for earlier Eevee prototype or Evergreen saves.
 
-**Why does the link say 404?** The repository is public, but the artifact may have expired or GitHub may require sign-in.
+**[Known limitations](KNOWN_ISSUES.md)** · **[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**
 
-**Can my friend edit the project when it becomes public?** No. Public GitHub repositories are viewable and forkable by anyone, but only authorized collaborators can directly push edits.
+## Is there an official release?
 
-**Can I carry over my old save?** No supported migration is available. Use a new save, and keep a backup of the older one.
+**No GitHub Release has been published yet.** The repository is public and the current test build is a temporary **GitHub Actions artifact**, not an approved public patch. Before a permanent release, the project must complete gameplay QA, clear third-party artwork permissions and prepare a distributable patch rather than repackaging a complete commercial Pokémon ROM.
 
-**Does "Build successful" mean "bug-free"?** No. It means the GBA ROM compiled. A short in-emulator test is still necessary before a player-friendly beta release.
-
-**Can this page have a permanent one-click download?** Yes, once the project has a **public release artifact** and distribution rights are confirmed. The intended safer route is a **ROM patch file** with installation instructions, not a full commercial Pokémon ROM.
-
-## Bugs and feedback
-
-**[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**. Include the build version, emulator, steps to reproduce, and what happened. The public repository accepts issue reports from signed-in GitHub users.
-
-## Release and attribution notes
-
-This is an unofficial fan project built with [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion). Some sprites were imported from *Oops! All Eevees!* provided for personal testing; public redistribution permissions are not established. No affiliation or endorsement by Nintendo, Game Freak or The Pokémon Company is claimed. Do not publish a full copyrighted game ROM as a "free download."
+This is an unofficial fan project; it isn't endorsed by Pokémon's rights holders.
