@@ -91,7 +91,7 @@ def title(root,img):
     d.rectangle((38,149,205,159),fill=(32,24,58))
     pixtext(d,'171 FORMS',73,fg=(255,224,138),shadow=(14,10,38))
     pixtext(d,'EMERALD EXPANSION',84,fg=(250,246,227),shadow=(16,12,43))
-    pixtext(d,'2025 LAMICTAL PROJECTS',151,fg=(241,230,214),shadow=(11,8,34))
+    pixtext(d,'2026 MONOAMINE',151,fg=(241,230,214),shadow=(11,8,34))
     # Use 253 ordinary colors, plus three animation-specific palette indices.
     p=im.quantize(colors=253, method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
     pal=p.getpalette()[:253*3]
