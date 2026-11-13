@@ -54,6 +54,10 @@ Before calling this a beta, manually verify:
 
 Use a **fresh save** or a separately backed-up experimental save. Do not reuse your only Evergreen save.
 
+## Compilation status
+
+**Stage 15 compiled successfully** in [GitHub Actions run #43377956728](https://github.com/Lamictal/Eevee/actions/runs/43377956728). The source checks generated 1,024 bonus species across **61 Hoenn land habitats**, plus the preexisting early wild Eevee, for **1,025/1,025 canonical National Dex species** with a direct wild encounter route. The full-171 ROM artifact was uploaded successfully. These checks do **not** replace a manual mGBA new-game, catch, or save/reload smoke test.
+
 ## Source and build
 
 - Patch: [`stage15_solo_dex.py`](stage15_solo_dex.py)
