@@ -1,4 +1,24 @@
-# Stage 8E emulator validation plan
+# Eevee Emerald Expansion: emulator validation plans
+
+> **Current test target: [Stage 15.1 Monoamine alpha, build #43467069844](https://github.com/Lamictal/Eevee/actions/runs/43467069844).** All **Stage 8E–8M** sections further down are **archived, version-specific checks**; they are **not** instructions for the current ROM. In particular, **Treecko/Torchic/Mudkip are the starters**, Eevee is wild, and the test-only level-6 evolution no longer applies. Never mix Evergreen or earlier prototype saves with the full 171-form alpha.
+
+## Current Stage 15.1 smoke test (in mGBA)
+
+- [ ] Open the latest successful `Eevee-All171-Monoamine-2026-Alpha-GBA` artifact and start a **fresh save**.
+- [ ] Inspect the **2026 MONOAMINE** animated title. Press Start, navigate **New Journey / Continue / Settings**, and verify Settings returns correctly.
+- [ ] Select **New Journey**: Birch's introduction should **not** have a green-tinted Eevee logo behind him. Stage 14C compiled successfully but still needs a screenshot-confirmed visual pass.
+- [ ] Confirm the original starter selection offers **Treecko, Torchic and Mudkip**; no Eevee starter option.
+- [ ] Catch **Eevee on Route 102** (10% base land slot). Also confirm ordinary Route 102 Pokémon.
+- [ ] If possible, encounter another official species from the Stage 15 bonus pools; check catching and National Dex registration. Pool odds are **12% ordinary**, with an optional **3% rare pool** tried first in late-game habitats; these are not probabilities for each individual species.
+- [ ] Verify one ordinary Eevee evolution and one **level 15+ custom catalyst** evolution.
+- [ ] Check a **level 38+, six-badge dual-type evolution** using the second-type booster through **Bag → Use**; verify item behavior and resulting species.
+- [ ] Inspect a custom Eevee form in the **party, battle, summary, Pokédex and follower** scenes. Some icons/follower frames are provisional.
+- [ ] Catch a custom form, store another Pokémon in the **PC**, **save normally**, quit and reopen mGBA, then inspect party, PC, inventory and Pokédex.
+- [ ] Continue the normal Emerald story and note any crashes, graphics problems, unusual levels or broken encounters.
+
+**Important:** The full 1,025-species source coverage and 171-form evolution checks do **not** prove end-to-end playability, complete Dex accessibility or cross-version save compatibility.
+
+## Archived prototype test cases (Stages 8E–8M only)
 
 **Scope:** Source-based Pokémon Emerald Expansion test ROM, not Evergreen 2.0. Do **not** open an existing Evergreen save in this build. Keep existing Emerald/Evergreen and Stage 8A.1 save backups.
 
