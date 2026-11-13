@@ -58,7 +58,7 @@ def enable_colored_effectiveness(checkout: Path):
     static const u8 mostlyIneffectiveIcon[] =  _("{TRIANGLE_UPSIDE_DOWN}");
     static const u8 immuneIcon[] =  _("{BIG_MULT_X}");'''
     new = '''    // STAGE8F_COLOR_EFFECTIVENESS: colored, readable multipliers, not symbols.
-    static const u8 effectiveIcon[] =  _("{COLOR DYNAMIC_COLOR6}1x");
+    static const u8 effectiveIcon[] =  _("{COLOR DYNAMIC_COLOR4}1x");
     static const u8 extremeleyEffectiveIcon[] =  _("{COLOR LIGHT_GREEN}4x");
     static const u8 superEffectiveIcon[] =  _("{COLOR GREEN}2x");
     static const u8 notVeryEffectiveIcon[] =  _("{COLOR LIGHT_RED}1/2");
