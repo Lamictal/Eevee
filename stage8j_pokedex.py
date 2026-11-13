@@ -23,6 +23,8 @@ def install(checkout: Path):
     hgss = root / "src/pokedex_plus_hgss.c"
     global_h = root / "include/global.h"
     species_config = root / "include/config/species_enabled.h"
+    pokemon_c = root / "src/pokemon.c"
+    summary_c = root / "src/pokemon_summary_screen.c"
 
     if not (root / "Makefile").is_file():
         raise ValueError("Not a source checkout")
@@ -106,11 +108,59 @@ def install(checkout: Path):
             x=x[:stats_at]+new+x[stats_at+len(old):]
         files[f]=x
 
+    # The PC/party summary uses SpeciesToPokedexNum, not PrintMonInfo.
+    # With the regional Pokédex still active, a non-Hoenn species has
+    # regional number 0. Returning that number incorrectly prints No. 000.
+    # Fall back only if a genuine National Dex number exists.
+    original_numbers = pokemon_c.read_text(encoding="utf-8")
+    old_numbers = """u16 SpeciesToPokedexNum(enum Species species)
+{
+    if (IsNationalPokedexEnabled())
+    {
+        return SpeciesToNationalPokedexNum(species);
+    }
+    else
+    {
+        species = SpeciesToRegionalPokedexNum(species);
+        if (species <= REGIONAL_DEX_COUNT)
+            return species;
+        return 0xFFFF;
+    }
+}"""
+    new_numbers = """u16 SpeciesToPokedexNum(enum Species species)
+{
+    u16 nationalNum = SpeciesToNationalPokedexNum(species);
+    u16 regionalNum;
+
+    if (IsNationalPokedexEnabled())
+        return nationalNum;
+
+    regionalNum = SpeciesToRegionalPokedexNum(species);
+    if (regionalNum != 0 && regionalNum <= REGIONAL_DEX_COUNT)
+        return regionalNum;
+
+    // STAGE8J_DEX: Nonregional Pokemon still have real National numbers.
+    if (regionalNum == 0 && nationalNum != NATIONAL_DEX_NONE)
+        return nationalNum;
+
+    return 0xFFFF;
+}"""
+    files[pokemon_c] = swap_exact(original_numbers,old_numbers,new_numbers,pokemon_c)
+
+    # Four digits are needed for custom forms and later National species,
+    # even while the National Pokédex is not unlocked.
+    summary_original = summary_c.read_text(encoding="utf-8")
+    files[summary_c] = swap_exact(
+        summary_original,
+        "u8 digitCount = (NATIONAL_DEX_COUNT > 999 && IsNationalPokedexEnabled()) ? 4 : 3;",
+        "u8 digitCount = (NATIONAL_DEX_COUNT > 999 && (IsNationalPokedexEnabled() || dexNum > 999)) ? 4 : 3; // STAGE8J_DEX",
+        summary_c)
+
     for path,contents in files.items():
         path.write_text(contents,encoding="utf-8")
     print("Stage 8J registered Aerieon #1026 and Aerartheon #1027 in the National Dex.")
     print("Category, height, weight, and descriptions use their custom species entries.")
-    print("Hoenn Dex order unchanged; Pokémon absent from Hoenn use their National number instead of No. 000.")
+    print("Hoenn Dex order unchanged; nonregional Pokemon display their real National Dex numbers in registration and PC summaries.")
     print("Save dex seen/caught array length remains 129 bytes. Runtime compatibility still untested.")
 
 if __name__=="__main__":
