@@ -27,7 +27,7 @@ def pointers(root):
 def defs(root):
     found=defaultdict(list)
     config=(root/'include/config/pokemon.h').read_text(encoding='utf8')
-    selected=re.search(r'(?m)^#define\\s+P_LVL_UP_LEARNSETS\\s+(GEN_LATEST|GEN_[1-9])\\b',config)
+    selected=re.search(r'(?m)^#define\s+P_LVL_UP_LEARNSETS\s+(GEN_LATEST|GEN_[1-9])\b',config)
     if not selected:
         raise ValueError('Cannot identify active level-up learnset generation from build config')
     generation=9 if selected.group(1)=='GEN_LATEST' else int(selected.group(1).split('_')[1])
