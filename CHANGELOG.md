@@ -8,6 +8,28 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 15.1 / Stage 14C: Monoamine title, GBA cover art, Birch-background fix and documentation audit (November 13, 2026)
+- **Latest compiled ROM:** [Stage 15.1 + Stage 14C](https://github.com/Lamictal/Eevee/actions/runs/43467069844), GitHub Actions **Success**. This proves compilation, not a passing in-emulator Birch intro or full gameplay test.
+- Replaced the title credit with **2026 MONOAMINE** and bundled optional emulator artwork in square and GBA box styles. Cover PNGs are **companion files**, not embedded ROM cover metadata.
+- **Stage 14C** updates the cached BG1 screen base for Birch's introductory scene; an earlier hardware-register-only correction compiled yet still displayed the old Eevee menu graphics behind Birch. **Visual confirmation remains open.**
+- Updated homepage, download guide, known issues, Field Guide, historical stage docs, bug-report template and current smoke test for accuracy. In particular, removed the obsolete claim that Birch offers Eevee as a starter.
+- No official tagged GitHub Release has been published. Current alpha download is a temporary Actions artifact, and third-party artwork/public patch permissions require review.
+
+## Stage 15: restore original starters and assign solo National Dex habitats (November 13, 2026)
+- **Source/ROM build:** [Stage 15](https://github.com/Lamictal/Eevee/actions/runs/43377956728), GitHub Actions **Success**.
+- Birch again offers **Treecko, Torchic and Mudkip**. Eevee is wild on Routes 101/102/104/117. The current **Route 102 Eevee core slot is 10%**; old experimental Aerieon/Aerartheon slots were removed from that route.
+- Assigned a potential encounter to every **official National Dex species** via 1,024 new bonus species across **61 Hoenn land habitats**, plus Eevee in its existing table. Actual accessibility, catchability and Dex completion are **not fully emulator-tested**.
+- Current bonus encounter logic uses an **optional 3% rare pool** first, then a **12% ordinary pool** on the remaining rolls. Therefore old Stage 11 guarantees of 90% actual ordinary encounters and some listed core-table spawn odds do **not** apply unchanged.
+- Bonus species inherit the original selected encounter's **level**, which still needs balance testing. All 171 Eevee forms and prior evolution routes were retained in source.
+
+## Stage 14: custom title screen and graphical transition (November 12–13, 2026)
+- Implemented a native 240×160 GBA Eevee title image, crisp pixel captions, palette effects, and matching main-menu background.
+- [Initial Stage 14 title/menu build](https://github.com/Lamictal/Eevee/actions/runs/43318859008) compiled. An mGBA screenshot then revealed an incorrect green-tinted Eevee logo behind Birch, prompting Stage 14B and 14C fixes.
+
+## Stage 13: custom main menu (November 12, 2026)
+- Added a custom Eevee menu background and New Journey / Settings labels, retaining Emerald's existing handlers and save logic.
+- [Historical Stage 13 build](https://github.com/Lamictal/Eevee/actions/runs/43305777808) compiled. Current Stage 15.1 supersedes this menu-only build.
+
 ## Stage 12: dual evolution item effect repair and player guide
 **Build:** [All-171 source with corrected type-boosting item effects](https://github.com/Lamictal/Eevee/actions/runs/43279472956); build and gameplay verification tracked separately.
 
