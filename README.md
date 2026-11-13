@@ -15,7 +15,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - The 171-form Eevee expansion and Stage 14 title-screen transition fix are kept. **Full gameplay/save behavior still needs emulator QA**.
 - Read the [Stage 15 guide](STAGE15_SOLO_DEX.md) or the [updated Eevee Field Guide](EEVEE_FIELD_GUIDE.md).
 
-**Current milestone: Stage 12 compiled successfully**, including the [full 171-form dual-evolution and habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956). Its automated 306-route checks passed, but **full-roster gameplay has not yet been validated in mGBA**. See the [Beta 1 release roadmap](BETA1_RELEASE_PLAN.md) for a short smoke-test gate, future polish and a public-distribution checklist. The 171-form ROM changes the saved Pokédex layout: **start a fresh save**, and do not mix with Evergreen saves.
+**Current milestone: Stage 15 compiled successfully**, including the [restored Hoenn starter trio and 1,025-species solo National Dex](https://github.com/Lamictal/Eevee/actions/runs/43377956728). The Stage 15 source check confirms **1,024 additional wild species spread across 61 Hoenn land habitats**, with Eevee remaining in the normal Route 102 encounters. All 306 custom dual-item evolution routes are retained. **Actual gameplay, encounter rates and save/reload behavior still need mGBA testing.** Start a fresh save for the all-171 ROM and never mix it with Evergreen saves.
 
 ## Stage 13: custom Eevee selection menu
 - [Custom menu design and QA plan](STAGE13_CUSTOM_MENU.md): original starry Eevee background, **NEW JOURNEY** and **SETTINGS** button labels, original menu handlers and save-file logic retained.
