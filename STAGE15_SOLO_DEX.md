@@ -20,9 +20,11 @@ This milestone is part of the **Stage 15.1 Monoamine Eevee Emerald Expansion alp
 
 Existing Hoenn land encounter tables are **not replaced**. Fishing, surfing, rocks, story/static encounters, trainer teams, item shops, and Pokédex save layout are not changed.
 
-In **61 selected land habitats**, the game can replace a normal table encounter with an extra species: an ordinary pool triggers on **12%** of rolls where reached. In maps with a rare legendary/mythical pool, the **3% rare roll happens first**; if it fails, the 12% ordinary roll runs, leaving approximately **85.36%** of encounters to the original table (versus 88% on maps with only an ordinary bonus pool). On Routes **101 and 102**, the Stage 15 override is disabled. These percentages are **pool probabilities, not odds for a specific Pokémon**; those depend on the local pool size. The original land tables remain in the code, but some actual encounter rates are reduced by the override.
+In **61 selected land habitats**, Stage 15's balanced bonus pools can replace a normal-table encounter. The new *ordinary pool* chance depends on location progression: **4% in opening areas**, **8% in midgame areas**, and **10% in late areas**. Legendary/mythical pool rolls are **1%**, and are confined to selected late-game habitats; if the rare roll misses, the ordinary roll can still occur. For example, in a late map with both pools, the native table retains approximately **89.1%** of encounters. Routes **101 and 102** are exempt from the bonus override, preserving the intended first wild Eevee encounter. Percentages are for the whole local pool, not for individual species.
 
-**Important implementation detail:** The bonus replacement happens *after* the engine chooses a level from the original wild encounter slot. A bonus species therefore inherits that slot's chosen level; the current source does **not** define a separate per-species bonus level range. This needs balance testing, especially for legendary/mythical encounters.
+**Evolution-stage gates:** The generator reads the official species evolution graph and stat totals, rather than assigning everything by type alone. Opening areas receive only unevolved, appropriately modest-power bonus species. Midgame areas can include first evolutions; second-stage/final-chain evolutions and especially powerful species are deferred to later maps. These are source-level gating rules, not yet a completed in-game progression test. In addition, bonus species have minimum wild levels: **18 for one-stage evolutions**, **34 for two-stage evolutions**, and **45 for legendary/mythical species**. If the original wild slot rolls a lower level, the bonus encounter is raised to its minimum. This prevents a level-4 Azumarill/Decidueye, although late-area difficulty still needs playtesting.
+
+**Custom Eeveelution correction:** Stage 11 no longer inserts early high-stat forms such as Artheon into Petalburg Woods or Champeon/Brickeon into Granite Cave. These still have other midgame/later wild habitats and explicit evolution routes. The original Hoenn tables and existing wild Eevee placements remain intact.
 
 ### Starter sightings by generation
 
@@ -50,9 +52,10 @@ Before calling this a beta, manually verify:
 1. New game has Treecko, Torchic, Mudkip, not Eevee, in Birch's bag.
 2. Route 102 still produces Eevee along with native wild Pokémon.
 3. A non-Hoenn starter appears in a listed habitat.
-4. A trade-evolution species (for example Gengar or Alakazam) appears in its assigned biome and can be caught, without trading.
-5. The Stage 14C Birch introduction now shows its own background correctly instead of the green-tinted Eevee logo. The code fix compiled but is not visually confirmed yet.
-6. Save and reload after catching a newly introduced species; confirm Pokédex registration and existing custom-Eevee forms.
+4. Route 104 no longer produces fully evolved Azumarill, Petalburg Woods no longer produces early Artheon, and later areas produce Quilladin / Decidueye at appropriate levels.
+5. A trade-evolution species (for example Gengar or Alakazam) appears in its assigned biome and can be caught, without trading.
+6. The Stage 14C Birch introduction now shows its own background correctly instead of the green-tinted Eevee logo. The code fix compiled but is not visually confirmed yet.
+7. Save and reload after catching a newly introduced species; confirm Pokédex registration and existing custom-Eevee forms.
 
 Use a **fresh save** or a separately backed-up experimental save. Do not reuse your only Evergreen save.
 
