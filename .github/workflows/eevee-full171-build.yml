@@ -35,6 +35,8 @@ on:
       - stage13_patch_builder.py
       - stage14_title_ui.py
       - tools/generate_eevee_cover.py
+      - tools/generate_eevee_learnsets.py
+      - tools/publish_eevee_learnsets.py
       - stage14_patch_builder.py
       - stage15_solo_dex.py
       - stage15_patch_builder.py
@@ -140,6 +142,20 @@ jobs:
             --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
             --jobs 4 2>&1 | tee stage8d_attempt.log
 
+      - name: Generate all Eevee family level-up move tables from compiled source
+        if: success()
+        run: |
+          python3 tools/generate_eevee_learnsets.py \
+            --checkout pokeemerald-expansion-stage8d \
+            --manifest stage10/manifest.json \
+            --output EEVEE_LEVEL_UP_MOVES.md
+
+      - name: Publish generated learnset guide to GitHub
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/publish_eevee_learnsets.py
+
       - name: Generate Monoamine emulator thumbnails and box art
         if: success()
         run: python3 tools/generate_eevee_cover.py --out cover
@@ -184,5 +200,6 @@ jobs:
             kit/stage8d_build.log
             stage11_ecology_report.json
             stage15_solo_dex_report.json
+            EEVEE_LEVEL_UP_MOVES.md
           if-no-files-found: warn
           retention-days: 14
