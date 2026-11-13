@@ -8,6 +8,11 @@ This file tracks the **source-based Emerald Expansion** prototype in [Lamictal/E
 - **Compiled** = GitHub Actions successfully produced a ROM. **Gameplay verified** requires an actual emulator test and is not implied by a green build.
 - Each new stage should have: scope, changed files, user-facing differences, build run URL and result, save compatibility notes, and outstanding testing.
 
+## Stage 15.1: all Eevee-family level-up learnsets documented (November 13, 2026)
+- **Successful build:** [Stage 15.1 with generated learnset audit](https://github.com/Lamictal/Eevee/actions/runs/43473796334). Compiled all 171 forms and published [172 move-level tables](EEVEE_LEVEL_UP_MOVES.md) (Eevee plus 171 evolutions) using the active Gen 9 source data.
+- Source audit found 172 explicit level-up arrays. However, all 163 custom forms have only five/six learning-level entries, and 26 include repeated moves at different levels. [Issue #5](https://github.com/Lamictal/Eevee/issues/5) tracks custom moveset polish and testing.
+- This is a **documentation and generator update**, not a change to Pokémon level-up behavior or saves. Future builds regenerate the move guide from source.
+
 ## Stage 15.1 / Stage 14C: Monoamine title, GBA cover art, Birch-background fix and documentation audit (November 13, 2026)
 - **Latest compiled ROM:** [Stage 15.1 + Stage 14C](https://github.com/Lamictal/Eevee/actions/runs/43467069844), GitHub Actions **Success**. This proves compilation, not a passing in-emulator Birch intro or full gameplay test.
 - Replaced the title credit with **2026 MONOAMINE** and bundled optional emulator artwork in square and GBA box styles. Cover PNGs are **companion files**, not embedded ROM cover metadata.
