@@ -16,10 +16,9 @@ WEIGHTS = (20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1)
 # Stage 9's 5% Aerieon on Route 119 and 1% Aerartheon in Victory Road
 # are preserved, as are 5-10% early Eevee sightings.
 HABITATS = {
-    "MAP_ROUTE117": [(9, "SINGLE_NORMAL", 14, 16)],
-    "MAP_GRANITE_CAVE_1F": [(10, "SINGLE_FIGHTING", 10, 12)],
-    "MAP_GRANITE_CAVE_B1F": [(11, "SINGLE_ROCK", 10, 12)],
-    "MAP_PETALBURG_WOODS": [(11, "SINGLE_BUG", 6, 8)],
+    # Keep Route 117's native Eevee sighting but do not add a high-stat
+    # Neuteon this early. The species appears on Route 118 instead.
+    "MAP_ROUTE117": [],
     "MAP_ROUTE114": [(7, "SINGLE_FIGHTING", 17, 19)],
     "MAP_ROUTE113": [(7, "SINGLE_POISON", 15, 17)],
     "MAP_FIERY_PATH": [(7, "SINGLE_FIRE", 16, 18), (9, "SINGLE_GROUND", 16, 18)],
@@ -34,7 +33,7 @@ HABITATS = {
     "MAP_METEOR_FALLS_1F_2R": [(7, "SINGLE_DRAGON", 36, 39), (9, "SINGLE_ROCK", 36, 39)],
     "MAP_SAFARI_ZONE_NORTH": [(7, "SINGLE_FAIRY", 28, 31), (9, "SINGLE_BUG", 28, 31)],
     "MAP_MIRAGE_TOWER_1F": [(7, "SINGLE_GROUND", 21, 24), (9, "SINGLE_ROCK", 21, 24)],
-    "MAP_ROUTE118": [(7, "SINGLE_WATER", 25, 27)],
+    "MAP_ROUTE118": [(7, "SINGLE_WATER", 25, 27), (9, "SINGLE_NORMAL", 25, 27)],
     "MAP_ROUTE110": [(10, "SINGLE_ELECTRIC", 13, 14)],
     "MAP_JAGGED_PASS": [(7, "SINGLE_FIRE", 21, 23), (9, "SINGLE_ROCK", 21, 23)],
     "MAP_SEAFLOOR_CAVERN_ROOM1": [(7, "SINGLE_WATER", 33, 36), (9, "SINGLE_DARK", 33, 36)],
@@ -59,6 +58,11 @@ def patch(checkout: Path) -> None:
     if sum(WEIGHTS) != 100:
         raise ValueError("Engine land encounter slot weights changed")
 
+    # The opening Woods and Granite Cave have native low-power wild encounters.
+    # Avoid putting 525-BST custom Eeveelutions there at levels 6-12.
+    for early in ("MAP_PETALBURG_WOODS", "MAP_GRANITE_CAVE_1F", "MAP_GRANITE_CAVE_B1F"):
+        if early in HABITATS:
+            raise ValueError(f"Unexpected early Eeveelution overwrites in {early}")
     # Don't allow a map entry to refer to a reserved or unimplemented species.
     species_enum = (root / "include/constants/species.h").read_text(encoding="utf-8")
     expected_singles = {"SINGLE_" + t for t in source["types"]}
@@ -142,6 +146,7 @@ def patch(checkout: Path) -> None:
                                  indent=2) + "\n", encoding="utf-8")
     print(f"STAGE11_FULL_ECOLOGY: balanced {len(report)} maps, {len(added_singles)} singles and {len(added_duals)} distinct rare dual types.")
     print("Retained at least 90% ordinary Pokémon per affected land map.")
+    print("Moved early Bug/Fighting/Rock/Normal custom Eeveelutions out of Woods, Granite Cave and Route 117.")
     print("Retained Stage 9 early Eevee and Aerieon / Aerartheon encounters; item shops unchanged.")
     print("No species IDs, evolution rules, or saved data structures modified.")
 
