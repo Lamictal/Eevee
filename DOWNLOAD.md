@@ -3,10 +3,10 @@
 **Current development version:** See the latest successful build linked below. The 171-form game remains experimental.
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43375848863 -->
-**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43375848863)**
+<!-- data-build-run=43377956728 -->
+**[VIEW THE LATEST TEMPORARY DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43377956728)**
 
-**Stage 14 - Eevee Animated Title and Menu Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43375848863)
+**Stage 15 - Hoenn Starters and Solo National Dex Alpha** · [Successful build details](https://github.com/Lamictal/Eevee/actions/runs/43377956728)
 
 On the build page open **Artifacts** for the ZIP if GitHub permits access. Artifacts expire after 14 days; this is not a permanent public patch release.
 <!-- EEVEE_LATEST_BUILD_END -->
