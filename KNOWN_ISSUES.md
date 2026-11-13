@@ -26,6 +26,7 @@
 - Start a **fresh save**. No save migration is guaranteed from Evergreen, ordinary Emerald or earlier Eevee test builds. Always back up saves.
 - Only nine distinct dual Eeveelutions have dedicated rare wild sightings; the rest are designed to be obtained through evolution.
 - Some art and follower/party icons remain provisional. The colored move-effectiveness labels and a searchable DexNav-style habitat system are planned rather than implemented.
+- **Custom move learnsets still need polishing.** The [generated level-up guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_LEVEL_UP_MOVES.md) confirms all 163 custom forms have just five or six level entries, and 26 forms repeat at least one move at different levels. The source tables are documented, but in-game behavior and balance have not been audited.
 - The repository is public, but the current `Eevee-All171-` download is a **temporary GitHub Actions artifact**. **No GitHub Release has been published**.
 - Redistribution rights for the *Oops! All Eevees!* artwork are not yet verified; a permission-cleared patch and appropriate credits are needed before public distribution.
 
