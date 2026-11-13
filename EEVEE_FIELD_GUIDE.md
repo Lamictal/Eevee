@@ -1,6 +1,6 @@
 # Eevee Field Guide: 171-Form Hoenn Alpha
 
-> **Latest source status:** Stage 11's full 171-form habitat alpha compiled successfully. The updated **Stage 12 dual-item fix** is in the build workflow and must pass its own build before being treated as ready. A successful build is not an emulator-tested game. **Use a new save** for the full 171-form ROM; older prototype / Evergreen saves are not confirmed compatible.
+> **Latest build status:** [Stage 15.1 Monoamine 2026 alpha compiled successfully](https://github.com/Lamictal/Eevee/actions/runs/43465510674), including the Stage 12 dual-item fix, restored original Hoenn starters, and solo National Dex habitats. Compilation is not emulator playtesting. **Use a fresh save**; older prototype / Evergreen saves are not confirmed compatible.
 
 **Short answer:**
 - **No:** not all 153 dual forms spawn in the wild. There are **nine distinct rare dual forms** in selected advanced locations, generally **1% per encounter slot**, with Water/Dragon in two areas.
@@ -71,7 +71,7 @@ Rates refer to **land encounters** on the listed area/map. Some rare encounters 
 | Sky Pillar 3F | **Aerfanteon** (Flying/Ghost) | 39–41 |
 | Meteor Falls B1F 2R | **Dravapreon** (Water/Dragon) | 38–40 |
 
-The remaining **144 dual species** are evolution-only in this alpha. You can still make them from singles using the booster table below, assuming Stage 12 evolution-item behavior passes the planned gameplay smoke tests.
+The other **144 dual Eevee forms** do not have dedicated Stage 11 wild-form habitats and are intended to be collected through evolution. Stage 15's broader solo National Dex system adds bonus species encounters across Hoenn, so separate bonus pools may create additional wild appearances. Evolution outcomes still need in-game testing.
 
 ## 4. Eevee → single-type form: item / condition and location
 
@@ -110,7 +110,7 @@ Once your single-type Eeveelution is **Lv. 38+** and you've earned **six Hoenn g
 4. The Pokémon should evolve into the corresponding two-type species. For example, **Aerieon (Flying) + Silver Powder (Bug) → Aerartheon (Flying/Bug)**; or **Artheon (Bug) + Sharp Beak (Flying) → Aerartheon**.
 5. The pair is **unordered**: Fire/Water and Water/Fire are the same species. Any original or custom single-type form can add any one of the **17 other types**.
 
-**Important technical note:** All 306 evolution entries were present in Stage 10/11, but some type boosters were missing the actual item-effect flag. The **Stage 12** source patch adds that flag, checks all 306 entries and preserves normal held-item boosts. Use a Stage 12 build to test this system rather than the earlier Stage 11 alpha.
+**Important technical note:** All 306 evolution entries were present in Stage 10/11, but some type boosters were missing the actual item-effect flag. The **Stage 12** source patch adds that flag, checks all 306 entries and preserves normal held-item boosts. Use the latest Stage 15.1 alpha, which includes the Stage 12 repair, for gameplay testing.
 
 | Type you want to ADD | Use this type item on a single-type Eeveelution | Earlier shop | Also at Lilycove 4F |
 |---|---|---|---|
@@ -152,7 +152,7 @@ Existing shop stock is retained and these are **added** items, not replacements.
 ## 7. Alpha / saves / testing
 
 - [Stage 11 compiled 171-form habitats alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803): full species and habitat build compiled, but the type-boosters were missing the effect flag for actual item evolution.
-- **Stage 12 evolution repair:** added to the [full 171-form build workflow](.github/workflows/eevee-full171-build.yml); use its latest successful artifact to test deliberate dual evolutions.
+- **Stage 12 evolution repair:** included in the [latest Stage 15.1 full-roster build workflow](.github/workflows/eevee-full171-build.yml); use its latest successful artifact to test deliberate dual evolutions.
 - **Emulator QA outstanding:** a successful GitHub build confirms compilation and static route checks. It does **not** prove every evolution or shop interaction succeeds in mGBA.
 - **Use a fresh save for the 171-form alpha.** The full roster expands saved Pokédex flags; there's no validated migration from the early two-form alpha or separate Evergreen ROM.
 
