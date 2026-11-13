@@ -269,9 +269,9 @@ static void Stage14_InitEeveeTitle(void)
         '    InitBgFromTemplate(&sBirchBgTemplate);'
     )
     birch_reset = (
-        '    // STAGE14B_EEVEE_TRANSITION: restore the original Birch BG1 tilemap.\n'
-        '    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0)\n'
-        '               | BGCNT_SCREENBASE(7) | BGCNT_16COLOR | BGCNT_TXT256x256);'
+        '    // STAGE14C_EEVEE_TRANSITION: restore the BG manager cache, not only the hardware register.\n'
+        '    // ShowBg(1) will overwrite REG_OFFSET_BG1CNT using this cached map base.\n'
+        '    SetBgAttribute(1, BG_ATTR_MAPBASEINDEX, 7);'
     )
     if patched_menu.count(birch_anchor) != 1:
         raise ValueError('Stage14B: Birch intro initializer changed; refusing patch')
@@ -279,7 +279,7 @@ static void Stage14_InitEeveeTitle(void)
     # Avoid writing either file before all the content checks pass.
     menu_c.write_text(patched_menu,encoding='utf8')
     print('Stage14B: menu BG1 is visible in all three native main-menu window states.')
-    print('Stage14B: Birch BG1 mapbase is restored to 7 before his intro begins.')
+    print('Stage14C: Birch BG1 manager mapbase restored to 7 before ShowBg(1) re-applies it.')
     print(f'Stage14: pixel-perfect GBA 240x160 title, {n} BG1 tiles, true main-menu callbacks retained')
     print('Stage14: title palette animation (stars/water/prompt), native 5x7 crisp labels')
 
