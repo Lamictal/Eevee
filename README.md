@@ -22,7 +22,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - The 171-form Eevee expansion and Stage 14 title-screen transition fix are kept. **Full gameplay/save behavior still needs emulator QA**.
 - Read the [Stage 15 guide](STAGE15_SOLO_DEX.md) or the [updated Eevee Field Guide](EEVEE_FIELD_GUIDE.md).
 
-**Current milestone: Stage 15 compiled successfully**, including the [restored Hoenn starter trio and 1,025-species solo National Dex](https://github.com/Lamictal/Eevee/actions/runs/43377956728). The Stage 15 source check confirms **1,024 additional wild species spread across 61 Hoenn land habitats**, with Eevee remaining in the normal Route 102 encounters. All 306 custom dual-item evolution routes are retained. **Actual gameplay, encounter rates and save/reload behavior still need mGBA testing.** Start a fresh save for the all-171 ROM and never mix it with Evergreen saves.
+**Current milestone: Stage 15.1 compiled successfully**, including the [Monoamine 2026 title and packaged emulator cover art](https://github.com/Lamictal/Eevee/actions/runs/43465510674), original Hoenn starters, and the solo National Dex feature. The Stage 15 source check confirms **1,024 additional wild species spread across 61 Hoenn land habitats**, with Eevee remaining in the normal Route 102 encounters. All 306 custom dual-item evolution routes are retained. **Actual gameplay, encounter rates and save/reload behavior still need mGBA testing.** Start a fresh save for the all-171 ROM and never mix it with Evergreen saves.
 
 ## Stage 13: custom Eevee selection menu
 - [Custom menu design and QA plan](STAGE13_CUSTOM_MENU.md): original starry Eevee background, **NEW JOURNEY** and **SETTINGS** button labels, original menu handlers and save-file logic retained.
@@ -31,13 +31,13 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 
 ## Beta 1 readiness and release notes
 - [Beta 1 release plan](BETA1_RELEASE_PLAN.md): short first-playthrough checks, graphics and balancing roadmap, and read-only public sharing notes.
-- [Successful Stage 12 all-171 build](https://github.com/Lamictal/Eevee/actions/runs/43279472956): use this newer experimental alpha, not Stage 11, for deliberate dual evolution.
+- [Latest successful Stage 15.1 full-roster build](https://github.com/Lamictal/Eevee/actions/runs/43465510674): includes the Stage 12 evolution repairs; gameplay evolution testing is still needed.
 
 ## Player guide: where to find Eevee, all 18 types, items and dual evolutions
 
 **[Read the complete Eevee Field Guide](EEVEE_FIELD_GUIDE.md)** (wild encounters, evolution items, towns and requirements).
 
-- **Eevee:** starter option and wild on **Routes 101 (5%), 102 (10%), 104 (5%), and 117 (5%)**.
+- **Eevee:** **wild**, not a starter, on **Routes 101 (5%), 102 (10%), 104 (5%) and 117 (5%)**. Birch offers Treecko, Torchic and Mudkip.
 - **All 18 single-type Eeveelutions:** distributed across Hoenn habitats including Granite Cave, Fiery Path, Route 119, Mt. Pyre, Shoal Cave, Meteor Falls and Sky Pillar; regular Pokémon retain at least 90% of affected land encounters.
 - **Are all 153 dual types wild? No.** Nine distinct duals have very rare late-game wild locations (generally **1%**). Others are evolution-only.
 - **Can every single become any dual with an item?** The Stage 12 source defines **17 choices per single × 18 singles = 306 item paths**, covering all **153 unordered dual pairs**. At **Lv. 38+ with six badges**, **Use** the booster item representing the *second* type (e.g., Aerieon + Silver Powder = Aerartheon). Stage 12 repairs the missing item effect from Stage 11.
@@ -75,10 +75,10 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
 
-## Stage 8K Eevee starter and balanced encounters
-- Eevee temporarily replaces Treecko as the first of Birch's three starter options; Torchic and Mudkip remain available.
+## Stage 8K (historical): temporary Eevee starter prototype
+- In the older Stage 8K build, Eevee replaced Treecko. **This no longer applies:** Stage 15 restored Treecko, Torchic and Mudkip.
 - Route 102 encounters: **10% Aerieon, 1% Aerartheon, 89% regular Pokémon**.
-- A new game is required to choose Eevee at the starter bag; old saves won't retroactively receive Eevee.
+- The historical Stage 8K starter behavior required a new game; **current Stage 15.1 has no Eevee starter**. Catch Eevee on Route 102 instead.
 - [Stage 8K build](https://github.com/Lamictal/Eevee/actions/runs/43092752535); compilation and mGBA validation are separate checks.
 - [Future colored effectiveness UI issue](https://github.com/Lamictal/Eevee/issues/3); *not yet included*.
 
