@@ -17,7 +17,7 @@ Explore Hoenn with the original Pokémon **plus 171 Eeveelution forms across all
 **Not a public patch release:** the build page contains a temporary GitHub Actions artifact for testing. Sign-in may be required. See [the download guide](DOWNLOAD.md).
 <!-- EEVEE_LATEST_BUILD_END -->
 
-**[Step-by-step download and emulator setup](DOWNLOAD.md)** · **[Known issues and test status](KNOWN_ISSUES.md)**
+**[Full wild Pokémon encounter rates by area](ENCOUNTERS.md)** · **[Step-by-step download and emulator setup](DOWNLOAD.md)** · **[Known issues and test status](KNOWN_ISSUES.md)**
 
 The GitHub repository is public, but this is **not a tagged GitHub Release or a verified public ROM patch**. GitHub Actions artifacts expire, and may require sign-in. A permission-cleared patch package is a separate release goal.
 
