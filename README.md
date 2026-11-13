@@ -1,16 +1,12 @@
-# Eevee: 171 Forms
+# Pokémon Eevee: 171 Forms
 
-### A bigger Eevee adventure in Pokémon Emerald
+**An unofficial Pokémon Emerald Expansion fan project · Monoamine, 2026**
 
-**171 Eeveelution forms. All 18 Pokémon types. The original Hoenn adventure.**
+Explore Hoenn with the original Pokémon **plus 171 Eeveelution forms across all 18 types**: 18 single-type forms and 153 unique dual-type combinations (including the eight official Eeveelutions). Keep the classic story, discover new habitats, and evolve Eevee into unexpected type combinations.
 
-Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evolutions**, ranging from single-type favorites to unusual dual-type combinations. Catch them in habitats across the region or choose a second type by using a special item.
+**Current version:** Stage 15.1, Monoamine 2026 alpha · **Platform:** Game Boy Advance · **Build:** Compiled successfully · **Gameplay testing:** Still in progress
 
-**Status:** Experimental alpha · **Platform:** Game Boy Advance · **Latest:** Stage 13 custom-menu build · **Gameplay QA:** In progress
-
----
-
-## Download and play
+## Download the current alpha
 
 <!-- EEVEE_LATEST_BUILD_START -->
 <!-- data-build-run=43465510674 -->
@@ -21,80 +17,62 @@ Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evoluti
 **Not a public patch release:** the build page contains a temporary GitHub Actions artifact for testing. Sign-in may be required. See [the download guide](DOWNLOAD.md).
 <!-- EEVEE_LATEST_BUILD_END -->
 
-**[New to GitHub? Read the easy download and setup guide.](DOWNLOAD.md)**
+**[Step-by-step download and emulator setup](DOWNLOAD.md)** · **[Known issues and test status](KNOWN_ISSUES.md)**
 
-The Stage 12 build is for development verification only. **There is not yet a public, permission-cleared patch release.** When one is available, this page will link to its stable release and installation guide.
+The GitHub repository is public, but this is **not a tagged GitHub Release or a verified public ROM patch**. GitHub Actions artifacts expire, and may require sign-in. A permission-cleared patch package is a separate release goal.
 
- > **Release status:** This repository is public, but GitHub Actions artifacts are temporary and may require GitHub sign-in. A successful build is not a verified, redistributable release. The eventual public download will be a patch, not a complete commercial ROM. Third-party artwork permissions must be resolved first.
+## What's in the latest build?
 
-## What's in the game?
+- **Original Hoenn starters:** Professor Birch offers **Treecko, Torchic and Mudkip**. Eevee does **not** replace a starter anymore.
+- **Wild Eevee early on:** Catch Eevee on Routes **101 (5%), 102 (10%), 104 (5%) and 117 (5%)**.
+- **171 Eeveelution forms:** 18 singles and 153 distinct dual types. All eight original Eeveelutions retain their native evolution options.
+- **Solo National Pokédex design:** The latest source assigns wild encounter habitats to **all 1,025 official National Dex species**, including trade-evolution and event-only Pokémon. It places 1,024 bonus species across **61 Hoenn land habitats**, with Eevee already in the existing encounter tables. This has passed source/compilation checks, **not a completed in-game Pokédex playthrough**.
+- **Explore to collect:** All 18 single-type Eeveelutions appear in suitable wild habitats. Nine distinct dual-type forms have rare wild encounters; other dual forms are designed to come through evolution.
+- **Evolution items:** Custom first-stage catalysts and second-type booster items are sold throughout Hoenn. The code defines **306 single-to-dual evolution routes** for all 153 unique duals.
+- **Quality-of-life features:** IV/EV details, basic move-effectiveness indicators, quick fleeing and provisional following Pokémon and party icons.
+- **Custom visuals:** Animated Eevee sunset title screen, **2026 MONOAMINE** credit, and custom New Journey/Continue/Settings menu artwork. Optional square and portrait GBA-style **emulator cover PNGs** are packaged with the latest build.
 
-- **171 Eeveelution forms:** 18 single-type and 153 unique dual-type combinations, including the eight official Eeveelutions.
-- **Keep the regular Pokémon:** the original Hoenn story and normal Pokémon remain, rather than being replaced by Eevees.
-- **Eevee from the beginning:** pick Eevee from Professor Birch's bag (replacing the Treecko choice in this alpha), or find one on Routes 101, 102, 104 and 117.
-- **Wild single types:** all 18 single-type forms appear in locations suited to their type, including forests, caves, mountains and spooky areas.
-- **Rare wild duals:** nine different dual-type forms have especially rare late-game encounters. The others are designed to be obtained through evolution.
-- **Choose the second type:** use the appropriate type-boosting item to evolve one of 18 single-type forms into a dual type. There are **306 item routes** targeting all 153 unique dual forms.
-- **Helpful features:** move-effectiveness hints, numeric IV/EV information, and provisional following Pokémon and party icons.
-- **Custom Eevee selection menu:** starry artwork and Eevee-themed branding with **New Journey**, **Continue** and **Settings** while retaining original menu behavior. [Menu details](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE13_CUSTOM_MENU.md).
+### The starter choices
 
-### How dual-type evolution works
+| Treecko | Torchic | Mudkip |
+|:---:|:---:|:---:|
+| Grass | Fire | Water |
 
-1. Get any **single-type Eeveelution**.
-2. Level it to **38+** and earn **at least six Hoenn badges**.
-3. In your Bag, **Use** the booster item representing the second type you want to add.
+**Want Eevee?** Walk into the grass on **Route 102**; it has a 10% encounter slot in the core table. Eevee is also available on several early routes, without taking Treecko's starter slot.
 
-For example, **Aerieon (Flying) + Silver Powder (Bug) → Aerartheon (Flying/Bug)**. The reverse route, **Artheon (Bug) + Sharp Beak (Flying)**, targets the same dual-type Pokémon.
+### How to evolve into a dual type
 
-The item effect and all 306 routes were checked automatically in Stage 12, but **not every possible in-game evolution has been emulator-tested yet**.
+1. Obtain a **single-type Eeveelution**, using a normal Eevee method or one of the custom catalysts.
+2. Reach **level 38 or higher** and earn **at least six Hoenn Gym Badges**.
+3. In the Bag, **Use** the item representing the *additional type* on your eligible single-type Eeveelution.
 
-**[Full evolution item and location guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**
+For example, Aerieon (Flying) + Silver Powder (Bug) is designed to evolve into **Aerartheon (Flying/Bug)**. Going the other way, Artheon (Bug) + Sharp Beak (Flying), targets the same species. The source validates all 306 routes, but some outcomes still need emulator testing.
 
-## Where can I find Eevee?
+**[Full Eevee Field Guide: all forms, items, shops and locations](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**
 
-| Location | How to get Eevee |
-|---|---|
-| Professor Birch's starter bag | Choose Eevee instead of Treecko |
-| Route 101 | 5% wild encounter |
-| Route 102 | 10% wild encounter |
-| Route 104 | 5% wild encounter |
-| Route 117 | 5% wild encounter |
+## Playing and saving
 
-For the other Eeveelutions, see the **[full wild encounter guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)**. Regular Pokémon remain at least 90% of land encounters in the modified habitat tables.
+**This is a real playable-build candidate, not a verified finished game.** Stage 15.1 compiled successfully, but the new-game intro, custom evolution items, follower art, long-term save/reload and complete story progression still need thorough testing.
 
-## Evolution items and shops
+**Start a fresh save.** Do not overwrite or reuse Evergreen, ordinary Emerald or early Eevee prototype saves. Keep backups as you test.
 
-| Location | Examples of new items |
-|---|---|
-| **Oldale** | Sky Catalyst |
-| **Rustboro** | Fire, Water and Thunder Stones; Neutral, Swarm and Stone Catalysts |
-| **Slateport** | Valor and Venom Catalysts; Silk Scarf, Mystic Water, Miracle Seed |
-| **Mauville** | Alloy and Earth Catalysts; Leaf and Ice Stones, Magnet, Twisted Spoon |
-| **Lavaridge** | Charcoal, Hard Stone, Soft Sand |
-| **Fortree** | Spirit and Dragon Catalysts; Flying/Bug/Ghost/Dark/Fighting/Poison/Steel boosters |
-| **Lilycove Department Store, 4F** | **All 18 second-type boosters** and nine first-stage custom Catalysts (Sky remains in Oldale) |
+A `.gba` ROM **does not embed a universal emulator thumbnail**. The optional image files in the build ZIP and separate cover-art ZIP are for emulator cover managers that support custom artwork.
 
-See **[the full item-by-type chart](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md#5-single-type-form--any-dual-type-choose-the-second-type)** for the exact item needed to evolve each form.
+## Project status and feedback
 
-## Is it finished?
+- **[Known issues and limitations](KNOWN_ISSUES.md)**: what is verified versus still untested
+- **[Stage 15 solo-National-Dex design](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE15_SOLO_DEX.md)**: encounter system and starter locations
+- **[v0.1.0-alpha release-candidate notes](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/RELEASE_NOTES_v0.1.0-alpha.md)**: release scope, saves and QA
+- **[Beta 1 roadmap](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md)**: work remaining
+- **[Report a bug or suggest a feature](https://github.com/Lamictal/Eevee/issues/new/choose)**
+- **[Development source and build scripts](https://github.com/Lamictal/Eevee/tree/stage8e-cloud-prototype)** · **[Contribution guide](CONTRIBUTING.md)**
 
-**It's a working build, not a verified complete game.** Stage 12 compiled successfully and passed its automated evolution-route checks. However, starter progression, all evolution-item behavior, save/reload, party icons, follower art and full story progression still need emulator testing.
+## Credits and distribution
 
-We're working toward a **friend-playable Beta 1**, followed by polish and a stable v1.0.
+**Monoamine (2026)** is the fan-project credit shown on the game title screen. This project builds on the open-source [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) engine. The project also uses Eeveelution artwork sourced from *Oops! All Eevees!* for development; original authorship, attribution and public redistribution rights must be verified before distributing those assets.
 
-- **[Known limitations](KNOWN_ISSUES.md)**: what is and isn't tested
-- **[Beta 1 roadmap](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/BETA1_RELEASE_PLAN.md)**: what's next
-- **[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)**: use the simple bug report template
-- **[Development source](https://github.com/Lamictal/Eevee/tree/stage8e-cloud-prototype)**: build scripts, changes and project history
-- **[Contributing and access](CONTRIBUTING.md)**: how to send suggestions without getting edit rights
-
-## Credits and legal notes
-
-**Artwork attribution:** Eeveelution designs and provisional sprites are sourced from *Oops! All Eevees!*; creator names, source links and redistribution permissions are still being verified. These assets are not claimed as original artwork. Gameplay mechanics, evolution systems, balancing and stability are the current priorities; customized art is planned for later, subject to permission and contributor availability.
-
-This is an **unofficial, noncommercial Pokémon fan project**, built using the open-source [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) engine and art sourced from *Oops! All Eevees!* for development. Pokémon and associated trademarks and characters belong to their respective owners. This project is not affiliated with or endorsed by Nintendo, Game Freak or The Pokémon Company.
-
-**Rights to publicly redistribute the third-party Eeveelution sprites have not been verified.** Public code access does not grant anyone a license to reuse that artwork, and a public release should use an appropriate patch rather than hosting a full commercial game ROM.
+This is a **noncommercial, unofficial fan project**, not sponsored, approved or endorsed by Nintendo, Game Freak, Creatures or The Pokémon Company. Pokémon and related names/art remain the property of their respective owners. Do not redistribute complete copyrighted base ROMs. Any later public release should use a permission-cleared patch and appropriate notices.
 
 ---
-*Built for Eevee fans who thought eight evolutions was a suspiciously low number.*
+
+*171 forms. One extremely ambitious Eevee.*
