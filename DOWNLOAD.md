@@ -36,7 +36,7 @@ Extract the ZIP using your device's file manager, then import the `.gba` in your
 - Catalyst and typed-item evolutions, IV/EV summaries, effectiveness hints, and provisional Pokémon followers.
 - New animated Eevee title, **2026 MONOAMINE** credit, and companion emulator cover art.
 
-**[Full Eevee evolution and location guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)** · **[Stage 15 habitats](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE15_SOLO_DEX.md)**
+**[Full Eevee evolution and location guide](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_FIELD_GUIDE.md)** · **[All Eevee + 171 forms: moves by level](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/EEVEE_LEVEL_UP_MOVES.md)** · **[Stage 15 habitats](https://github.com/Lamictal/Eevee/blob/stage8e-cloud-prototype/STAGE15_SOLO_DEX.md)**
 
 ## Before committing to a long playthrough
 
