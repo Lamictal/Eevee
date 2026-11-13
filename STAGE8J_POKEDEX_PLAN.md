@@ -1,6 +1,8 @@
-# Stage 8J plan: Proper custom Eeveelution Pokédex registration
+# Stage 8J plan: Proper custom Eeveelution Pokédex registration (historical)
 
-Status: engineering plan only; **no implemented dex patch or successful build yet**.
+> **Archived engineering plan, not current feature status.** The original “no implemented patch” note below describes a pre-Stage-8J planning moment. Stage 8J subsequently compiled and assigned National Dex #1026 to Aerieon and #1027 to Aerartheon. The latest Stage 15.1 full-roster alpha has 163 custom Eevee forms in source, although gameplay/registration still needs emulator verification. See [current release notes](RELEASE_NOTES_v0.1.0-alpha.md).
+
+**Historical status when originally written:** engineering plan only. **Current status:** the Stage 8J registration patch compiled successfully; individual in-game Dex display and save handling remain subject to emulator QA.
 
 Tracked bug: [issue #1](https://github.com/Lamictal/Eevee/issues/1). Stage 8H screenshot showed `No. 000`, `Unknown Pokémon`, `HT 0'00"`, `WT 0.0 lbs.` while the species front art rendered.
 
