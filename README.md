@@ -13,10 +13,10 @@ Explore Hoenn with the usual wild Pokémon **plus a huge family of Eevee evoluti
 ## Download and play
 
 <!-- EEVEE_LATEST_BUILD_START -->
-<!-- data-build-run=43377956728 -->
-### [VIEW THE LATEST DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43377956728)
+<!-- data-build-run=43464981889 -->
+### [VIEW THE LATEST DEVELOPMENT BUILD](https://github.com/Lamictal/Eevee/actions/runs/43464981889)
 
-**Stage 15 - Hoenn Starters and Solo National Dex Alpha** · [Build details](https://github.com/Lamictal/Eevee/actions/runs/43377956728)
+**Stage 15 - Hoenn Starters and Solo National Dex Alpha** · [Build details](https://github.com/Lamictal/Eevee/actions/runs/43464981889)
 
 **Not a public patch release:** the build page contains a temporary GitHub Actions artifact for testing. Sign-in may be required. See [the download guide](DOWNLOAD.md).
 <!-- EEVEE_LATEST_BUILD_END -->
