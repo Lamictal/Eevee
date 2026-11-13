@@ -3,7 +3,7 @@
 This is a small, independently maintained Pokémon Emerald Expansion fan project.
 
 ## Playing and feedback
-- **[Get the current alpha](DOWNLOAD.md)** (available only to authorized repository viewers while private).
+- **[Get the current alpha](DOWNLOAD.md)** (the repository is public; downloadable test builds are temporary GitHub Actions artifacts).
 - **[Report a bug](https://github.com/Lamictal/Eevee/issues/new/choose)** with the build link, emulator, save status and reproducible steps.
 - Suggestions for improvements are welcome as issues or pull requests.
 
