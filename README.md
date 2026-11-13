@@ -22,7 +22,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - The 171-form Eevee expansion and Stage 14 title-screen transition fix are kept. **Full gameplay/save behavior still needs emulator QA**.
 - Read the [Stage 15 guide](STAGE15_SOLO_DEX.md) or the [updated Eevee Field Guide](EEVEE_FIELD_GUIDE.md).
 
-**Current milestone: Stage 15.1 compiled successfully**, including the [Monoamine 2026 title and packaged emulator cover art](https://github.com/Lamictal/Eevee/actions/runs/43465510674), original Hoenn starters, and the solo National Dex feature. The Stage 15 source check confirms **1,024 additional wild species spread across 61 Hoenn land habitats**, with Eevee remaining in the normal Route 102 encounters. All 306 custom dual-item evolution routes are retained. **Actual gameplay, encounter rates and save/reload behavior still need mGBA testing.** Start a fresh save for the all-171 ROM and never mix it with Evergreen saves.
+**Current milestone: Stage 15.1 compiled successfully**, including the [Monoamine 2026 title, Stage 14C Birch-background patch and packaged emulator cover art](https://github.com/Lamictal/Eevee/actions/runs/43467069844), original Hoenn starters, and the solo National Dex feature. The Stage 15 source check confirms **1,024 additional wild species spread across 61 Hoenn land habitats**, with Eevee remaining in the normal Route 102 encounters. All 306 custom dual-item evolution routes are retained. **Actual gameplay, encounter rates and save/reload behavior still need mGBA testing.** Start a fresh save for the all-171 ROM and never mix it with Evergreen saves.
 
 ## Stage 13: custom Eevee selection menu
 - [Custom menu design and QA plan](STAGE13_CUSTOM_MENU.md): original starry Eevee background, **NEW JOURNEY** and **SETTINGS** button labels, original menu handlers and save-file logic retained.
@@ -31,14 +31,14 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 
 ## Beta 1 readiness and release notes
 - [Beta 1 release plan](BETA1_RELEASE_PLAN.md): short first-playthrough checks, graphics and balancing roadmap, and read-only public sharing notes.
-- [Latest successful Stage 15.1 full-roster build](https://github.com/Lamictal/Eevee/actions/runs/43465510674): includes the Stage 12 evolution repairs; gameplay evolution testing is still needed.
+- [Latest successful Stage 15.1 full-roster build](https://github.com/Lamictal/Eevee/actions/runs/43467069844): includes the Stage 12 evolution repairs; gameplay evolution testing is still needed.
 
 ## Player guide: where to find Eevee, all 18 types, items and dual evolutions
 
 **[Read the complete Eevee Field Guide](EEVEE_FIELD_GUIDE.md)** (wild encounters, evolution items, towns and requirements).
 
-- **Eevee:** **wild**, not a starter, on **Routes 101 (5%), 102 (10%), 104 (5%) and 117 (5%)**. Birch offers Treecko, Torchic and Mudkip.
-- **All 18 single-type Eeveelutions:** distributed across Hoenn habitats including Granite Cave, Fiery Path, Route 119, Mt. Pyre, Shoal Cave, Meteor Falls and Sky Pillar; regular Pokémon retain at least 90% of affected land encounters.
+- **Eevee:** **wild**, not a starter, on Routes **101 (5% base-table slot), 102 (10%), 104 (5%) and 117 (5%)**. Stage 15's extra encounter pool can reduce effective rates on Routes 104/117 to approximately **4.4%**. Birch offers Treecko, Torchic and Mudkip.
+- **All 18 single-type Eeveelutions:** distributed across Hoenn habitats including Granite Cave, Fiery Path, Route 119, Mt. Pyre, Shoal Cave, Meteor Falls and Sky Pillar. Listed encounter percentages are **core table-slot weights**; Stage 15 bonus pools can replace some encounters on 61 maps. The older at-least-90%-ordinary-encounters claim no longer applies to actual Stage 15.1 encounters.
 - **Are all 153 dual types wild? No.** Nine distinct duals have very rare late-game wild locations (generally **1%**). Others are evolution-only.
 - **Can every single become any dual with an item?** The Stage 12 source defines **17 choices per single × 18 singles = 306 item paths**, covering all **153 unordered dual pairs**. At **Lv. 38+ with six badges**, **Use** the booster item representing the *second* type (e.g., Aerieon + Silver Powder = Aerartheon). Stage 12 repairs the missing item effect from Stage 11.
 - **Items:** original and custom first-stage catalysts appear in **Oldale, Rustboro, Slateport, Mauville, Fortree and Lilycove**; type boosters in Slateport, Mauville, Lavaridge, Fortree, and **all 18 boosters at Lilycove Department Store 4F**. See the [complete shop chart](EEVEE_FIELD_GUIDE.md#6-shops-by-town-quick-index).
@@ -46,7 +46,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 
 ## Stage 11: all-type habitat balance
 - [Encounter maps and item progression](STAGE11_HABITATS.md): all 18 single-type Eeveelutions have wild locations, with selected rare dual types in endgame areas.
-- At least **90% of land encounters** on each affected map remain ordinary Pokémon; no existing fishing or surfing encounter tables changed.
+- **Historical Stage 11 behavior:** core table slots preserved at least 90% ordinary species weight. **Stage 15.1 adds a separate override** and may lower that actual share. Fishing and surfing encounter tables are unchanged.
 - Stage 9/10 evolution catalysts remain distributed through shops; Lilycove remains the full type-item hub.
 - [New 171-form habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43276563803); full ROM build verification separate from scripted source checks. No manual testing is required for this development step.
 
@@ -55,7 +55,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - **Eevee -> Aerieon:** use Sky Catalyst on Eevee at level 15+.
 - **Aerieon -> Aerartheon:** use another Sky Catalyst at level 38+ and with at least six badges.
 - Neither of these custom evolutions now triggers from leveling up automatically.
-- All eight canonical Eeveelutions are retained; Route 102 wild rates remain 10% Aerieon / 1% Aerartheon.
+- At the **historical Stage 8M milestone**, Route 102's experimental slots contained 10% Aerieon / 1% Aerartheon. **Current Stage 15.1 does not have those slots:** Route 102 has **10% Eevee** instead, and the Aerartheon core slot was reverted to Zigzagoon. All eight canonical Eeveelutions are retained.
 - This is an initial controlled item path, not a 171-form selection menu.
 - [Stage 8M build](https://github.com/Lamictal/Eevee/actions/runs/43170210160), separate from gameplay QA.
 - Back up .sav files; same-save compatibility is not yet verified.
@@ -64,7 +64,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [Full fixed-form roster](data/eevee_form_registry.json): **18 singles + 153 unordered duals** = 171 forms, including **eight official Eeveelutions**, so **163 custom forms** total.
 - Custom National Dex IDs reserved **#1026..#1188**; Aerieon #1026 and Aerartheon #1027 are unchanged.
 - [Save and migration contract](STAGE8N_SAVE_AND_ROSTER.md): full roster would increase each Dex seen/caught array **129 → 149 bytes**, requiring explicit migration or an audited alternate layout. Stage 8N **does not modify the ROM's saves**.
-- [Automated registry checks](https://github.com/Lamictal/Eevee/actions/runs/43267372542) passed. The 161 additional forms remain *reserved*, not yet implemented.
+- [Historical Stage 8N registry checks](https://github.com/Lamictal/Eevee/actions/runs/43267372542) passed. At **that milestone**, the 161 additional forms were reserved; **Stage 10 subsequently implemented the full 171-form roster in source**.
 - [Stage 8M cloud ROM build](https://github.com/Lamictal/Eevee/actions/runs/43265195678) compiled successfully; it still needs eventual milestone gameplay verification. No Stage 8N manual tests required.
 
 ## Development reference
@@ -72,7 +72,7 @@ Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-t
 - [TEST_PLAN.md](TEST_PLAN.md): gameplay and save test checklist.
 - [Stage 8G compiled ROM download](https://github.com/Lamictal/Eevee/actions/runs/42892764393): GitHub Actions artifacts, accessible when signed in.
 - [Stage 8F compiled ROM download](https://github.com/Lamictal/Eevee/actions/runs/42887055365): earlier effectiveness-indicator build.
-- [Development workflow](.github/workflows/eevee-build.yml): reconstructs the upstream source on GitHub Actions and applies our patches.
+- [Current full-171 development workflow](.github/workflows/eevee-full171-build.yml): reconstructs the upstream source and applies the complete Stage 15.1 patches. [Earlier two-species workflow](.github/workflows/eevee-build.yml) is historical.
 - [Stage 8E engineering notes](STAGE8E.md): initial architecture, now superseded by the changelog for current status.
 
 ## Stage 8K (historical): temporary Eevee starter prototype
