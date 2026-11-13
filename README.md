@@ -9,6 +9,12 @@
 
 Custom Pokémon Emerald Expansion proof of concept for a long-term **18 single-type + 153 dual-type Eeveelution** game.
 
+## Stage 15: original Birch starters + solo National Dex (alpha)
+- **Birch now offers Treecko / Torchic / Mudkip** again. Eevee remains catchable on Route 102 and other early routes; the old Stage 8K Eevee-starter configuration below is historical.
+- **All 1,025 canonical National Pokédex species** have a designed wild encounter route somewhere in Hoenn, including trade evolutions, mythicals and other event-only Pokémon. Bonus encounters are biome-based; all original tables remain.
+- The 171-form Eevee expansion and Stage 14 title-screen transition fix are kept. **Full gameplay/save behavior still needs emulator QA**.
+- Read the [Stage 15 guide](STAGE15_SOLO_DEX.md) or the [updated Eevee Field Guide](EEVEE_FIELD_GUIDE.md).
+
 **Current milestone: Stage 12 compiled successfully**, including the [full 171-form dual-evolution and habitat alpha](https://github.com/Lamictal/Eevee/actions/runs/43279472956). Its automated 306-route checks passed, but **full-roster gameplay has not yet been validated in mGBA**. See the [Beta 1 release roadmap](BETA1_RELEASE_PLAN.md) for a short smoke-test gate, future polish and a public-distribution checklist. The 171-form ROM changes the saved Pokédex layout: **start a fresh save**, and do not mix with Evergreen saves.
 
 ## Stage 13: custom Eevee selection menu
