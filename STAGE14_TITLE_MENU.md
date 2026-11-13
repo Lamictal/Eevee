@@ -1,6 +1,6 @@
 # Stage 14: Eevee title screen and matching native menu
 
-**Scope:** Stage 13's tested source-based Emerald Expansion project, with all 171 forms. Stage 14 does not change any save data, species, items, encounters or evolution logic.
+**Scope:** Stage 13's compiled (but not comprehensively emulator-verified) Emerald Expansion project, with all 171 forms. Stage 14 does not change any save data, species, items, encounters or evolution logic.
 
 ## Artwork and readability
 
@@ -28,7 +28,7 @@ A prior Stage 14B patch restored BG1 screenblock **only in the hardware register
 
 The Stage 14C patch instead calls `SetBgAttribute(1, BG_ATTR_MAPBASEINDEX, 7)` during `Task_NewGameBirchSpeech_Init`, after initializing Birch's BG0 and before `ShowBg(1)`. This restores the manager's saved BG1 screenblock so Birch's own map data is visible.
 
-**Not visually certified until tested in mGBA.** An earlier build compiled despite still displaying the logo behind Birch. After this patch compiles, verify New Journey → Birch, then Settings return and Continue, especially with custom title and menu graphics loaded.
+**Stage 14C compiled successfully** in [the latest Stage 15.1 build](https://github.com/Lamictal/Eevee/actions/runs/43467069844), but is **not visually certified until retested in mGBA**. Stage 14B compiled despite showing the old logo behind Birch. Verify New Journey → Birch, then Settings return and Continue.
 
 ## Acceptance tests (actual emulator)
 
