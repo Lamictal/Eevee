@@ -10,8 +10,8 @@ This milestone is part of the **Stage 15.1 Monoamine Eevee Emerald Expansion alp
 
 ## Solo-completable National Pokédex
 
-- The source generator assigns a bonus wild habitat to **1,024 of the 1,025 canonical National Pokédex species**, from Bulbasaur through Pecharunt. **Eevee** already appears in normal wild tables. This is an automated coverage claim, **not** a verified completion of the National Dex in-game.
-- Eevee is already available in the normal Route 102 encounter table. The other **1,024 species** are each assigned a deterministic, biome-oriented bonus encounter habitat.
+- The source generator assigns a land bonus habitat to **1,023 of the 1,025 canonical National Pokédex species**, from Bulbasaur through Pecharunt. **Eevee** already appears in normal wild tables and **Carvanha** stays in its original fishing encounters. This is an automated coverage claim, **not** a verified completion of the National Dex in-game.
+- Eevee is already available on Route 102. Carvanha remains available using the native Good Rod and Super Rod tables rather than appearing in grass. The remaining **1,023 species** receive deterministic, biome-oriented land bonus encounter habitats.
 - The intended design avoids online trading and limited-time events, including for trade-evolution and event-only Pokémon. **Every official species has a scripted potential encounter**, but actual map accessibility, encounter behavior, Pokédex registration and catchability still need emulator checks before guaranteeing full completion.
 - This is **National Dex species coverage**, not a guarantee of every alternate battle form, variant, costume, regional form, or gender-specific appearance.
 - The **171 Eevee forms**, including eight canonical species, remain governed by the existing Stage 10–12 item-evolution mechanics. All 153 dual forms are intended to remain reachable via item paths, pending in-game QA.
@@ -44,7 +44,7 @@ These sightings use the bonus pools; they do **not** replace regular grass spawn
 
 ## What the automated checks do and do not prove
 
-The source patch fails if the canonical National roster has fewer or more than 1,025 distinct entries, if a referenced species has no enum constant, if the Birch starter patch anchor changed, or if any of the 1,024 additional species lacks a habitat. It does **not** change saved data or the meaning of a Pokédex entry.
+The source patch fails if the canonical National roster has fewer or more than 1,025 distinct entries, if a referenced species has no enum constant, if the Birch starter patch anchor changed, or if any of the 1,023 additional bonus species lacks a habitat or Carvanha lacks a native aquatic encounter. It does **not** change saved data or the meaning of a Pokédex entry.
 
 GitHub compilation checks whether the modified ROM builds. **A successful build does not establish emulator playability or certify a completed Pokédex.**
 
@@ -61,7 +61,7 @@ Use a **fresh save** or a separately backed-up experimental save. Do not reuse y
 
 ## Compilation status
 
-**Latest Stage 15.1 compiled successfully** in [GitHub Actions run #43467069844](https://github.com/Lamictal/Eevee/actions/runs/43467069844). The source checks generated 1,024 bonus species across **61 Hoenn land habitats**, plus the preexisting early wild Eevee, for **1,025/1,025 canonical National Dex species** with an assigned encounter path. The updated ROM artifact was uploaded. These checks do **not** establish every encounter's in-game accessibility or a fully completable Pokédex; manual mGBA tests of Birch, catching, evolution, saving and loading remain necessary.
+**Previous Stage 15.1 build** [#43506764573](https://github.com/Lamictal/Eevee/actions/runs/43506764573) compiled successfully before the aquatic-only Carvanha correction. The revised generator is designed to assign **1,023 bonus species across Hoenn land habitats**, plus preexisting wild Eevee and native fishing Carvanha, for **1,025/1,025 official species** with an encounter path. The revised build still requires compilation and in-game checking; successful compilation alone does not prove every habitat is reachable.
 
 ## Source and build
 
