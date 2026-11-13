@@ -3,8 +3,8 @@
 
 Eevee -> Aerieon: use Sky Catalyst at level >= 15.
 Aerieon -> Aerartheon: use Sky Catalyst at level >= 38 with six Hoenn badges.
-No automatic custom level-up evolutions. All eight canonical Eevee evolutions
-retain their original behavior. Sky Catalyst is sold in the expanded Oldale Mart.
+No automatic custom level-up evolutions. Leafeon and Glaceon use explicit
+stones only, avoiding surprise map-triggered evolution while grinding. Sky Catalyst is sold in the expanded Oldale Mart.
 Existing species and item IDs are preserved; one new item ID is appended (874).
 """
 from pathlib import Path
@@ -142,6 +142,22 @@ def patch(checkout: Path):
             raise ValueError(f"Original Eevee evolution changed: {target}")
     if eevee_new.count("ITEM_SKY_CATALYST") != 1:
         raise ValueError("Expected exactly one Eevee catalyst branch")
+    # STAGE8M_CHOICE: Petalburg Woods and Shoal Cave are training areas,
+    # not consent to evolve. Keep their stone equivalents intact.
+    leafeon_auto = "                                ,{EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_PETALBURG_WOODS})},\n"
+    glaceon_auto = "                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})},\n"
+    for auto in (leafeon_auto, glaceon_auto):
+        if eevee_new.count(auto) != 1:
+            raise ValueError("Expected exactly one automatic map evolution to disable")
+        eevee_new = eevee_new.replace(auto, "", 1)
+    leaf_stone = "                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},"
+    if eevee_new.count(leaf_stone) != 1:
+        raise ValueError("Leaf Stone path not found after deleting location evolution")
+    eevee_new = eevee_new.replace(leaf_stone,
+        "                                ,{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON}, // STAGE8M_CHOICE", 1)
+    assert "MAP_PETALBURG_WOODS" not in eevee_new
+    assert "MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM" not in eevee_new
+    assert eevee_new.count("ITEM_LEAF_STONE") == 1 and eevee_new.count("ITEM_ICE_STONE") == 1
     new["eevee"] = old["eevee"][:start] + eevee_new + old["eevee"][end:]
 
     # Replace the Aerieon -> Aerartheon TEST-ONLY level 6 shortcut.
@@ -216,6 +232,7 @@ def patch(checkout: Path):
     print("Stage 8M: Sky Catalyst (ID 874) available at expanded Oldale Town Mart.")
     print("Eevee -> Aerieon: Sky Catalyst, level >= 15; other 8 evolutions preserved.")
     print("Aerieon -> Aerartheon: Sky Catalyst, level >= 38, at least 6 badges.")
+    print("Removed automatic Leafeon/Glaceon map level-ups; both stone choices preserved.")
     print("Removed both automatic level-6 test evolutions; wild encounter rates unchanged.")
     print("Only staged source was changed. Gameplay and saved-game compatibility need testing.")
 
