@@ -26,8 +26,16 @@ def pointers(root):
 
 def defs(root):
     found=defaultdict(list)
-    files=sorted((root/'src/data/pokemon/level_up_learnsets').glob('*.h'))
-    if len(files)<9:raise ValueError('Expected nine generation learnset source headers')
+    config=(root/'include/config/pokemon.h').read_text(encoding='utf8')
+    selected=re.search(r'(?m)^#define\\s+P_LVL_UP_LEARNSETS\\s+(GEN_LATEST|GEN_[1-9])\\b',config)
+    if not selected:
+        raise ValueError('Cannot identify active level-up learnset generation from build config')
+    generation=9 if selected.group(1)=='GEN_LATEST' else int(selected.group(1).split('_')[1])
+    file=root/f'src/data/pokemon/level_up_learnsets/gen_{generation}.h'
+    if not file.is_file():
+        raise ValueError('Active generation learnset file not found: '+str(file))
+    print(f'Active level-up configuration: {selected.group(1)} -> gen_{generation}.h')
+    files=[file]
     for file in files:
         text=file.read_text(encoding='utf8')
         matches=list(DEF.finditer(text))
@@ -89,6 +97,7 @@ def generate(checkout,manifest,output):
         '',
         '## How to read this',
         '',
+        '- A level 0 entry, where present, means a move learned on evolution.',
         '- Level-up moves are tied to the evolved species. Evolving with a catalyst or',
         '  type item does not itself guarantee a move from earlier levels.',
         '- Custom first evolutions require level 15+ and their catalyst; dual forms',
@@ -118,7 +127,7 @@ def generate(checkout,manifest,output):
             if lv<0 or lv>100:raise ValueError('Unusual level for '+label+': '+str(lv))
             buckets[lv].append(pretty(move))
         for lv,stuff in sorted(buckets.items()):
-            txt='1 (start/relearn)' if lv==1 else str(lv)
+            txt='Evolution' if lv==0 else '1 (start/relearn)' if lv==1 else str(lv)
             text.append('| '+txt+' | '+', '.join(stuff)+' |')
         text.append('')
     output.parent.mkdir(parents=True,exist_ok=True)
