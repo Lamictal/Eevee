@@ -150,7 +150,15 @@ All 18 type-boosting items retain their traditional **held-item type-power bonus
 
 Existing shop stock is retained and these are **added** items, not replacements. Some shop lists only appear after normal story progression or shop expansion.
 
-## 7. Alpha / saves / testing
+## 7. Every Eeveelution's moves by level
+
+**[Complete level-up move reference: Eevee + all 171 Eeveelutions](EEVEE_LEVEL_UP_MOVES.md)**
+
+The linked guide lists exactly what each form's current compiled learnset provides, grouped by level, including **level 0 (on evolution)** and **level 1 (starting/relearner)** entries where present. The normal Eeveelutions use the engine's active Gen 9 learnsets, whereas the custom forms have separately defined experimental schedules. **TMs, tutors, eggs and other move-acquisition methods are not included.**
+
+**Balance still needs work:** All **163 custom forms have just five or six level entries**, and **26** have a move repeated at multiple levels. These are current source facts, not necessarily final design choices. Individual in-emulator move-learning behavior has not been fully tested.
+
+## 8. Alpha / saves / testing
 
 - [Historical Stage 11 habitat build](https://github.com/Lamictal/Eevee/actions/runs/43276563803): its earlier type-boosters lacked the necessary item evolution effect; do not use Stage 11 as the current test build.
 - **Stage 12 evolution repair:** included in the [latest Stage 15.1 full-roster build workflow](.github/workflows/eevee-full171-build.yml); use its latest successful artifact to test deliberate dual evolutions.
