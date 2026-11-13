@@ -34,6 +34,7 @@ on:
       - stage13_custom_menu.py
       - stage13_patch_builder.py
       - stage14_title_ui.py
+      - tools/generate_eevee_cover.py
       - stage14_patch_builder.py
       - stage15_solo_dex.py
       - stage15_patch_builder.py
@@ -139,21 +140,38 @@ jobs:
             --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
             --jobs 4 2>&1 | tee stage8d_attempt.log
 
+      - name: Generate Monoamine emulator thumbnails and box art
+        if: success()
+        run: python3 tools/generate_eevee_cover.py --out cover
+
       - name: Upload prototype ROM if successful
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: Eevee-All171-SoloNationalDex-Stage15-GBA
+          name: Eevee-All171-Monoamine-2026-Alpha-GBA
           compression-level: 0
-          path: pokeemerald-expansion-stage8d/pokeemerald.gba
+          path: |
+            pokeemerald-expansion-stage8d/pokeemerald.gba
+            cover/pokemon_eevee_thumbnail.png
+            cover/pokemon_eevee_thumbnail_256.png
+            cover/pokemon_eevee_gba_cover.png
+            cover/COVER_README.txt
           if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload emulator cover art as a standalone download
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-Monoamine-2026-Cover-Art
+          path: cover/
           retention-days: 14
 
       - name: Refresh latest build links on homepage and download guide
         if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EEVEE_BUILD_LABEL: Stage 15 - Hoenn Starters and Solo National Dex Alpha
+          EEVEE_BUILD_LABEL: Stage 15.1 - Monoamine 2026 Title and Cover Alpha
         run: python3 tools/sync_latest_build.py
 
       - name: Upload diagnostic logs
