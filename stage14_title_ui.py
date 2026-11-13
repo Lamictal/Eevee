@@ -262,20 +262,20 @@ static void Stage14_InitEeveeTitle(void)
     # moves the title-derived menu backdrop to screenblock 15. Without this
     # reset, Birch appears over the recycled Eevee backdrop in the wrong colors.
     birch_anchor = (
-        'static void Task_NewGameBirchSpeech_Init(u8 taskId)\\n'
-        '{\\n'
-        '    SetGpuReg(REG_OFFSET_DISPCNT, 0);\\n'
-        '    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);\\n'
+        'static void Task_NewGameBirchSpeech_Init(u8 taskId)\n'
+        '{\n'
+        '    SetGpuReg(REG_OFFSET_DISPCNT, 0);\n'
+        '    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);\n'
         '    InitBgFromTemplate(&sBirchBgTemplate);'
     )
     birch_reset = (
-        '    // STAGE14B_EEVEE_TRANSITION: restore the original Birch BG1 tilemap.\\n'
-        '    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0)\\n'
+        '    // STAGE14B_EEVEE_TRANSITION: restore the original Birch BG1 tilemap.\n'
+        '    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0)\n'
         '               | BGCNT_SCREENBASE(7) | BGCNT_16COLOR | BGCNT_TXT256x256);'
     )
     if patched_menu.count(birch_anchor) != 1:
         raise ValueError('Stage14B: Birch intro initializer changed; refusing patch')
-    patched_menu = patched_menu.replace(birch_anchor, birch_anchor + '\\n' + birch_reset, 1)
+    patched_menu = patched_menu.replace(birch_anchor, birch_anchor + '\n' + birch_reset, 1)
     # Avoid writing either file before all the content checks pass.
     menu_c.write_text(patched_menu,encoding='utf8')
     print('Stage14B: menu BG1 is visible in all three native main-menu window states.')
