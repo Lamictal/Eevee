@@ -46,6 +46,7 @@ on:
       - data/stage14_title_source.b85
       - tools/sync_latest_build.py
       - tools/qa_postbuild.py
+      - tools/qa_emulator_smoke.py
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
@@ -152,6 +153,24 @@ jobs:
             --checkout pokeemerald-expansion-stage8d \
             --manifest stage10/manifest.json \
             --report qa_report.json
+
+      - name: Install emulator smoke-test tools
+        run: |
+          sudo apt-get install -y --no-install-recommends mgba-qt xvfb xauth xdotool imagemagick
+
+      - name: Boot ROM and exercise basic input in mGBA
+        timeout-minutes: 3
+        run: |
+          QT_OPENGL=software LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a python3 tools/qa_emulator_smoke.py pokeemerald-expansion-stage8d/pokeemerald.gba --out emulator_qa
+
+      - name: Upload emulator QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eevee-emulator-smoke-evidence
+          path: emulator_qa/
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Generate accurate wild encounters by area from compiled source
         if: success()
