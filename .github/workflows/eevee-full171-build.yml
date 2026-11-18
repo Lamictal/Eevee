@@ -45,6 +45,7 @@ on:
       - stage16_custom_icons.py
       - data/stage14_title_source.b85
       - tools/sync_latest_build.py
+      - tools/qa_postbuild.py
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
@@ -145,6 +146,13 @@ jobs:
             --checkout "$GITHUB_WORKSPACE/pokeemerald-expansion-stage8d" \
             --jobs 4 2>&1 | tee stage8d_attempt.log
 
+      - name: Run automated static post-build QA
+        run: |
+          python3 tools/qa_postbuild.py \
+            --checkout pokeemerald-expansion-stage8d \
+            --manifest stage10/manifest.json \
+            --report qa_report.json
+
       - name: Generate accurate wild encounters by area from compiled source
         if: success()
         run: |
@@ -213,6 +221,7 @@ jobs:
         with:
           name: Eevee-Stage8E-logs
           path: |
+            qa_report.json
             stage8d_attempt.log
             kit/stage8d_build.log
             stage11_ecology_report.json
