@@ -47,6 +47,7 @@ on:
       - tools/sync_latest_build.py
       - tools/qa_postbuild.py
       - tools/qa_emulator_smoke.py
+      - tools/qa_core_runtime.c
       - 'data/full171_bundle_part*.b64'
   workflow_dispatch:
 
@@ -162,6 +163,14 @@ jobs:
         timeout-minutes: 3
         run: |
           QT_OPENGL=software LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a python3 tools/qa_emulator_smoke.py pokeemerald-expansion-stage8d/pokeemerald.gba --out emulator_qa
+
+      - name: Direct emulator core runtime and state replay
+        timeout-minutes: 5
+        run: |
+          sudo apt-get install -y --no-install-recommends libmgba-dev
+          cc -O2 -o /tmp/eevee-core-qa tools/qa_core_runtime.c -lmgba
+          set -o pipefail
+          /tmp/eevee-core-qa pokeemerald-expansion-stage8d/pokeemerald.gba 2>&1 | tee emulator_qa/core-runtime.log
 
       - name: Upload emulator QA evidence
         if: always()
